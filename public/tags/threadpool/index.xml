@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ThreadPool on Blog Lập Trình Mạng</title>
+    <link>http://localhost:1313/tags/threadpool/</link>
+    <description>Recent content in ThreadPool on Blog Lập Trình Mạng</description>
+    <generator>Hugo -- 0.151.0</generator>
+    <language>vi</language>
+    <lastBuildDate>Thu, 09 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/threadpool/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Concurrency trong ứng dụng mạng Java</title>
+      <link>http://localhost:1313/blog/java-concurrency-cho-ung-dung-mang/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/java-concurrency-cho-ung-dung-mang/</guid>
+      <description>&lt;p&gt;3 mô hình phổ biến:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Thread-per-connection&lt;/strong&gt; (dễ nhất, tốn tài nguyên),&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ThreadPool + Queue&lt;/strong&gt; (cân bằng hơn),&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;NIO/Reactive&lt;/strong&gt; (hiệu năng cao).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Gợi ý: dùng &lt;code&gt;ExecutorService&lt;/code&gt;, giới hạn pool, đo độ trễ/tải, và quản lý backpressure (hàng đợi). Với IO-bound, ưu tiên NIO/Reactor/Vert.x/Spring WebFlux.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

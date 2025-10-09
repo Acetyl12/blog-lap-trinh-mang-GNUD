@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Networking on Blog Lập Trình Mạng</title>
+    <link>http://localhost:1313/tags/networking/</link>
+    <description>Recent content in Networking on Blog Lập Trình Mạng</description>
+    <generator>Hugo -- 0.151.0</generator>
+    <language>vi</language>
+    <lastBuildDate>Thu, 09 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/networking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java cơ bản: Giới thiệu Lập trình Mạng &amp; Socket</title>
+      <link>http://localhost:1313/blog/java-co-ban-gioi-thieu-mang-socket/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/java-co-ban-gioi-thieu-mang-socket/</guid>
+      <description>&lt;p&gt;Bài viết mở đầu chuỗi Java Network: tổng quan TCP/UDP, địa chỉ IP/Port, và mô hình Client/Server.&lt;br&gt;
+&lt;strong&gt;Socket&lt;/strong&gt; là điểm đầu cuối của kết nối mạng. Với Java, gói &lt;code&gt;java.net&lt;/code&gt; cung cấp &lt;code&gt;Socket&lt;/code&gt;, &lt;code&gt;ServerSocket&lt;/code&gt; (TCP) và &lt;code&gt;DatagramSocket&lt;/code&gt; (UDP).&lt;br&gt;
+&lt;strong&gt;Khi nào dùng TCP?&lt;/strong&gt; Khi cần tin cậy, có thứ tự. &lt;strong&gt;Khi nào dùng UDP?&lt;/strong&gt; Khi cần tốc độ, chấp nhận mất mát (streaming, game).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Mẹo học: phác thảo luồng dữ liệu từ client → server và log mọi trạng thái để dễ debug.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

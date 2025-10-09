@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Socket on Blog Lập Trình Mạng</title>
+    <link>http://localhost:1313/tags/socket/</link>
+    <description>Recent content in Socket on Blog Lập Trình Mạng</description>
+    <generator>Hugo -- 0.151.0</generator>
+    <language>vi</language>
+    <lastBuildDate>Thu, 09 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/socket/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java cơ bản: Giới thiệu Lập trình Mạng &amp; Socket</title>
+      <link>http://localhost:1313/blog/java-co-ban-gioi-thieu-mang-socket/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/java-co-ban-gioi-thieu-mang-socket/</guid>
+      <description>&lt;p&gt;Bài viết mở đầu chuỗi Java Network: tổng quan TCP/UDP, địa chỉ IP/Port, và mô hình Client/Server.&lt;br&gt;
+&lt;strong&gt;Socket&lt;/strong&gt; là điểm đầu cuối của kết nối mạng. Với Java, gói &lt;code&gt;java.net&lt;/code&gt; cung cấp &lt;code&gt;Socket&lt;/code&gt;, &lt;code&gt;ServerSocket&lt;/code&gt; (TCP) và &lt;code&gt;DatagramSocket&lt;/code&gt; (UDP).&lt;br&gt;
+&lt;strong&gt;Khi nào dùng TCP?&lt;/strong&gt; Khi cần tin cậy, có thứ tự. &lt;strong&gt;Khi nào dùng UDP?&lt;/strong&gt; Khi cần tốc độ, chấp nhận mất mát (streaming, game).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Mẹo học: phác thảo luồng dữ liệu từ client → server và log mọi trạng thái để dễ debug.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Java Socket TCP: Server/Client cơ bản</title>
+      <link>http://localhost:1313/blog/java-socket-tcp-server-client-co-ban/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/java-socket-tcp-server-client-co-ban/</guid>
+      <description>&lt;p&gt;Ví dụ tối giản:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Server&lt;/strong&gt;: mở &lt;code&gt;ServerSocket&lt;/code&gt;, chấp nhận &lt;code&gt;Socket&lt;/code&gt;, đọc/ghi qua &lt;code&gt;InputStream/OutputStream&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Client&lt;/strong&gt;: tạo &lt;code&gt;Socket(host, port)&lt;/code&gt;, gửi chuỗi, nhận phản hồi.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Các bước an toàn:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Dùng &lt;code&gt;try-with-resources&lt;/code&gt; để đóng tài nguyên.&lt;/li&gt;
+&lt;li&gt;Quy ước &lt;strong&gt;message protocol&lt;/strong&gt; (ví dụ: chuỗi JSON kết thúc bằng &lt;code&gt;\n&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;Thử nghiệm bằng &lt;code&gt;telnet&lt;/code&gt;/&lt;code&gt;nc&lt;/code&gt; để kiểm tra server.&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+  </channel>
+</rss>

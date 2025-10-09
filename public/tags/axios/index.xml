@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Axios on Blog Lập Trình Mạng</title>
+    <link>http://localhost:1313/tags/axios/</link>
+    <description>Recent content in Axios on Blog Lập Trình Mạng</description>
+    <generator>Hugo -- 0.151.0</generator>
+    <language>vi</language>
+    <lastBuildDate>Thu, 09 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/axios/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fetch vs Axios: gọi API hiệu quả</title>
+      <link>http://localhost:1313/blog/js-fetch-axios-xu-ly-api/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/js-fetch-axios-xu-ly-api/</guid>
+      <description>&lt;p&gt;&lt;code&gt;fetch&lt;/code&gt; là native, &lt;code&gt;axios&lt;/code&gt; tiện alias &amp;amp; interceptor. Best-practices:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tạo &lt;strong&gt;HTTP client&lt;/strong&gt; dùng chung (baseURL, timeout, headers).&lt;/li&gt;
+&lt;li&gt;Interceptor xử lý token &amp;amp; lỗi 401/403.&lt;/li&gt;
+&lt;li&gt;Chuẩn hoá response (success/data/error), có retry/backoff cho lỗi mạng tạm thời.&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

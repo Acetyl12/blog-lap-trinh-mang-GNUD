@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Realtime on Blog Lập Trình Mạng</title>
+    <link>http://localhost:1313/tags/realtime/</link>
+    <description>Recent content in Realtime on Blog Lập Trình Mạng</description>
+    <generator>Hugo -- 0.151.0</generator>
+    <language>vi</language>
+    <lastBuildDate>Thu, 09 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/realtime/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WebSocket cơ bản: realtime trong JS/Node</title>
+      <link>http://localhost:1313/blog/js-websocket-realtime-co-ban/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/js-websocket-realtime-co-ban/</guid>
+      <description>&lt;p&gt;WebSocket cho kết nối &lt;strong&gt;2 chiều&lt;/strong&gt; thời gian thực (chat, dashboard).&lt;br&gt;
+Frontend: &lt;code&gt;new WebSocket(url)&lt;/code&gt;; Backend: &lt;code&gt;ws&lt;/code&gt; (Node) hoặc Socket.IO (có fallback &amp;amp; rooms).&lt;br&gt;
+Lưu ý: xác thực (JWT qua query/header), ping/pong, auto-reconnect, phân kênh (rooms), và hạn mức message size.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

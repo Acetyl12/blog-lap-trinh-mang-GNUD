@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>HTTP on Blog Lập Trình Mạng</title>
+    <link>http://localhost:1313/tags/http/</link>
+    <description>Recent content in HTTP on Blog Lập Trình Mạng</description>
+    <generator>Hugo -- 0.151.0</generator>
+    <language>vi</language>
+    <lastBuildDate>Thu, 09 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/http/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fetch vs Axios: gọi API hiệu quả</title>
+      <link>http://localhost:1313/blog/js-fetch-axios-xu-ly-api/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/js-fetch-axios-xu-ly-api/</guid>
+      <description>&lt;p&gt;&lt;code&gt;fetch&lt;/code&gt; là native, &lt;code&gt;axios&lt;/code&gt; tiện alias &amp;amp; interceptor. Best-practices:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tạo &lt;strong&gt;HTTP client&lt;/strong&gt; dùng chung (baseURL, timeout, headers).&lt;/li&gt;
+&lt;li&gt;Interceptor xử lý token &amp;amp; lỗi 401/403.&lt;/li&gt;
+&lt;li&gt;Chuẩn hoá response (success/data/error), có retry/backoff cho lỗi mạng tạm thời.&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Java 11&#43;: HttpClient hiện đại (sync/async)</title>
+      <link>http://localhost:1313/blog/java-http-client-modern-11-plus/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/java-http-client-modern-11-plus/</guid>
+      <description>&lt;p&gt;&lt;code&gt;java.net.http.HttpClient&lt;/code&gt; (Java 11+) đơn giản hoá gọi REST:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tạo &lt;code&gt;HttpClient&lt;/code&gt;, &lt;code&gt;HttpRequest&lt;/code&gt;, sau đó &lt;code&gt;send()&lt;/code&gt; (sync) hoặc &lt;code&gt;sendAsync()&lt;/code&gt; (CompletableFuture).&lt;/li&gt;
+&lt;li&gt;Dễ set timeout, redirect, header; parse JSON với Jackson/Gson.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ví dụ: GET/POST, retry (tự viết), log request/response, và best-practices (timeout, circuit-breaker bên ngoài như Resilience4j).&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

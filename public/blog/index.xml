@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Blogs on Blog Lập Trình Mạng</title>
+    <link>http://localhost:1313/blog/</link>
+    <description>Recent content in Blogs on Blog Lập Trình Mạng</description>
+    <generator>Hugo -- 0.151.0</generator>
+    <language>vi</language>
+    <lastBuildDate>Thu, 09 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Concurrency trong ứng dụng mạng Java</title>
+      <link>http://localhost:1313/blog/java-concurrency-cho-ung-dung-mang/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/java-concurrency-cho-ung-dung-mang/</guid>
+      <description>&lt;p&gt;3 mô hình phổ biến:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Thread-per-connection&lt;/strong&gt; (dễ nhất, tốn tài nguyên),&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ThreadPool + Queue&lt;/strong&gt; (cân bằng hơn),&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;NIO/Reactive&lt;/strong&gt; (hiệu năng cao).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Gợi ý: dùng &lt;code&gt;ExecutorService&lt;/code&gt;, giới hạn pool, đo độ trễ/tải, và quản lý backpressure (hàng đợi). Với IO-bound, ưu tiên NIO/Reactor/Vert.x/Spring WebFlux.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Fetch vs Axios: gọi API hiệu quả</title>
+      <link>http://localhost:1313/blog/js-fetch-axios-xu-ly-api/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/js-fetch-axios-xu-ly-api/</guid>
+      <description>&lt;p&gt;&lt;code&gt;fetch&lt;/code&gt; là native, &lt;code&gt;axios&lt;/code&gt; tiện alias &amp;amp; interceptor. Best-practices:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tạo &lt;strong&gt;HTTP client&lt;/strong&gt; dùng chung (baseURL, timeout, headers).&lt;/li&gt;
+&lt;li&gt;Interceptor xử lý token &amp;amp; lỗi 401/403.&lt;/li&gt;
+&lt;li&gt;Chuẩn hoá response (success/data/error), có retry/backoff cho lỗi mạng tạm thời.&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Java 11&#43;: HttpClient hiện đại (sync/async)</title>
+      <link>http://localhost:1313/blog/java-http-client-modern-11-plus/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/java-http-client-modern-11-plus/</guid>
+      <description>&lt;p&gt;&lt;code&gt;java.net.http.HttpClient&lt;/code&gt; (Java 11+) đơn giản hoá gọi REST:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tạo &lt;code&gt;HttpClient&lt;/code&gt;, &lt;code&gt;HttpRequest&lt;/code&gt;, sau đó &lt;code&gt;send()&lt;/code&gt; (sync) hoặc &lt;code&gt;sendAsync()&lt;/code&gt; (CompletableFuture).&lt;/li&gt;
+&lt;li&gt;Dễ set timeout, redirect, header; parse JSON với Jackson/Gson.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ví dụ: GET/POST, retry (tự viết), log request/response, và best-practices (timeout, circuit-breaker bên ngoài như Resilience4j).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Java cơ bản: Giới thiệu Lập trình Mạng &amp; Socket</title>
+      <link>http://localhost:1313/blog/java-co-ban-gioi-thieu-mang-socket/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/java-co-ban-gioi-thieu-mang-socket/</guid>
+      <description>&lt;p&gt;Bài viết mở đầu chuỗi Java Network: tổng quan TCP/UDP, địa chỉ IP/Port, và mô hình Client/Server.&lt;br&gt;
+&lt;strong&gt;Socket&lt;/strong&gt; là điểm đầu cuối của kết nối mạng. Với Java, gói &lt;code&gt;java.net&lt;/code&gt; cung cấp &lt;code&gt;Socket&lt;/code&gt;, &lt;code&gt;ServerSocket&lt;/code&gt; (TCP) và &lt;code&gt;DatagramSocket&lt;/code&gt; (UDP).&lt;br&gt;
+&lt;strong&gt;Khi nào dùng TCP?&lt;/strong&gt; Khi cần tin cậy, có thứ tự. &lt;strong&gt;Khi nào dùng UDP?&lt;/strong&gt; Khi cần tốc độ, chấp nhận mất mát (streaming, game).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Mẹo học: phác thảo luồng dữ liệu từ client → server và log mọi trạng thái để dễ debug.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Java NIO: Selector &amp; Channel cho kết nối đồng thời</title>
+      <link>http://localhost:1313/blog/java-nio-selector-va-channel/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/java-nio-selector-va-channel/</guid>
+      <description>&lt;p&gt;&lt;code&gt;java.nio&lt;/code&gt; hỗ trợ &lt;strong&gt;non-blocking I/O&lt;/strong&gt; với &lt;code&gt;Selector&lt;/code&gt; + &lt;code&gt;Channel&lt;/code&gt;, xử lý nhiều socket trên 1 thread.&lt;br&gt;
+Lợi ích: tiết kiệm tài nguyên hơn so với mỗi kết nối một thread.&lt;br&gt;
+Ý tưởng chính:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ServerSocketChannel&lt;/code&gt; non-blocking + &lt;code&gt;Selector&lt;/code&gt; theo dõi events &lt;code&gt;OP_ACCEPT/OP_READ/OP_WRITE&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Bộ đệm &lt;code&gt;ByteBuffer&lt;/code&gt; tái sử dụng để giảm GC.&lt;/li&gt;
+&lt;li&gt;Thiết kế &lt;strong&gt;state machine&lt;/strong&gt; cho từng connection (đọc header → đọc body → xử lý → ghi).&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Java Socket TCP: Server/Client cơ bản</title>
+      <link>http://localhost:1313/blog/java-socket-tcp-server-client-co-ban/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/java-socket-tcp-server-client-co-ban/</guid>
+      <description>&lt;p&gt;Ví dụ tối giản:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Server&lt;/strong&gt;: mở &lt;code&gt;ServerSocket&lt;/code&gt;, chấp nhận &lt;code&gt;Socket&lt;/code&gt;, đọc/ghi qua &lt;code&gt;InputStream/OutputStream&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Client&lt;/strong&gt;: tạo &lt;code&gt;Socket(host, port)&lt;/code&gt;, gửi chuỗi, nhận phản hồi.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Các bước an toàn:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Dùng &lt;code&gt;try-with-resources&lt;/code&gt; để đóng tài nguyên.&lt;/li&gt;
+&lt;li&gt;Quy ước &lt;strong&gt;message protocol&lt;/strong&gt; (ví dụ: chuỗi JSON kết thúc bằng &lt;code&gt;\n&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;Thử nghiệm bằng &lt;code&gt;telnet&lt;/code&gt;/&lt;code&gt;nc&lt;/code&gt; để kiểm tra server.&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    <item>
+      <title>JavaScript Event Loop &amp; Network I/O</title>
+      <link>http://localhost:1313/blog/js-event-loop-network-io/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/js-event-loop-network-io/</guid>
+      <description>&lt;p&gt;Event Loop là trái tim của JS runtime. Network I/O diễn ra &lt;strong&gt;bất đồng bộ&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Task Queue&lt;/strong&gt; (macro), &lt;strong&gt;Microtask Queue&lt;/strong&gt; (Promise callbacks).&lt;/li&gt;
+&lt;li&gt;Thực hành: tránh block main thread, dùng &lt;code&gt;async/await&lt;/code&gt; và &lt;code&gt;Promise.allSettled&lt;/code&gt; khi cần.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Debug tip: thêm timestamp và request-id khi log để truy lần.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Node.js: net(dành cho TCP) &amp; dgram(cho UDP)</title>
+      <link>http://localhost:1313/blog/nodejs-net-module-tcp-udp/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/nodejs-net-module-tcp-udp/</guid>
+      <description>&lt;p&gt;Node.js cung cấp:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;net&lt;/code&gt; để tạo TCP server/client,&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dgram&lt;/code&gt; cho UDP socket.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Mẹo:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Thiết kế protocol rõ ràng (delimiters, length-prefix).&lt;/li&gt;
+&lt;li&gt;Dùng &lt;code&gt;Buffer&lt;/code&gt; đúng cách, chống split/merge packet.&lt;/li&gt;
+&lt;li&gt;Thêm health-check &amp;amp; graceful shutdown (SIGINT/SIGTERM).&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>WebSocket cơ bản: realtime trong JS/Node</title>
+      <link>http://localhost:1313/blog/js-websocket-realtime-co-ban/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/js-websocket-realtime-co-ban/</guid>
+      <description>&lt;p&gt;WebSocket cho kết nối &lt;strong&gt;2 chiều&lt;/strong&gt; thời gian thực (chat, dashboard).&lt;br&gt;
+Frontend: &lt;code&gt;new WebSocket(url)&lt;/code&gt;; Backend: &lt;code&gt;ws&lt;/code&gt; (Node) hoặc Socket.IO (có fallback &amp;amp; rooms).&lt;br&gt;
+Lưu ý: xác thực (JWT qua query/header), ping/pong, auto-reconnect, phân kênh (rooms), và hạn mức message size.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>TCP on Blog Lập Trình Mạng</title>
+    <link>http://localhost:1313/tags/tcp/</link>
+    <description>Recent content in TCP on Blog Lập Trình Mạng</description>
+    <generator>Hugo -- 0.151.0</generator>
+    <language>vi</language>
+    <lastBuildDate>Thu, 09 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/tcp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java Socket TCP: Server/Client cơ bản</title>
+      <link>http://localhost:1313/blog/java-socket-tcp-server-client-co-ban/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/java-socket-tcp-server-client-co-ban/</guid>
+      <description>&lt;p&gt;Ví dụ tối giản:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Server&lt;/strong&gt;: mở &lt;code&gt;ServerSocket&lt;/code&gt;, chấp nhận &lt;code&gt;Socket&lt;/code&gt;, đọc/ghi qua &lt;code&gt;InputStream/OutputStream&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Client&lt;/strong&gt;: tạo &lt;code&gt;Socket(host, port)&lt;/code&gt;, gửi chuỗi, nhận phản hồi.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Các bước an toàn:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Dùng &lt;code&gt;try-with-resources&lt;/code&gt; để đóng tài nguyên.&lt;/li&gt;
+&lt;li&gt;Quy ước &lt;strong&gt;message protocol&lt;/strong&gt; (ví dụ: chuỗi JSON kết thúc bằng &lt;code&gt;\n&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;Thử nghiệm bằng &lt;code&gt;telnet&lt;/code&gt;/&lt;code&gt;nc&lt;/code&gt; để kiểm tra server.&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    <item>
+      <title>Node.js: net(dành cho TCP) &amp; dgram(cho UDP)</title>
+      <link>http://localhost:1313/blog/nodejs-net-module-tcp-udp/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/nodejs-net-module-tcp-udp/</guid>
+      <description>&lt;p&gt;Node.js cung cấp:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;net&lt;/code&gt; để tạo TCP server/client,&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dgram&lt;/code&gt; cho UDP socket.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Mẹo:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Thiết kế protocol rõ ràng (delimiters, length-prefix).&lt;/li&gt;
+&lt;li&gt;Dùng &lt;code&gt;Buffer&lt;/code&gt; đúng cách, chống split/merge packet.&lt;/li&gt;
+&lt;li&gt;Thêm health-check &amp;amp; graceful shutdown (SIGINT/SIGTERM).&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

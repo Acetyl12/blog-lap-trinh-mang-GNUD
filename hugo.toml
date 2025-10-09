@@ -1,0 +1,43 @@
+baseURL = "https://Acetyl12.github.io/" 
+title   = "Blog Lập Trình Mạng"
+theme   = "PaperMod"
+languageCode = "vi"
+
+[pagination]
+  pagerSize = 10
+
+
+[params]
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  disableScrollToTop = false
+  comments = false
+
+  [params.profileMode]
+    enabled = true
+    title = "Xin chào, mình là Phương Dung"
+    subtitle = "Chia sẻ về Lập trình Mạng, Java & JavaScript"
+    imageUrl = "images/avatar.png"      
+    imageWidth = 160
+    imageHeight = 160
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url  = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Blog"
+    url  = "/blog/"
+    weight = 2
+  [[menu.main]]
+    name = "About"
+    url  = "/about/"
+    weight = 3
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]

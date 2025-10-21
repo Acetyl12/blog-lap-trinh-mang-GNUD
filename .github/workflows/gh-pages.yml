@@ -63,10 +63,9 @@ jobs:
           echo "Using BASE_URL=$BASE_URL"
 
       - name: Build (production purge/minify)
-        env:
-          HUGO_ENVIRONMENT: production
+        env: { HUGO_ENVIRONMENT: production }
         run: |
-          hugo --gc --minify --baseURL "$BASE_URL"
+          hugo --cleanDestinationDir --gc --minify --baseURL "$BASE_URL"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

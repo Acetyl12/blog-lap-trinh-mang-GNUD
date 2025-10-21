@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Selector on Blog Lập Trình Mạng</title>
+    <link>http://localhost:1313/tags/selector/</link>
+    <description>Recent content in Selector on Blog Lập Trình Mạng</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <lastBuildDate>Sun, 19 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/selector/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java NIO &amp; Selector: Xử lý hàng nghìn kết nối trên một thread</title>
+      <link>http://localhost:1313/blog/java-nio-selector-hang-nghin-ket-noi/</link>
+      <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/java-nio-selector-hang-nghin-ket-noi/</guid>
+      <description>&lt;p&gt;&#xD;&#xA;&lt;figure class=&#34;my-6&#34;&gt;&#xD;&#xA;  &lt;img&#xD;&#xA;    src=&#34;http://localhost:1313/images/posts/java-nio-selector-hang-nghin-ket-noi.svg&#34;&#xD;&#xA;    alt=&#34;minh họa&#34;&#xD;&#xA;    loading=&#34;lazy&#34;&#xD;&#xA;    class=&#34;mx-auto block &#34;&gt;&#xD;&#xA;  &#xD;&#xA;&lt;/figure&gt;&lt;/p&gt;&#xA;&lt;p&gt;Kiến trúc non-blocking với Channel/Selector, mô hình state machine cho mỗi kết nối và tối ưu buffer.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Từ khoá:&lt;/strong&gt; Java, NIO, Selector, Concurrency.&lt;br&gt;&#xA;Trong bài viết này, mình đi theo hướng &lt;em&gt;thực chiến&lt;/em&gt;: giải thích ngắn gọn, kèm checklist, bẫy thường gặp và ví dụ code để bạn có thể áp dụng ngay vào dự án.&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-vì-sao-nio&#34;&gt;1) Vì sao NIO?&lt;/h2&gt;&#xA;&lt;p&gt;Với mô hình “mỗi kết nối một thread”, chi phí context-switch + bộ nhớ tăng mạnh khi có hàng nghìn kết nối. &lt;strong&gt;NIO (non-blocking I/O)&lt;/strong&gt; dùng &lt;code&gt;Selector&lt;/code&gt; để theo dõi nhiều kênh (Channel) trên &lt;strong&gt;ít thread&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

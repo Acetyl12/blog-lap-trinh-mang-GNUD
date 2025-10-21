@@ -1,0 +1,126 @@
+{{ define "main" }}
+
+{{ $p := site.Data.profile }}
+<section class="container mx-auto p-6">
+  <div class="rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 backdrop-blur p-5 md:p-6 grid md:grid-cols-5 gap-6 items-center">
+
+    {{/* ẢNH BÊN TRÁI: ưu tiên hero nếu file tồn tại, không thì dùng avatar */}}
+    <div class="md:col-span-2">
+      {{ $img := "" }}
+      {{ if and $p.hero (fileExists (printf "static%s" $p.hero)) }}
+        {{ $img = $p.hero }}
+      {{ else if $p.avatar }}
+        {{ $img = $p.avatar }}
+      {{ end }}
+      {{ with $img }}
+        <img src="{{ . | relURL }}"
+          alt="{{ $p.name }}"
+          class="w-full h-56 md:h-64 object-cover object-top rounded-2xl shadow-md">
+
+      {{ end }}
+    </div>
+
+    {{/* NỘI DUNG BÊN PHẢI */}}
+    <div class="md:col-span-3">
+      <h2 class="text-xl font-semibold mb-1">Giới thiệu</h2>
+      <h3 class="text-2xl font-bold">Xin chào, mình là {{ with $p.name }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}</h3>
+      {{ with $p.headline }}<p class="mt-1 opacity-80">{{ . }}</p>{{ end }}
+      {{ with $p.bio }}<p class="mt-3 opacity-90 leading-relaxed">{{ . }}</p>{{ end }}
+
+      {{ with $p.links }}
+      <div class="mt-4 flex flex-wrap gap-3">
+        {{ range . }}
+          <a class="px-3 py-2 rounded-lg bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700"
+             href="{{ .url }}" target="_blank" rel="noopener">{{ .label }}</a>
+        {{ end }}
+        <a class="px-3 py-2 rounded-lg bg-black text-white dark:bg-white dark:text-black"
+           href="{{ "/about/" | relLangURL }}">Xem thêm</a>
+      </div>
+      {{ end }}
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== Bài viết mới ===== -->
+<section class="container mx-auto p-6">
+  <div class="flex items-center justify-between mb-4">
+    <h2 class="text-2xl font-semibold">Bài viết mới</h2>
+    <a href="{{ "/blog/" | relLangURL }}" class="opacity-80 hover:opacity-100">Xem tất cả →</a>
+  </div>
+
+  {{ $blogPages := first 6 (where .Site.RegularPages.ByDate.Reverse "Section" "blog") }}
+  <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mb-12">
+    {{ range $blogPages }}
+      <article class="group rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 backdrop-blur hover:shadow-xl hover:-translate-y-0.5 transition">
+        {{ with .Params.cover }}
+          <a href="{{ $.RelPermalink }}"><img src="{{ . | relURL }}" alt="{{ $.Title }}" class="w-full h-44 object-cover"></a>
+        {{ end }}
+        <div class="p-4">
+          <h3 class="text-lg font-semibold">
+            <a href="{{ .RelPermalink }}" class="group-hover:underline decoration-2 underline-offset-4">{{ .Title }}</a>
+          </h3>
+          <p class="text-sm opacity-70 mt-1">{{ .Date.Format "2006-01-02" }} • ~{{ .ReadingTime }} phút</p>
+          {{ with .Summary }}<p class="opacity-90 mt-2">{{ . | plainify | truncate 150 }}</p>{{ end }}
+          <div class="mt-3 flex flex-wrap gap-2">
+            {{ with .Params.categories }}
+              {{ range first 1 . }}
+                {{ $c := . }}
+                {{ with site.GetPage (printf "/categories/%s" ($c | urlize)) }}
+                  <a href="{{ .RelPermalink }}" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">{{ $c }}</a>
+                {{ end }}
+              {{ end }}
+            {{ end }}
+            {{ with .Params.tags }}
+              {{ range first 3 . }}
+                {{ $t := . }}
+                {{ with site.GetPage (printf "/tags/%s" ($t | urlize)) }}
+                  <a href="{{ .RelPermalink }}" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#{{ $t }}</a>
+                {{ end }}
+              {{ end }}
+            {{ end }}
+          </div>
+        </div>
+      </article>
+    {{ end }}
+  </div>
+</section>
+
+<!-- ===== Dự án nổi bật (Portfolio) ===== -->
+<section class="container mx-auto p-6">
+  <div class="flex items-center justify-between mb-4">
+    <h2 class="text-2xl font-semibold">Dự án nổi bật</h2>
+    <a href="{{ "/portfolio/" | relLangURL }}" class="opacity-80 hover:opacity-100">Xem tất cả →</a>
+  </div>
+
+  {{ $allPortfolio := where .Site.RegularPages "Section" "portfolio" }}
+  {{ $featured := where $allPortfolio ".Params.featured" true }}
+  {{ $pick := cond (gt (len $featured) 0) $featured $allPortfolio }}
+  <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+    {{ range first 6 ($pick.ByDate.Reverse) }}
+      <article class="group rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 backdrop-blur hover:shadow-xl hover:-translate-y-0.5 transition">
+        {{ $cover := .Resources.GetMatch "cover*" }}
+        {{ if $cover }}
+          <a href="{{ .RelPermalink }}"><img src="{{ $cover.RelPermalink }}" alt="{{ .Title }}" class="w-full h-44 object-cover"></a>
+        {{ else if .Params.cover }}
+          <a href="{{ .RelPermalink }}"><img src="{{ .Params.cover | relURL }}" alt="{{ .Title }}" class="w-full h-44 object-cover"></a>
+        {{ end }}
+        <div class="p-4">
+          <h3 class="text-lg font-semibold">
+            <a href="{{ .RelPermalink }}" class="group-hover:underline decoration-2 underline-offset-4">{{ .Title }}</a>
+          </h3>
+          {{ with .Params.summary }}<p class="opacity-90 mt-1">{{ . }}</p>{{ end }}
+          {{ with .Params.tech }}
+            <div class="mt-2 flex flex-wrap gap-2">
+              {{ range first 4 . }}
+                <span class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">{{ . }}</span>
+              {{ end }}
+            </div>
+          {{ end }}
+        </div>
+      </article>
+    {{ end }}
+  </div>
+</section>
+
+{{ end }}

@@ -1,0 +1,39 @@
+{{ $p := site.Data.profile }}
+<section class="container mx-auto p-6">
+  <div class="rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 backdrop-blur p-5 md:p-6 grid md:grid-cols-5 gap-6 items-center">
+
+    {{/* ẢNH BÊN TRÁI: ưu tiên hero nếu file tồn tại, không thì dùng avatar */}}
+    <div class="md:col-span-2">
+      {{ $img := "" }}
+      {{ if and $p.hero (fileExists (printf "static%s" $p.hero)) }}
+        {{ $img = $p.hero }}
+      {{ else if $p.avatar }}
+        {{ $img = $p.avatar }}
+      {{ end }}
+      {{ with $img }}
+        <img src="{{ . | relURL }}" alt="{{ $p.name }}"
+             class="w-full h-56 md:h-64 object-cover rounded-2xl shadow-md">
+      {{ end }}
+    </div>
+
+    {{/* NỘI DUNG BÊN PHẢI */}}
+    <div class="md:col-span-3">
+      <h2 class="text-xl font-semibold mb-1">Giới thiệu</h2>
+      <h3 class="text-2xl font-bold">Xin chào, mình là {{ with $p.name }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}</h3>
+      {{ with $p.headline }}<p class="mt-1 opacity-80">{{ . }}</p>{{ end }}
+      {{ with $p.bio }}<p class="mt-3 opacity-90 leading-relaxed">{{ . }}</p>{{ end }}
+
+      {{ with $p.links }}
+      <div class="mt-4 flex flex-wrap gap-3">
+        {{ range . }}
+          <a class="px-3 py-2 rounded-lg bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700"
+             href="{{ .url }}" target="_blank" rel="noopener">{{ .label }}</a>
+        {{ end }}
+        <a class="px-3 py-2 rounded-lg bg-black text-white dark:bg-white dark:text-black"
+           href="{{ "/about/" | relLangURL }}">Xem thêm</a>
+      </div>
+      {{ end }}
+    </div>
+
+  </div>
+</section>

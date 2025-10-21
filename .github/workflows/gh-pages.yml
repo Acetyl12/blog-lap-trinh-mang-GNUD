@@ -47,6 +47,10 @@ jobs:
           hugo-version: "0.151.0"
           extended: true
 
+       - name: Configure Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
       - name: Compute baseURL
         # Project Pages: https://<owner>.github.io/<repo>/
         # User/Org Pages: https://<owner>.github.io/

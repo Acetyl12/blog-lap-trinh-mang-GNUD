@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="/favicon.ico">
+
+  <title>
+  Đồ án cơ sở - Quản lý lịch đặt hẹn khám bệnh - Blog Lập Trình Mạng
+  </title>
+  <meta name="description" content="Hệ thống quản lý đặt lịch khám bệnh thông minh sử dụng ASP.NET Core, tích hợp chatbot AI tư vấn, phân quyền Identity và quản lý lịch hẹn – đơn thuốc – xét nghiệm." /><meta name="generator" content="Hugo 0.151.0">
+  <link rel="stylesheet" href="/css/styles.css" />
+  
+  
+
+  <meta property="og:url" content="http://localhost:1313/portfolio/dacs_medbooking/">
+  <meta property="og:site_name" content="Blog Lập Trình Mạng">
+  <meta property="og:title" content="Đồ án cơ sở - Quản lý lịch đặt hẹn khám bệnh">
+  <meta property="og:description" content="Hệ thống quản lý đặt lịch khám bệnh thông minh sử dụng ASP.NET Core, tích hợp chatbot AI tư vấn, phân quyền Identity và quản lý lịch hẹn – đơn thuốc – xét nghiệm.">
+  <meta property="og:locale" content="vi">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="portfolio">
+    <meta property="article:published_time" content="2025-10-20T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-10-20T00:00:00+00:00">
+    <meta property="og:image" content="http://localhost:1313/portfolio/dacs_medbooking/cover.png">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/portfolio/dacs_medbooking/cover.png">
+  <meta name="twitter:title" content="Đồ án cơ sở - Quản lý lịch đặt hẹn khám bệnh">
+  <meta name="twitter:description" content="Hệ thống quản lý đặt lịch khám bệnh thông minh sử dụng ASP.NET Core, tích hợp chatbot AI tư vấn, phân quyền Identity và quản lý lịch hẹn – đơn thuốc – xét nghiệm.">
+
+  
+  <meta itemprop="name" content="Đồ án cơ sở - Quản lý lịch đặt hẹn khám bệnh">
+  <meta itemprop="description" content="Hệ thống quản lý đặt lịch khám bệnh thông minh sử dụng ASP.NET Core, tích hợp chatbot AI tư vấn, phân quyền Identity và quản lý lịch hẹn – đơn thuốc – xét nghiệm.">
+  <meta itemprop="datePublished" content="2025-10-20T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-10-20T00:00:00+00:00">
+  <meta itemprop="wordCount" content="483">
+  <meta itemprop="image" content="http://localhost:1313/portfolio/dacs_medbooking/cover.png">
+
+  
+</head>
+<body class="dark:bg-gray-800 dark:text-white relative flex flex-col min-h-screen"><header class="container flex justify-between md:justify-between gap-4 flex-wrap p-6 mx-auto relative">
+  <a href="http://localhost:1313/" class="capitalize font-extrabold text-2xl">
+    
+    Blog Lập Trình Mạng
+    
+  </a>
+  <button class="mobile-menu-button md:hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <line x1="4" y1="8" x2="20" y2="8" />
+      <line x1="4" y1="16" x2="20" y2="16" />
+    </svg>
+  </button>
+  <ul class="mobile-menu absolute z-10 px-6 pb-6 md:p-0 top-full left-0 w-full md:w-auto md:relative hidden md:flex flex-col md:flex-row items-end md:items-center gap-4 lg:gap-6 bg-white dark:bg-gray-800">
+
+    
+    <li><a href="/">Home</a></li>
+    
+    <li><a href="/blog/">Blog</a></li>
+    
+    <li><a href="/about/">About</a></li>
+    
+    <li><a href="/portfolio/">Portfolio</a></li>
+    
+    <li><a href="/tags/">Tags</a></li>
+    
+
+    <li class="relative">
+      <details class="group">
+        <summary class="list-none cursor-pointer px-3 py-2 flex items-center gap-1 hover:opacity-80">
+          Categories <span aria-hidden>▾</span>
+        </summary>
+
+        <div class="absolute mt-2 z-50 bg-white dark:bg-neutral-900 rounded-xl shadow-lg p-2 w-64 border border-neutral-200 dark:border-neutral-800">
+          <ul class="max-h-72 overflow-auto">
+            
+            
+            
+              <li>
+                <a class="block px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                  href="/categories/java/">
+                  Java <span class="opacity-60">(10)</span>
+                </a>
+              </li>
+            
+              <li>
+                <a class="block px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                  href="/categories/javascript/">
+                  JavaScript <span class="opacity-60">(8)</span>
+                </a>
+              </li>
+            
+              <li>
+                <a class="block px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                  href="/categories/general/">
+                  General <span class="opacity-60">(1)</span>
+                </a>
+              </li>
+            
+
+            <li class="mt-1 border-t border-neutral-200 dark:border-neutral-800 pt-2">
+              <a class="block px-3 py-2 text-sm opacity-80 hover:opacity-100" href="/categories/">Xem tất cả →</a>
+            </li>
+          </ul>
+        </div>
+      </details>
+    </li>
+
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="open-search inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="10" cy="10" r="7" />
+          <line x1="21" y1="21" x2="15" y2="15" />
+        </svg>
+      </span>
+    </li>
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="toggle-dark-mode inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="12" cy="12" r="3" />
+          <line x1="12" y1="5" x2="12" y2="5.01" />
+          <line x1="17" y1="7" x2="17" y2="7.01" />
+          <line x1="19" y1="12" x2="19" y2="12.01" />
+          <line x1="17" y1="17" x2="17" y2="17.01" />
+          <line x1="12" y1="19" x2="12" y2="19.01" />
+          <line x1="7" y1="17" x2="7" y2="17.01" />
+          <line x1="5" y1="12" x2="5" y2="12.01" />
+          <line x1="7" y1="7" x2="7" y2="7.01" />
+        </svg>
+      </span>
+    </li>
+    
+  </ul>
+</header>
+
+<style>
+  summary::-webkit-details-marker { display: none; }
+</style><main class="flex-1">
+
+<section class="container mx-auto p-6 col-span-full">
+  <article class="max-w-none">
+    <header class="mb-6">
+      <h1 class="text-3xl font-bold">Đồ án cơ sở - Quản lý lịch đặt hẹn khám bệnh</h1>
+      <p class="opacity-80 mt-1">Hệ thống quản lý đặt lịch khám bệnh thông minh sử dụng ASP.NET Core, tích hợp chatbot AI tư vấn, phân quyền Identity và quản lý lịch hẹn – đơn thuốc – xét nghiệm.</p>
+      <div class="mt-2 flex flex-wrap gap-3 text-sm opacity-80">
+        <span>Vai trò: <strong>Fullstack Developer</strong></span>
+        <span>Ngày: 2025-10-20</span>
+      </div>
+      
+      <div class="mt-3 flex flex-wrap gap-2">
+        <span class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">ASP.NET Core</span><span class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">C#</span><span class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">Entity Framework</span><span class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">Identity</span><span class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">OpenAI API</span>
+      </div>
+      
+      
+      <div class="mt-4 flex flex-wrap gap-3">
+        
+        <a class="px-3 py-2 rounded-lg bg-black text-white dark:bg-white dark:text-black"
+           href="https://github.com/Acetyl12/DACS_QLDatKhamBenh" target="_blank" rel="noopener">Source</a>
+        
+        <a class="px-3 py-2 rounded-lg bg-black text-white dark:bg-white dark:text-black"
+           href="#" target="_blank" rel="noopener">Docs</a>
+        
+      </div>
+      
+    </header>
+
+    
+    
+      <img src="/portfolio/dacs_medbooking/cover.png" alt="Đồ án cơ sở - Quản lý lịch đặt hẹn khám bệnh" class="w-full rounded-xl mb-6 object-cover">
+    
+
+    
+    <div class="prose dark:prose-invert max-w-none mx-auto">
+      <h2 id="-giới-thiệu-dự-án">🏥 Giới thiệu dự án</h2>
+<p>Đồ án cơ sở “<strong>Quản lý lịch đặt hẹn khám bệnh</strong>” là một ứng dụng web được phát triển bằng <strong>ASP.NET Core MVC</strong>, hỗ trợ người dùng quản lý quy trình khám chữa bệnh trực tuyến – từ đăng ký, đặt hẹn, khám bệnh, kê toa, đến xét nghiệm.<br>
+Dự án đồng thời tích hợp <strong>AI Chatbot</strong> giúp bệnh nhân được <strong>tư vấn triệu chứng sơ bộ, chọn bác sĩ hoặc chuyên khoa phù hợp</strong>, và đặt lịch trực tiếp.</p>
+<hr>
+<h2 id="-mục-tiêu">🎯 Mục tiêu</h2>
+<ul>
+<li>Tin học hóa quy trình đặt lịch và khám chữa bệnh.</li>
+<li>Tăng trải nghiệm người dùng thông qua <strong>AI tư vấn và tự động hóa thông báo</strong>.</li>
+<li>Cung cấp hệ thống phân quyền rõ ràng giữa <strong>Admin – Bác sĩ – Bệnh nhân</strong>.</li>
+<li>Quản lý lịch hẹn, đơn thuốc, và lịch xét nghiệm một cách trực quan và tập trung.</li>
+</ul>
+<hr>
+<h2 id="-công-nghệ-sử-dụng">⚙️ Công nghệ sử dụng</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Thành phần</th>
+          <th>Công nghệ</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Backend</td>
+          <td>ASP.NET Core 8.0 (C#)</td>
+      </tr>
+      <tr>
+          <td>Frontend</td>
+          <td>Razor Pages, Bootstrap 5</td>
+      </tr>
+      <tr>
+          <td>CSDL</td>
+          <td>Microsoft SQL Server</td>
+      </tr>
+      <tr>
+          <td>ORM</td>
+          <td>Entity Framework Core</td>
+      </tr>
+      <tr>
+          <td>Authentication</td>
+          <td>ASP.NET Identity (Role-based)</td>
+      </tr>
+      <tr>
+          <td>AI Chatbot</td>
+          <td>OpenAI API / Azure OpenAI</td>
+      </tr>
+      <tr>
+          <td>Email/Notification</td>
+          <td>MailKit, SignalR</td>
+      </tr>
+      <tr>
+          <td>IDE</td>
+          <td>Visual Studio 2022</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-các-vai-trò-trong-hệ-thống">👥 Các vai trò trong hệ thống</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Vai trò</th>
+          <th>Quyền hạn</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Admin</strong></td>
+          <td>Quản lý người dùng, bác sĩ, chuyên khoa, lịch hẹn và thống kê toàn hệ thống</td>
+      </tr>
+      <tr>
+          <td><strong>Bác sĩ</strong></td>
+          <td>Xem lịch khám của mình, xác nhận/huỷ lịch, kê đơn thuốc, nhập kết quả xét nghiệm</td>
+      </tr>
+      <tr>
+          <td><strong>Bệnh nhân</strong></td>
+          <td>Đăng ký, đăng nhập, chat với AI, đặt lịch khám theo bác sĩ hoặc khoa, xem đơn thuốc, xét nghiệm</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-các-tính-năng-chính">💡 Các tính năng chính</h2>
+<h3 id="-1-quản-lý-người-dùng-và-phân-quyền">🔐 1. Quản lý người dùng và phân quyền</h3>
+<ul>
+<li>Đăng ký / đăng nhập qua <strong>ASP.NET Identity</strong></li>
+<li>Quản lý <strong>3 role:</strong> Admin – Doctor – Patient</li>
+<li>Xác thực email, đổi mật khẩu, khôi phục tài khoản</li>
+</ul>
+<h3 id="-2-chatbot-ai-tư-vấn-sức-khỏe">🤖 2. Chatbot AI tư vấn sức khỏe</h3>
+<ul>
+<li>Gợi ý chuyên khoa dựa trên triệu chứng nhập vào</li>
+<li>Đặt lịch khám trực tiếp qua hội thoại</li>
+<li>Sử dụng OpenAI API để xử lý ngôn ngữ tự nhiên</li>
+</ul>
+<h3 id="-3-đặt-lịch-khám-bệnh">📅 3. Đặt lịch khám bệnh</h3>
+<ul>
+<li>Lọc lịch theo bác sĩ, chuyên khoa hoặc thời gian</li>
+<li>Kiểm tra trùng lịch, xác nhận tự động</li>
+<li>Gửi thông báo khi lịch được duyệt hoặc huỷ</li>
+</ul>
+<h3 id="-4-kê-đơn-thuốc--quản-lý-toa-thuốc">💊 4. Kê đơn thuốc &amp; quản lý toa thuốc</h3>
+<ul>
+<li>Bác sĩ kê toa trực tuyến sau khi khám</li>
+<li>Bệnh nhân có thể tra cứu lại đơn thuốc trong hồ sơ</li>
+<li>Lưu trữ và cập nhật lịch sử điều trị</li>
+</ul>
+<h3 id="-5-đặt-và-quản-lý-lịch-xét-nghiệm">🧪 5. Đặt và quản lý lịch xét nghiệm</h3>
+<ul>
+<li>Đăng ký loại xét nghiệm (máu, X-quang, MRI, v.v.)</li>
+<li>Theo dõi kết quả xét nghiệm và bác sĩ phụ trách</li>
+<li>Nhận thông báo tự động khi có kết quả</li>
+</ul>
+<h3 id="-6-hệ-thống-thông-báo--báo-cáo">🔔 6. Hệ thống thông báo &amp; báo cáo</h3>
+<ul>
+<li>Gửi email và thông báo real-time (SignalR)</li>
+<li>Thống kê lịch hẹn, doanh thu, số lượt khám</li>
+<li>Báo cáo theo ngày / tuần / tháng</li>
+</ul>
+<hr>
+
+    </div>
+
+    <div class="mt-10 flex flex-col gap-4">
+
+  
+  
+
+  
+  
+
+</div>
+  </article>
+</section>
+
+    </main><footer class="container p-6 mx-auto flex justify-between items-center">
+  <span class="text-sm font-light">
+    
+    2025 © Blog Lập Trình Mạng
+    
+  </span>
+  <span onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-1 cursor-pointer">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5"
+      stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M18 15l-6 -6l-6 6h12" />
+    </svg>
+  </span>
+</footer>
+
+<div class="search-ui absolute top-0 left-0 w-full h-full bg-white dark:bg-gray-800 hidden">
+  <div class="container max-w-3xl mx-auto p-12">
+    <div class="relative">
+      <div class="my-4 text-center text-2xl font-bold">Search</div>
+
+      <span class="p-2 absolute right-0 top-0 cursor-pointer close-search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </span>
+    </div>
+
+    <input type="search" class="py-2 px-3 w-full dark:text-black border dark:border-transparent"
+      placeholder="Enter search query" />
+
+    <div class="search-results text-lg font-medium my-4 hidden">Results</div>
+    <ul class="search-list my-2">
+
+    </ul>
+
+    <div class="no-results text-center my-8 hidden">
+      <div class="text-xl font-semibold mb-2">No results found</div>
+      <p class="font-light text-sm">Try adjusting your search query</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script src="http://localhost:1313/js/scripts.min.js"></script>
+
+
+
+
+
+
+
+<script>
+  
+  const darkmode = document.querySelector('.toggle-dark-mode');
+  function toggleDarkMode() {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('darkmode', 'light')
+    } else {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('darkmode', 'dark')
+    }
+  }
+  if (darkmode) {
+    darkmode.addEventListener('click', toggleDarkMode);
+  }
+
+  const darkStorage = localStorage.getItem('darkmode');
+  const isBrowserDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if (!darkStorage && isBrowserDark) {
+    document.documentElement.classList.add('dark');
+  }
+
+  if (darkStorage && darkStorage === 'dark') {
+    toggleDarkMode();
+  }
+</script>
+
+
+<script>
+  const mobileMenuButton = document.querySelector('.mobile-menu-button')
+  const mobileMenu = document.querySelector('.mobile-menu')
+  function toggleMenu() {
+    mobileMenu.classList.toggle('hidden');
+    mobileMenu.classList.toggle('flex');
+  }
+  if(mobileMenu && mobileMenuButton){
+    mobileMenuButton.addEventListener('click', toggleMenu)
+  }
+</script>
+</body>
+</html>

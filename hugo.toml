@@ -1,6 +1,6 @@
 baseURL = "https://Acetyl12.github.io/" 
 title   = "Blog Lập Trình Mạng"
-theme   = "PaperMod"
+theme   = "blist"
 languageCode = "vi"
 
 [pagination]
@@ -8,22 +8,11 @@ languageCode = "vi"
 
 
 [params]
-  defaultTheme = "auto"
-  ShowReadingTime = true
-  ShowShareButtons = true
-  ShowPostNavLinks = true
-  ShowBreadCrumbs = true
-  ShowCodeCopyButtons = true
-  disableScrollToTop = false
-  comments = false
-
-  [params.profileMode]
-    enabled = true
-    title = "Xin chào, mình là Phương Dung"
-    subtitle = "Chia sẻ về Lập trình Mạng, Java & JavaScript"
-    imageUrl = "images/avatar.png"      
-    imageWidth = 160
-    imageHeight = 160
+  enableSearch = true              # bật icon & index tìm kiếm
+  darkModeToggle = true          # (tuỳ chọn) bật nút Dark/Light
+  ascentColor = "bg-blue-200"    # (tuỳ chọn) đổi màu nhấn, theo Tailwind
+  # logo = "/images/logo.png"      # (tuỳ chọn) logo thay vì text
+  social = [ {name="github", url="https://github.com/Acetyl12"} ]
 
 [menu]
   [[menu.main]]
@@ -38,6 +27,19 @@ languageCode = "vi"
     name = "About"
     url  = "/about/"
     weight = 3
+  [[menu.main]]
+    name = "Portfolio"
+    url  = "/portfolio/"
+    weight = 4
+  [[menu.main]]
+    name = "Tags"
+    url  = "/tags/"
+    weight = 5
+
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]

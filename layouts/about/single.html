@@ -1,0 +1,75 @@
+{{ define "main" }}
+<article class="container mx-auto p-6">
+  {{ $p := site.Data.profile }}
+
+  <!-- Header 2 cột: Ảnh trái, nội dung phải -->
+  <header class="mb-8 grid md:grid-cols-5 gap-6 items-center">
+    <!-- ẢNH CHỮ NHẬT BÊN TRÁI (không crop, không bo tròn tròn) -->
+    <div class="md:col-span-2">
+      {{/* Ưu tiên hero nếu file tồn tại, không thì dùng avatar */}}
+      {{ $img := "" }}
+      {{ if and $p.hero (fileExists (printf "static%s" $p.hero)) }}
+        {{ $img = $p.hero }}
+      {{ else if and $p.avatar (fileExists (printf "static%s" $p.avatar)) }}
+        {{ $img = $p.avatar }}
+      {{ end }}
+
+      {{ with $img }}
+        <img src="{{ . | relURL }}"
+             alt="{{ $p.name }}"
+             class="w-full h-auto max-w-xl rounded-2xl shadow-md">
+      {{ end }}
+    </div>
+
+    <!-- NỘI DUNG BÊN PHẢI -->
+    <div class="md:col-span-3">
+      <h1 class="text-3xl font-bold">{{ $p.name }}</h1>
+      {{ with $p.headline }}<p class="opacity-80 mt-1">{{ . }}</p>{{ end }}
+      {{ with $p.location }}<p class="text-sm opacity-70 mt-1">{{ . }}</p>{{ end }}
+    </div>
+  </header>
+
+  {{ with $p.bio }}
+  <section class="prose dark:prose-invert max-w-none">
+    <p>{{ . }}</p>
+  </section>
+  {{ end }}
+
+  {{ with $p.skills }}
+  <section class="mt-6">
+    <h2 class="text-xl font-semibold mb-2">Kỹ năng</h2>
+    <div class="flex flex-wrap gap-2">
+      {{ range . }}
+        <span class="px-3 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 text-sm">{{ . }}</span>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  {{ with $p.links }}
+  <section class="mt-6">
+    <h2 class="text-xl font-semibold mb-2">Liên kết</h2>
+    <ul class="flex flex-wrap gap-3">
+      {{ range . }}
+        <li>
+          <a class="px-3 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700"
+             href="{{ .url }}" target="_blank" rel="noopener">{{ .label }}</a>
+        </li>
+      {{ end }}
+    </ul>
+  </section>
+  {{ end }}
+
+  {{ with $p.resume_url }}
+  <section class="mt-6">
+    <a class="inline-block px-4 py-2 rounded-lg bg-black text-white dark:bg-white dark:text-black"
+       href="{{ . | relURL }}" target="_blank" rel="noopener">Tải CV</a>
+  </section>
+  {{ end }}
+
+  <!-- Nội dung Markdown bổ sung trong content/about/index.md -->
+  <section class="prose dark:prose-invert mt-8 max-w-none">
+    {{ .Content }}
+  </section>
+</article>
+{{ end }}

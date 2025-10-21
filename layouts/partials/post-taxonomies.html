@@ -1,0 +1,39 @@
+<div class="mt-10 flex flex-col gap-4">
+
+  {{/* Categories */}}
+  {{ with .Params.categories }}
+  <div class="flex flex-wrap items-center gap-2">
+    <span class="text-sm opacity-70">Categories:</span>
+    {{ range . }}
+      {{ $term := . }}
+      {{ with site.GetPage (printf "/categories/%s" ($term | urlize)) }}
+        <a href="{{ .RelPermalink }}"
+           class="px-3 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition text-sm">
+          {{ $term }}
+        </a>
+      {{ else }}
+        <span class="px-3 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 text-sm">{{ $term }}</span>
+      {{ end }}
+    {{ end }}
+  </div>
+  {{ end }}
+
+  {{/* Tags */}}
+  {{ with .Params.tags }}
+  <div class="flex flex-wrap items-center gap-2">
+    <span class="text-sm opacity-70">Tags:</span>
+    {{ range . }}
+      {{ $term := . }}
+      {{ with site.GetPage (printf "/tags/%s" ($term | urlize)) }}
+        <a href="{{ .RelPermalink }}"
+           class="px-3 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition text-sm">
+          #{{ $term }}
+        </a>
+      {{ else }}
+        <span class="px-3 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 text-sm">#{{ $term }}</span>
+      {{ end }}
+    {{ end }}
+  </div>
+  {{ end }}
+
+</div>

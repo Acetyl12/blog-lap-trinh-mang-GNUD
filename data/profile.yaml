@@ -6,7 +6,6 @@ bio: >
   Java/Node.js, từ TCP/UDP, WebSocket đến HTTP client resilient.
 
 avatar: "/images/avatar.png"   # đặt ảnh tại static/images/avatar.png
-hero: "/images/avatar.png" 
 location: "TP.HCM, Việt Nam"
 email: "phuongdungphan1207@gmail.com"
 

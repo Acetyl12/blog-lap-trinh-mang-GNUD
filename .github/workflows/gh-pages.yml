@@ -47,7 +47,7 @@ jobs:
           hugo-version: "0.151.0"
           extended: true
 
-       - name: Configure Pages
+      - name: Configure Pages
         id: pages
         uses: actions/configure-pages@v5
 

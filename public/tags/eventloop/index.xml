@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>EventLoop on Blog Lập Trình Mạng</title>
+    <link>http://localhost:1313/tags/eventloop/</link>
+    <description>Recent content in EventLoop on Blog Lập Trình Mạng</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <lastBuildDate>Thu, 09 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/eventloop/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JavaScript Event Loop &amp; Network I/O</title>
+      <link>http://localhost:1313/blog/js-event-loop-network-io/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/js-event-loop-network-io/</guid>
+      <description>&lt;p&gt;Event Loop là trái tim của JS runtime. Network I/O diễn ra &lt;strong&gt;bất đồng bộ&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Task Queue&lt;/strong&gt; (macro), &lt;strong&gt;Microtask Queue&lt;/strong&gt; (Promise callbacks).&lt;/li&gt;&#xA;&lt;li&gt;Thực hành: tránh block main thread, dùng &lt;code&gt;async/await&lt;/code&gt; và &lt;code&gt;Promise.allSettled&lt;/code&gt; khi cần.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Debug tip: thêm timestamp và request-id khi log để truy lần.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

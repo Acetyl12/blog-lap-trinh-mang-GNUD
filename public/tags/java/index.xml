@@ -2,59 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Java on Blog Lập Trình Mạng</title>
-    <link>http://localhost:1313/tags/java/</link>
+    <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/java/</link>
     <description>Recent content in Java on Blog Lập Trình Mạng</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate>Sun, 19 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/java/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kiểm thử code mạng Java với JUnit &amp; WireMock</title>
-      <link>http://localhost:1313/blog/kiem-thu-network-java-junit-wiremock/</link>
+      <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/blog/kiem-thu-network-java-junit-wiremock/</link>
       <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/kiem-thu-network-java-junit-wiremock/</guid>
+      <guid>http://localhost:1313/blog-lap-trinh-mang-GNUD/blog/kiem-thu-network-java-junit-wiremock/</guid>
       <description>&lt;p&gt;Mock server HTTP, giả lập tình huống lỗi, timeouts, và viết test đáng tin cậy cho logic mạng.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Từ khoá:&lt;/strong&gt; Java, Testing, WireMock, JUnit.&lt;br&gt;&#xA;Trong bài viết này, mình đi theo hướng &lt;em&gt;thực chiến&lt;/em&gt;: giải thích ngắn gọn, kèm checklist, bẫy thường gặp và ví dụ code để bạn có thể áp dụng ngay vào dự án.&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-vì-sao-cần-mock&#34;&gt;1) Vì sao cần mock?&lt;/h2&gt;&#xA;&lt;p&gt;Trong lập trình mạng, code thường tương tác với server, API, hoặc socket, nên cần kiểm tra kỹ lưỡng. JUnit là framework kiểm thử đơn vị (unit testing) phổ biến trong Java, còn WireMock là công cụ giả lập (mocking) để mô phỏng phản hồi từ server mạng – rất hữu ích khi không muốn phụ thuộc vào server thật. Kiểm thử code mạng &lt;strong&gt;không phụ thuộc&lt;/strong&gt; hệ thống bên ngoài. &lt;code&gt;WireMock&lt;/code&gt; giúp giả lập API với scenario, delay, lỗi…&lt;/p&gt;</description>
     </item>
     <item>
       <title>Java: Lập trình Multicast</title>
-      <link>http://localhost:1313/blog/java-lap-trinh-multicast/</link>
+      <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/blog/java-lap-trinh-multicast/</link>
       <pubDate>Fri, 17 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/java-lap-trinh-multicast/</guid>
+      <guid>http://localhost:1313/blog-lap-trinh-mang-GNUD/blog/java-lap-trinh-multicast/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Hành trình khám phá lập trình Multicast trong Java: Server và Client cơ bản!&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Chào các bạn! Hôm nay mình muốn chia sẻ một trải nghiệm mới mẻ và thú vị: học cách lập trình Multicast trong Java, một phần quan trọng của môn Lập trình Mạng. Khác với TCP thông thường, Multicast cho phép gửi dữ liệu đến nhiều máy cùng lúc, giống như phát sóng radio vậy!&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Bắt đầu với Multicast&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Java cơ bản:  Khám Phá Quản Lý Địa Chỉ Kết Nối Mạng</title>
-      <link>http://localhost:1313/blog/java-quan-ly-ket-noi-mang/</link>
+      <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/blog/java-quan-ly-ket-noi-mang/</link>
       <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/java-quan-ly-ket-noi-mang/</guid>
+      <guid>http://localhost:1313/blog-lap-trinh-mang-GNUD/blog/java-quan-ly-ket-noi-mang/</guid>
       <description>&lt;p&gt;Chào mừng các bạn đến với bài viết đầu tiên trong chuỗi &lt;strong&gt;Java Network&lt;/strong&gt;! Hôm nay, mình sẽ giới thiệu về &lt;strong&gt;quản lý địa chỉ kết nối mạng&lt;/strong&gt;, bao gồm khái niệm về địa chỉ IP, port, subnet, và cách Java xử lý chúng trong lập trình mạng. Đây là nền tảng quan trọng để bạn làm chủ các ứng dụng mạng. Cùng mình khám phá nhé!&lt;/p&gt;&#xA;&lt;h2 id=&#34;quản-lý-địa-chỉ-mạng-là-gì&#34;&gt;Quản lý địa chỉ mạng là gì?&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Quản lý địa chỉ kết nối mạng&lt;/strong&gt; là quá trình định danh và tổ chức các thiết bị trên mạng để chúng có thể giao tiếp với nhau. Trong Java, gói &lt;code&gt;java.net&lt;/code&gt; cung cấp các lớp như &lt;code&gt;InetAddress&lt;/code&gt;, &lt;code&gt;Socket&lt;/code&gt;, và &lt;code&gt;ServerSocket&lt;/code&gt; để giúp quản lý địa chỉ IP và port – những &amp;ldquo;tọa độ&amp;rdquo; quan trọng trong mạng. Đây là bước đầu tiên để xây dựng mô hình Client/Server hoặc ứng dụng phân tán.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Java cơ bản: Giới thiệu Lập trình Mạng &amp; Socket</title>
-      <link>http://localhost:1313/blog/java-co-ban-gioi-thieu-mang-socket/</link>
+      <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/blog/java-co-ban-gioi-thieu-mang-socket/</link>
       <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/java-co-ban-gioi-thieu-mang-socket/</guid>
+      <guid>http://localhost:1313/blog-lap-trinh-mang-GNUD/blog/java-co-ban-gioi-thieu-mang-socket/</guid>
       <description>&lt;p&gt;Chào mừng các bạn đến với bài viết đầu tiên trong chuỗi &lt;strong&gt;Java Network&lt;/strong&gt;! Hôm nay, mình sẽ giới thiệu tổng quan về &lt;strong&gt;TCP/UDP&lt;/strong&gt;, vai trò của &lt;strong&gt;địa chỉ IP/Port&lt;/strong&gt;, và mô hình &lt;strong&gt;Client/Server&lt;/strong&gt; – những nền tảng quan trọng khi lập trình mạng bằng Java. Đây sẽ là bước khởi đầu để bạn làm quen với thế giới kết nối mạng!&lt;/p&gt;&#xA;&lt;h2 id=&#34;socket-là-gì&#34;&gt;Socket là gì?&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Socket&lt;/strong&gt; chính là điểm đầu cuối của một kết nối mạng, nơi dữ liệu được gửi và nhận giữa các thiết bị. Trong Java, gói &lt;code&gt;java.net&lt;/code&gt; cung cấp các lớp quan trọng để xử lý:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Java Socket TCP: Server/Client cơ bản</title>
-      <link>http://localhost:1313/blog/java-socket-tcp-server-client-co-ban/</link>
+      <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/blog/java-socket-tcp-server-client-co-ban/</link>
       <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/java-socket-tcp-server-client-co-ban/</guid>
+      <guid>http://localhost:1313/blog-lap-trinh-mang-GNUD/blog/java-socket-tcp-server-client-co-ban/</guid>
       <description>&lt;p&gt;Hành trình khám phá Java Socket TCP: Tạo Server và Client cơ bản!&#xA;Chào các bạn! Hôm nay mình muốn chia sẻ một trải nghiệm siêu thú vị: học cách làm một Server và Client TCP cơ bản bằng Java. Đây là một phần quan trọng trong môn Lập trình Mạng, và mình đã thử nghiệm với vài dòng code nhỏ để &amp;ldquo;nói chuyện&amp;rdquo; giữa hai máy.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Bắt đầu với Socket TCP: Nghe lạ nhưng dễ hiểu&lt;/strong&gt;&#xA;TCP là giao thức truyền dữ liệu ổn định, đảm bảo thông tin đến đúng chỗ, còn socket là &amp;ldquo;cầu nối&amp;rdquo; giữa máy chủ và máy khách.&#xA;Mình bắt đầu với mấy bước cơ bản:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Java: Lập trình đa tuyến - Multi Thread</title>
-      <link>http://localhost:1313/blog/java-lap-trinh-da-tuyen/</link>
+      <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/blog/java-lap-trinh-da-tuyen/</link>
       <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/java-lap-trinh-da-tuyen/</guid>
+      <guid>http://localhost:1313/blog-lap-trinh-mang-GNUD/blog/java-lap-trinh-da-tuyen/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Hành trình học lập trình đa tuyến trong Java môn Lập trình Mạng&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Chào các bạn! Hôm nay, mình muốn chia sẻ một hành trình mới mà mình vừa trải qua: học về lập trình đa tuyến (multithreading) trong môn Lập trình Mạng bằng Java.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Khởi đầu với đa tuyến&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Đa tuyến là cách Java cho phép chạy nhiều luồng (thread) cùng lúc, giúp xử lý nhiều việc một cách hiệu quả, đặc biệt trong lập trình mạng.&#xA;Mình bắt đầu với mấy khái niệm cơ bản:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Java: Lập trình đa tuyến - Multi Thread</title>
-      <link>http://localhost:1313/blog/java-phan-tan-doi-tuong-rmi/</link>
+      <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/blog/java-phan-tan-doi-tuong-rmi/</link>
       <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/java-phan-tan-doi-tuong-rmi/</guid>
+      <guid>http://localhost:1313/blog-lap-trinh-mang-GNUD/blog/java-phan-tan-doi-tuong-rmi/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Hành trình khám phá phân tán đối tượng trong Java bằng RMI&lt;/strong&gt;&#xA;Chào các bạn! Hôm nay mình muốn chia sẻ một bài học thú vị: học về phân tán đối tượng (object distribution) trong Java bằng RMI (Remote Method Invocation), một phần quan trọng trong môn Lập trình Mạng. Đây là lần đầu mình tiếp cận với cách gọi phương thức từ xa.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;RMI là gì?&lt;/strong&gt;&#xA;RMI là một công nghệ của Java cho phép gọi phương thức từ một đối tượng trên máy này sang máy khác, giống như &amp;ldquo;gửi lời mời&amp;rdquo; qua mạng. Nó dùng để xây dựng ứng dụng phân tán, nơi các máy phối hợp làm việc. Hãy tưởng tượng nó như một đội làm việc từ xa, mỗi người ở một nơi nhưng vẫn &amp;ldquo;hợp sức&amp;rdquo;!&lt;/p&gt;</description>
     </item>
   </channel>

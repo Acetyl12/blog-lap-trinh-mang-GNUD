@@ -3,7 +3,7 @@ headline: "Lập trình Mạng • Java & JavaScript"
 bio: >
   Sinh viên năm 4 chuyên ngành Công nghệ Thông tin tại Trường Đại học Công nghệ Thành phố Hồ Chí Minh (HUTECH)
 
-avatar: "/images/avatar.png"   # đặt ảnh tại static/images/avatar.png
+avatar: "images/avatar.png"   # đặt ảnh tại static/images/avatar.png
 location: "TP.HCM, Việt Nam"
 email: "phuongdungphan1207@gmail.com"
 

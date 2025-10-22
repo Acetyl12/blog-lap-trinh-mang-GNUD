@@ -3,7 +3,7 @@ title: "About"
 type: "about"            # dùng layout: layouts/about/single.html 
 description: "Giới thiệu về Phương Dung – Lập trình Mạng, Java & JavaScript"
 aliases: ["/gioi-thieu"]
-images: ["/static/images/avatar.png"] # (tuỳ chọn) ảnh og:image nếu để cùng thư mục
+images: ["images/avatar.png"] # (tuỳ chọn) ảnh og:image nếu để cùng thư mục
 draft: false
 ---
 
@@ -41,9 +41,9 @@ Hành trình của tôi bắt đầu từ năm nhất đại học, khi tôi l�
 ## Dự án tiêu biểu
 - **Dự án nhóm - Website chia sẻ công thức nấu ăn:** mạng xã hội thu nhỏ dùng để chia sẻ các công thức nấu ăn
 
-  → *Tech:* Elysia, BuntJs, Clerk • [Xem chi tiết](/portfolio/DAMH_CNPM/)  
+  → *Tech:* Elysia, BuntJs, Clerk • [Xem chi tiết]({{< relref "portfolio/damh_cnpm" >}})  
 - **Dự án nhóm - Websiet đặt lịch hẹn khám bệnh:**  
-  → *Tech:* ASP.NetCore MVC, MailKit, Entity • [Xem chi tiết](/portfolio/DACS_Medbooking/)
+  → *Tech:* ASP.NetCore MVC, MailKit, Entity • [Xem chi tiết]({{< relref "portfolio/dacs_medbooking" >}})
 
 ## Chứng chỉ & Thành tựu
 - Hoàn thành chứng chỉ Java Essential 1 & 2. 

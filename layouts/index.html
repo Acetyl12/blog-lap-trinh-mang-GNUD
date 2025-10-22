@@ -6,21 +6,19 @@
 
     {{/* ẢNH BÊN TRÁI: ưu tiên hero nếu file tồn tại, không thì dùng avatar */}}
     <div class="md:col-span-2">
-      {{ $img := "" }}
-      {{ if and $p.hero (fileExists (printf "static%s" $p.hero)) }}
-        {{ $img = $p.hero }}
-      {{ else if $p.avatar }}
-        {{ $img = $p.avatar }}
-      {{ end }}
-      {{ if $img }}
-        {{ $abs := printf "static%s" $img }}
-        {{ $ver := md5 (readFile $abs) }}
-        <img 
-          src="{{ printf "%s?v=%s" ($img | relURL) $ver }}"
-          alt="{{ $p.name }}"
-          class="w-full h-56 md:h-64 object-cover object-top rounded-2xl shadow-md">
+      {{/* Lấy đường dẫn từ data/profile.yml; nếu trống → dùng mặc định */}}
+      {{ $pick := (cond (and $p.hero (ne $p.hero "")) $p.hero $p.avatar) | default "images/avatar.png" }}
 
-      {{ end }}
+      {{/* Chuẩn hoá: bỏ dấu "/" đầu nếu có */}}
+      {{ $path := strings.TrimPrefix "/" $pick }}
+
+      {{/* Đường dẫn tuyệt đối tới file trong thư mục build để kiểm tra tồn tại + tạo version */}}
+      {{ $abs := printf "static/%s" $path }}
+
+      <img
+        src='{{ if fileExists $abs }}{{ (printf "%s?v=%s" $path (md5 (readFile $abs))) | relURL }}{{ else }}{{ $path | relURL }}{{ end }}'
+        alt='{{ $p.name }}'
+        class="w-full h-56 md:h-64 object-cover object-top rounded-2xl shadow-md">
     </div>
 
     {{/* NỘI DUNG BÊN PHẢI */}}
@@ -37,7 +35,7 @@
              href="{{ .url }}" target="_blank" rel="noopener">{{ .label }}</a>
         {{ end }}
         <a class="px-3 py-2 rounded-lg bg-black text-white dark:bg-white dark:text-black"
-           href="{{ "/about/" | relLangURL }}">Xem thêm</a>
+           href="{{ "about/" | relLangURL }}">Xem thêm</a>
       </div>
       {{ end }}
     </div>
@@ -49,7 +47,7 @@
 <section class="container mx-auto p-6">
   <div class="flex items-center justify-between mb-4">
     <h2 class="text-2xl font-semibold">Bài viết mới</h2>
-    <a href="{{ "/blog/" | relLangURL }}" class="opacity-80 hover:opacity-100">Xem tất cả →</a>
+    <a href="{{ "blog/" | relLangURL }}" class="opacity-80 hover:opacity-100">Xem tất cả →</a>
   </div>
 
   {{ $blogPages := first 6 (where .Site.RegularPages.ByDate.Reverse "Section" "blog") }}
@@ -93,7 +91,7 @@
 <section class="container mx-auto p-6">
   <div class="flex items-center justify-between mb-4">
     <h2 class="text-2xl font-semibold">Dự án nổi bật</h2>
-    <a href="{{ "/portfolio/" | relLangURL }}" class="opacity-80 hover:opacity-100">Xem tất cả →</a>
+    <a href="{{ "portfolio/" | relLangURL }}" class="opacity-80 hover:opacity-100">Xem tất cả →</a>
   </div>
 
   {{ $allPortfolio := where .Site.RegularPages "Section" "portfolio" }}

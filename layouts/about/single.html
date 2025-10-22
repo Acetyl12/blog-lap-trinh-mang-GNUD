@@ -6,22 +6,19 @@
   <header class="mb-8 grid md:grid-cols-5 gap-6 items-center">
     <!-- ẢNH CHỮ NHẬT BÊN TRÁI (không crop, không bo tròn tròn) -->
     <div class="md:col-span-2">
-      {{/* Ưu tiên hero nếu file tồn tại, không thì dùng avatar */}}
-      {{ $img := "" }}
-      {{ if and $p.hero (fileExists (printf "static%s" $p.hero)) }}
-        {{ $img = $p.hero }}
-      {{ else if and $p.avatar (fileExists (printf "static%s" $p.avatar)) }}
-        {{ $img = $p.avatar }}
-      {{ end }}
+      {{/* Lấy đường dẫn từ data/profile.yml; nếu trống → dùng mặc định */}}
+      {{ $pick := (cond (and $p.hero (ne $p.hero "")) $p.hero $p.avatar) | default "images/avatar.png" }}
 
-      {{ if $img }}
-        {{ $abs := printf "static%s" $img }}
-        {{ $ver := md5 (readFile $abs) }}
-        <img 
-            src="{{ printf "%s?v=%s" ($img | relURL) $ver }}"
-            alt="{{ $p.name }}"
-            class="w-full h-auto max-w-xl rounded-2xl shadow-md">
-      {{ end }}
+      {{/* Chuẩn hoá: bỏ dấu "/" đầu nếu có */}}
+      {{ $path := strings.TrimPrefix "/" $pick }}
+
+      {{/* Đường dẫn tuyệt đối tới file trong thư mục build để kiểm tra tồn tại + tạo version */}}
+      {{ $abs := printf "static/%s" $path }}
+
+      <img
+        src='{{ if fileExists $abs }}{{ (printf "%s?v=%s" $path (md5 (readFile $abs))) | relURL }}{{ else }}{{ $path | relURL }}{{ end }}'
+        alt='{{ $p.name }}'
+        class="w-full h-56 md:h-64 object-cover object-top rounded-2xl shadow-md">
     </div>
 
     <!-- NỘI DUNG BÊN PHẢI -->

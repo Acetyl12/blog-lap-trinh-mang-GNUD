@@ -1189,9 +1189,6 @@ a.page-link {
 .h-8 {
   height: 2rem;
 }
-.h-auto {
-  height: auto;
-}
 .h-full {
   height: 100%;
 }
@@ -1227,9 +1224,6 @@ a.page-link {
 }
 .max-w-screen-lg {
   max-width: 1024px;
-}
-.max-w-xl {
-  max-width: 36rem;
 }
 .flex-1 {
   flex: 1 1 0%;

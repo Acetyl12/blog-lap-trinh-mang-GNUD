@@ -1,7 +1,7 @@
 {{ $src := .Destination | safeURL }}
 <figure class="my-6">
   <img
-    src="{{ $src }}"
+    src="{{ .Destination | relURL}}"
     alt="{{ .Text | plainify }}"
     loading="lazy"
     class="mx-auto block {{ with .Page.Params.imageClass }}{{ . }}{{ end }}">

@@ -52,20 +52,17 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Compute baseURL
-        # Project Pages: https://<owner>.github.io/<repo>/
-        # User/Org Pages: https://<owner>.github.io/
+        id: base
         run: |
-          if [[ "${GITHUB_REPOSITORY#*/}" == "${GITHUB_REPOSITORY_OWNER}.github.io" ]]; then
-            echo "BASE_URL=https://${GITHUB_REPOSITORY_OWNER}.github.io/" >> $GITHUB_ENV
-          else
-            echo "BASE_URL=https://${GITHUB_REPOSITORY_OWNER}.github.io/${GITHUB_REPOSITORY#*/}/" >> $GITHUB_ENV
-          fi
-          echo "Using BASE_URL=$BASE_URL"
+          OWNER=${{ github.repository_owner }}
+          REPO=${{ github.event.repository.name }}
+          echo "BASE_URL=https://${OWNER}.github.io/${REPO}/" >> $GITHUB_OUTPUT
 
-      - name: Build (production purge/minify)
-        env: { HUGO_ENVIRONMENT: production }
+      - name: Build
+        env:
+          BASE_URL: ${{ steps.base.outputs.BASE_URL }}
         run: |
-          hugo --cleanDestinationDir --gc --minify --baseURL "$BASE_URL"
+          hugo --cleanDestinationDir --gc --minify --baseURL "${BASE_URL}"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

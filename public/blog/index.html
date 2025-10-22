@@ -26,8 +26,8 @@
 
   
   <meta itemprop="name" content="Blogs">
-  <meta itemprop="datePublished" content="2025-10-19T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2025-10-19T00:00:00+00:00">
+  <meta itemprop="datePublished" content="2025-10-21T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-10-21T00:00:00+00:00">
 
   
 </head>
@@ -72,14 +72,14 @@
               <li>
                 <a class="block px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800"
                   href="/categories/java/">
-                  Java <span class="opacity-60">(10)</span>
+                  Java <span class="opacity-60">(7)</span>
                 </a>
               </li>
             
               <li>
                 <a class="block px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800"
                   href="/categories/javascript/">
-                  JavaScript <span class="opacity-60">(8)</span>
+                  JavaScript <span class="opacity-60">(2)</span>
                 </a>
               </li>
             
@@ -140,113 +140,671 @@
   summary::-webkit-details-marker { display: none; }
 </style><main class="flex-1">
 
-  <h1 class="container px-6 pt-6 mx-auto text-3xl font-bold">Blogs</h1>
+<section class="container mx-auto p-6">
+  
+  <header class="mb-6">
+    <h1 class="text-3xl font-extrabold">Blogs</h1>
+    
+  </header>
 
   
-  <div class="container p-6 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
-    <div class="p-2">
-<a href="http://localhost:1313/blog/websocket-co-ban-realtime-trinh-duyet-node/">
-  
-  <div class="my-2 text-xl font-semibold">WebSocket cơ bản: realtime trên trình duyệt &amp; Node</div>
-  <div></div>
-</a>
-
-  
-
-</div>
-<div class="p-2">
-<a href="http://localhost:1313/blog/tang-do-ben-mang-retry-backoff-circuit-breaker-java-js/">
-  
-  <div class="my-2 text-xl font-semibold">Tăng độ bền mạng: Retry, Backoff, Circuit Breaker cho Java &amp; JS</div>
-  <div></div>
-</a>
-
-  
-
-</div>
-<div class="p-2">
-<a href="http://localhost:1313/blog/nodejs-tcp-udp-net-dgram-server-hieu-nang/">
-  
-  <div class="my-2 text-xl font-semibold">Node.js TCP/UDP: net &amp; dgram cho server hiệu năng</div>
-  <div></div>
-</a>
-
-  
-
-</div>
-<div class="p-2">
-<a href="http://localhost:1313/blog/kiem-thu-network-java-junit-wiremock/">
-  
-  <div class="my-2 text-xl font-semibold">Kiểm thử code mạng Java với JUnit &amp; WireMock</div>
-  <div></div>
-</a>
-
-  
-
-</div>
-<div class="p-2">
-<a href="http://localhost:1313/blog/javascript-event-loop-async-await-microtask-network-io/">
-  
-  <div class="my-2 text-xl font-semibold">JavaScript Event Loop: hiểu đúng async/await, microtask &amp; network I/O</div>
-  <div></div>
-</a>
-
-  
-
-</div>
-<div class="p-2">
-<a href="http://localhost:1313/blog/java-socket-tcp-co-ban/">
-  
-  <div class="my-2 text-xl font-semibold">Java Socket TCP cơ bản: Client/Server và giao thức thông điệp đơn giản</div>
-  <div></div>
-</a>
-
-  
-
-</div>
-
-  </div><div class="grid place-items-center mb-8">
-  
-    <ul class="pagination pagination-default">
-      <li class="page-item disabled">
-        <a aria-disabled="true" aria-label="First" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;&laquo;</span></a>
-      </li>
-      <li class="page-item disabled">
-        <a aria-disabled="true" aria-label="Previous" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;</span></a>
-      </li>
-      <li class="page-item active">
-        <a aria-current="page" aria-label="Page 1" class="page-link" role="button">1</a>
-      </li>
-      <li class="page-item">
-        <a href="/blog/page/2/" aria-label="Page 2" class="page-link" role="button">2</a>
-      </li>
-      <li class="page-item">
-        <a href="/blog/page/3/" aria-label="Page 3" class="page-link" role="button">3</a>
-      </li>
-      <li class="page-item">
-        <a href="/blog/page/4/" aria-label="Page 4" class="page-link" role="button">4</a>
-      </li>
-      <li class="page-item">
-        <a href="/blog/page/2/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/blog/page/4/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
-      </li>
-    </ul>
-</div>
-<div class="bg-blue-200 dark:bg-gray-900">
-  <div class="container px-4 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
-    <div>
-      <div class="text-2xl font-bold mb-2"></div>
-      <p class="opacity-60"></p>
+  <div class="flex flex-col md:flex-row gap-4 md:items-center md:justify-between mb-6">
+    <div class="flex flex-wrap gap-2">
+      
+      
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+      
+        
+        
+        
+          <a href="/categories/java/"
+             class="px-3 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 text-sm hover:bg-neutral-200 dark:hover:bg-neutral-700">
+            java <span class="opacity-60">(7)</span>
+          </a>
+        
+      
+        
+        
+        
+          <a href="/categories/javascript/"
+             class="px-3 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 text-sm hover:bg-neutral-200 dark:hover:bg-neutral-700">
+            javascript <span class="opacity-60">(2)</span>
+          </a>
+        
+      
+        
+        
+        
+          <a href="/categories/general/"
+             class="px-3 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 text-sm hover:bg-neutral-200 dark:hover:bg-neutral-700">
+            general <span class="opacity-60">(1)</span>
+          </a>
+        
       
     </div>
 
-    <ul class="flex justify-center gap-x-3 flex-wrap gap-y-2">
-      
-    </ul>
+    
+    <div class="relative w-full md:w-80">
+      <input id="blogFilter" type="search"
+             placeholder="Lọc theo tiêu đề, tags, categories…"
+             class="w-full px-4 py-2 rounded-lg border border-neutral-200 dark:border-neutral-700 bg-white/70 dark:bg-neutral-900/70 focus:outline-none focus:ring-2 focus:ring-neutral-400">
+      <svg class="absolute right-3 top-2.5 opacity-60" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+           viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </div>
   </div>
-</div>
+
+  
+  
+  
+  <div id="blogGrid" class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+    
+      
+      <article
+        class="group rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 backdrop-blur hover:shadow-xl hover:-translate-y-0.5 transition"
+        data-search='nhật ký học javascript essential 2 (ned academy): từ mảng/đối tượng đến dom &amp; async ned academy javascript essential essential 2 dom async tips thực chiến javascript'>
+
+        
+        
+          <a href="/blog/nhat-ky-hoc-javascript-essential-2-nedacademy/"><img src="/images/posts/js-essential-2-nedacademy-cover.jpg" alt="Nhật ký học JavaScript Essential 2 (NED Academy): Từ mảng/đối tượng đến DOM &amp; async" class="w-full h-44 object-cover"></a>
+        
+
+        
+        <div class="p-4">
+          <h2 class="text-lg font-semibold leading-snug">
+            <a href="/blog/nhat-ky-hoc-javascript-essential-2-nedacademy/" class="group-hover:underline decoration-2 underline-offset-4">Nhật ký học JavaScript Essential 2 (NED Academy): Từ mảng/đối tượng đến DOM &amp; async</a>
+          </h2>
+          <p class="text-sm opacity-70 mt-1">2025-10-21 • ~2 phút</p>
+
+          
+          
+          <p class="opacity-90 mt-2" style="-webkit-line-clamp:3;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden;">
+            Phần 2: mảng/đối tượng, arrow function &amp; this, DOM/events, và async với fetch + async/await.
+          </p>
+
+          
+          <div class="mt-3 flex flex-wrap gap-2">
+            
+              
+                
+                
+                  <a href="/categories/javascript/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">JavaScript</a>
+                
+              
+            
+            
+              
+                
+                
+                  <a href="/tags/ned-academy/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#NED Academy</a>
+                
+              
+                
+                
+                  <a href="/tags/javascript-essential/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#JavaScript Essential</a>
+                
+              
+                
+                
+                  <a href="/tags/essential-2/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Essential 2</a>
+                
+              
+            
+          </div>
+        </div>
+      </article>
+    
+      
+      <article
+        class="group rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 backdrop-blur hover:shadow-xl hover:-translate-y-0.5 transition"
+        data-search='nhật ký học javascript essential 1 (ned academy): bắt đầu nhẹ nhàng mà chắc ned academy javascript essential essential 1 hành trình học tips thực chiến javascript'>
+
+        
+        
+          <a href="/blog/nhat-ky-hoc-javascript-essential-1-nedacademy/"><img src="/images/posts/js-essential-1-nedacademy-cover.jpg" alt="Nhật ký học JavaScript Essential 1 (NED Academy): Bắt đầu nhẹ nhàng mà chắc" class="w-full h-44 object-cover"></a>
+        
+
+        
+        <div class="p-4">
+          <h2 class="text-lg font-semibold leading-snug">
+            <a href="/blog/nhat-ky-hoc-javascript-essential-1-nedacademy/" class="group-hover:underline decoration-2 underline-offset-4">Nhật ký học JavaScript Essential 1 (NED Academy): Bắt đầu nhẹ nhàng mà chắc</a>
+          </h2>
+          <p class="text-sm opacity-70 mt-1">2025-10-21 • ~4 phút</p>
+
+          
+          
+          <p class="opacity-90 mt-2" style="-webkit-line-clamp:3;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden;">
+            Ghi chép đời thường khi mình học Essential 1: từ biến/kiểu dữ liệu, so sánh, điều kiện, vòng lặp cho tới hàm.
+          </p>
+
+          
+          <div class="mt-3 flex flex-wrap gap-2">
+            
+              
+                
+                
+                  <a href="/categories/javascript/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">JavaScript</a>
+                
+              
+            
+            
+              
+                
+                
+                  <a href="/tags/ned-academy/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#NED Academy</a>
+                
+              
+                
+                
+                  <a href="/tags/javascript-essential/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#JavaScript Essential</a>
+                
+              
+                
+                
+                  <a href="/tags/essential-1/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Essential 1</a>
+                
+              
+            
+          </div>
+        </div>
+      </article>
+    
+      
+      <article
+        class="group rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 backdrop-blur hover:shadow-xl hover:-translate-y-0.5 transition"
+        data-search='kiểm thử code mạng java với junit &amp; wiremock java testing wiremock junit java'>
+
+        
+        
+          <a href="/blog/kiem-thu-network-java-junit-wiremock/"><img src="/images/posts/kiem-thu-network-java-junit-wiremock.png" alt="Kiểm thử code mạng Java với JUnit &amp; WireMock" class="w-full h-44 object-cover"></a>
+        
+
+        
+        <div class="p-4">
+          <h2 class="text-lg font-semibold leading-snug">
+            <a href="/blog/kiem-thu-network-java-junit-wiremock/" class="group-hover:underline decoration-2 underline-offset-4">Kiểm thử code mạng Java với JUnit &amp; WireMock</a>
+          </h2>
+          <p class="text-sm opacity-70 mt-1">2025-10-19 • ~3 phút</p>
+
+          
+          
+          <p class="opacity-90 mt-2" style="-webkit-line-clamp:3;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden;">
+            Mock server HTTP, giả lập tình huống lỗi, timeouts, và viết test đáng tin cậy cho logic mạng.
+Từ khoá: Java, Testing, WireMock, JUnit.
+Trong bài viết này, mình đi theo hướng thực chiến: giải thích ngắn gọn, kèm checklist, bẫy thường gặp và ví dụ code để bạn có thể áp dụng ngay vào dự án.
+1) Vì sao cần mock? Trong lập trình mạng, code thường tương tác với server, API, hoặc socket, nên cần kiểm tra kỹ lưỡng. JUnit là framework kiểm thử đơn vị (unit testing) phổ biến trong Java, còn WireMock là công cụ giả lập (mocking) để mô phỏng phản hồi từ server mạng – rất hữu ích khi không muốn phụ thuộc vào server thật. Kiểm thử code mạng không phụ thuộc hệ thống bên ngoài. WireMock giúp giả lập API với scenario, delay, lỗi…
+
+          </p>
+
+          
+          <div class="mt-3 flex flex-wrap gap-2">
+            
+              
+                
+                
+                  <a href="/categories/java/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">Java</a>
+                
+              
+            
+            
+              
+                
+                
+                  <a href="/tags/java/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Java</a>
+                
+              
+                
+                
+                  <a href="/tags/testing/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Testing</a>
+                
+              
+                
+                
+                  <a href="/tags/wiremock/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#WireMock</a>
+                
+              
+            
+          </div>
+        </div>
+      </article>
+    
+      
+      <article
+        class="group rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 backdrop-blur hover:shadow-xl hover:-translate-y-0.5 transition"
+        data-search='java: lập trình multicast java multicast java'>
+
+        
+        
+          <a href="/blog/java-lap-trinh-multicast/"><img src="/images/posts/lap-trinh-multicast.png" alt="Java: Lập trình Multicast" class="w-full h-44 object-cover"></a>
+        
+
+        
+        <div class="p-4">
+          <h2 class="text-lg font-semibold leading-snug">
+            <a href="/blog/java-lap-trinh-multicast/" class="group-hover:underline decoration-2 underline-offset-4">Java: Lập trình Multicast</a>
+          </h2>
+          <p class="text-sm opacity-70 mt-1">2025-10-17 • ~3 phút</p>
+
+          
+          
+          <p class="opacity-90 mt-2" style="-webkit-line-clamp:3;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden;">
+            Hành trình khám phá lập trình Multicast trong Java: Server và Client cơ bản!
+Chào các bạn! Hôm nay mình muốn chia sẻ một trải nghiệm mới mẻ và thú vị: học cách lập trình Multicast trong Java, một phần quan trọng của môn Lập trình Mạng. Khác với TCP thông thường, Multicast cho phép gửi dữ liệu đến nhiều máy cùng lúc, giống như phát sóng radio vậy!
+Bắt đầu với Multicast
+
+          </p>
+
+          
+          <div class="mt-3 flex flex-wrap gap-2">
+            
+              
+                
+                
+                  <a href="/categories/java/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">Java</a>
+                
+              
+            
+            
+              
+                
+                
+                  <a href="/tags/java/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Java</a>
+                
+              
+                
+                
+                  <a href="/tags/multicast/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Multicast</a>
+                
+              
+            
+          </div>
+        </div>
+      </article>
+    
+      
+      <article
+        class="group rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 backdrop-blur hover:shadow-xl hover:-translate-y-0.5 transition"
+        data-search='network basics cisco networking cisco general'>
+
+        
+        
+          <a href="/blog/network-basics-cisco/"><img src="/images/posts/network-basics-cisco-cover.jpg" alt="Network Basics Cisco" class="w-full h-44 object-cover"></a>
+        
+
+        
+        <div class="p-4">
+          <h2 class="text-lg font-semibold leading-snug">
+            <a href="/blog/network-basics-cisco/" class="group-hover:underline decoration-2 underline-offset-4">Network Basics Cisco</a>
+          </h2>
+          <p class="text-sm opacity-70 mt-1">2025-10-09 • ~5 phút</p>
+
+          
+          
+          <p class="opacity-90 mt-2" style="-webkit-line-clamp:3;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden;">
+            Hành trình học khóa Network Basics của Cisco trên Networking Academy
+Chào các bạn! Hôm nay mình muốn chia sẻ một hành trình dài và thú vị mà mình vừa hoàn thành: khóa học Network Basics của Cisco trên Cisco Networking Academy (hay còn gọi là NetAcad). Nếu bạn đang tìm hiểu về mạng máy tính, đây là khóa học siêu hay dành cho người mới bắt đầu.
+Bắt đầu hành trình: Từ zero đến hero với Network Basics
+
+          </p>
+
+          
+          <div class="mt-3 flex flex-wrap gap-2">
+            
+              
+                
+                
+                  <a href="/categories/general/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">General</a>
+                
+              
+            
+            
+              
+                
+                
+                  <a href="/tags/networking/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Networking</a>
+                
+              
+                
+                
+                  <a href="/tags/cisco/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Cisco</a>
+                
+              
+            
+          </div>
+        </div>
+      </article>
+    
+      
+      <article
+        class="group rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 backdrop-blur hover:shadow-xl hover:-translate-y-0.5 transition"
+        data-search='java: lập trình đa tuyến - multi thread java rmi java'>
+
+        
+        
+          <a href="/blog/java-phan-tan-doi-tuong-rmi/"><img src="/images/posts/java-phan-tan-doi-tuong-rmi.png" alt="Java: Lập trình đa tuyến - Multi Thread" class="w-full h-44 object-cover"></a>
+        
+
+        
+        <div class="p-4">
+          <h2 class="text-lg font-semibold leading-snug">
+            <a href="/blog/java-phan-tan-doi-tuong-rmi/" class="group-hover:underline decoration-2 underline-offset-4">Java: Lập trình đa tuyến - Multi Thread</a>
+          </h2>
+          <p class="text-sm opacity-70 mt-1">2025-10-09 • ~3 phút</p>
+
+          
+          
+          <p class="opacity-90 mt-2" style="-webkit-line-clamp:3;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden;">
+            Hành trình khám phá phân tán đối tượng trong Java bằng RMI Chào các bạn! Hôm nay mình muốn chia sẻ một bài học thú vị: học về phân tán đối tượng (object distribution) trong Java bằng RMI (Remote Method Invocation), một phần quan trọng trong môn Lập trình Mạng. Đây là lần đầu mình tiếp cận với cách gọi phương thức từ xa.
+RMI là gì? RMI là một công nghệ của Java cho phép gọi phương thức từ một đối tượng trên máy này sang máy khác, giống như &ldquo;gửi lời mời&rdquo; qua mạng. Nó dùng để xây dựng ứng dụng phân tán, nơi các máy phối hợp làm việc. Hãy tưởng tượng nó như một đội làm việc từ xa, mỗi người ở một nơi nhưng vẫn &ldquo;hợp sức&rdquo;!
+
+          </p>
+
+          
+          <div class="mt-3 flex flex-wrap gap-2">
+            
+              
+                
+                
+                  <a href="/categories/java/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">Java</a>
+                
+              
+            
+            
+              
+                
+                
+                  <a href="/tags/java/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Java</a>
+                
+              
+                
+                
+                  <a href="/tags/rmi/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#RMI</a>
+                
+              
+            
+          </div>
+        </div>
+      </article>
+    
+      
+      <article
+        class="group rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 backdrop-blur hover:shadow-xl hover:-translate-y-0.5 transition"
+        data-search='java: lập trình đa tuyến - multi thread java thread multi thread java'>
+
+        
+        
+          <a href="/blog/java-lap-trinh-da-tuyen/"><img src="/images/posts/java-lap-trinh-da-tuyen.png" alt="Java: Lập trình đa tuyến - Multi Thread" class="w-full h-44 object-cover"></a>
+        
+
+        
+        <div class="p-4">
+          <h2 class="text-lg font-semibold leading-snug">
+            <a href="/blog/java-lap-trinh-da-tuyen/" class="group-hover:underline decoration-2 underline-offset-4">Java: Lập trình đa tuyến - Multi Thread</a>
+          </h2>
+          <p class="text-sm opacity-70 mt-1">2025-10-09 • ~3 phút</p>
+
+          
+          
+          <p class="opacity-90 mt-2" style="-webkit-line-clamp:3;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden;">
+            Hành trình học lập trình đa tuyến trong Java môn Lập trình Mạng
+Chào các bạn! Hôm nay, mình muốn chia sẻ một hành trình mới mà mình vừa trải qua: học về lập trình đa tuyến (multithreading) trong môn Lập trình Mạng bằng Java.
+Khởi đầu với đa tuyến
+Đa tuyến là cách Java cho phép chạy nhiều luồng (thread) cùng lúc, giúp xử lý nhiều việc một cách hiệu quả, đặc biệt trong lập trình mạng. Mình bắt đầu với mấy khái niệm cơ bản:
+
+          </p>
+
+          
+          <div class="mt-3 flex flex-wrap gap-2">
+            
+              
+                
+                
+                  <a href="/categories/java/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">Java</a>
+                
+              
+            
+            
+              
+                
+                
+                  <a href="/tags/java/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Java</a>
+                
+              
+                
+                
+                  <a href="/tags/thread/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Thread</a>
+                
+              
+                
+                
+                  <a href="/tags/multi-thread/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Multi Thread</a>
+                
+              
+            
+          </div>
+        </div>
+      </article>
+    
+      
+      <article
+        class="group rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 backdrop-blur hover:shadow-xl hover:-translate-y-0.5 transition"
+        data-search='java socket tcp: server/client cơ bản java tcp socket java'>
+
+        
+        
+          <a href="/blog/java-socket-tcp-server-client-co-ban/"><img src="/images/posts/java-tcp-socket-co-ban.png" alt="Java Socket TCP: Server/Client cơ bản" class="w-full h-44 object-cover"></a>
+        
+
+        
+        <div class="p-4">
+          <h2 class="text-lg font-semibold leading-snug">
+            <a href="/blog/java-socket-tcp-server-client-co-ban/" class="group-hover:underline decoration-2 underline-offset-4">Java Socket TCP: Server/Client cơ bản</a>
+          </h2>
+          <p class="text-sm opacity-70 mt-1">2025-10-09 • ~3 phút</p>
+
+          
+          
+          <p class="opacity-90 mt-2" style="-webkit-line-clamp:3;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden;">
+            Hành trình khám phá Java Socket TCP: Tạo Server và Client cơ bản! Chào các bạn! Hôm nay mình muốn chia sẻ một trải nghiệm siêu thú vị: học cách làm một Server và Client TCP cơ bản bằng Java. Đây là một phần quan trọng trong môn Lập trình Mạng, và mình đã thử nghiệm với vài dòng code nhỏ để &ldquo;nói chuyện&rdquo; giữa hai máy.
+Bắt đầu với Socket TCP: Nghe lạ nhưng dễ hiểu TCP là giao thức truyền dữ liệu ổn định, đảm bảo thông tin đến đúng chỗ, còn socket là &ldquo;cầu nối&rdquo; giữa máy chủ và máy khách. Mình bắt đầu với mấy bước cơ bản:
+
+          </p>
+
+          
+          <div class="mt-3 flex flex-wrap gap-2">
+            
+              
+                
+                
+                  <a href="/categories/java/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">Java</a>
+                
+              
+            
+            
+              
+                
+                
+                  <a href="/tags/java/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Java</a>
+                
+              
+                
+                
+                  <a href="/tags/tcp/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#TCP</a>
+                
+              
+                
+                
+                  <a href="/tags/socket/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Socket</a>
+                
+              
+            
+          </div>
+        </div>
+      </article>
+    
+      
+      <article
+        class="group rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 backdrop-blur hover:shadow-xl hover:-translate-y-0.5 transition"
+        data-search='java cơ bản: giới thiệu lập trình mạng &amp; socket java networking socket java'>
+
+        
+        
+          <div class="w-full h-44 bg-gradient-to-br from-neutral-200/70 to-neutral-300/70 dark:from-neutral-800 dark:to-neutral-700"></div>
+        
+
+        
+        <div class="p-4">
+          <h2 class="text-lg font-semibold leading-snug">
+            <a href="/blog/java-co-ban-gioi-thieu-mang-socket/" class="group-hover:underline decoration-2 underline-offset-4">Java cơ bản: Giới thiệu Lập trình Mạng &amp; Socket</a>
+          </h2>
+          <p class="text-sm opacity-70 mt-1">2025-10-09 • ~2 phút</p>
+
+          
+          
+          <p class="opacity-90 mt-2" style="-webkit-line-clamp:3;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden;">
+            Chào mừng các bạn đến với bài viết đầu tiên trong chuỗi Java Network! Hôm nay, mình sẽ giới thiệu tổng quan về TCP/UDP, vai trò của địa chỉ IP/Port, và mô hình Client/Server – những nền tảng quan trọng khi lập trình mạng bằng Java. Đây sẽ là bước khởi đầu để bạn làm quen với thế giới kết nối mạng!
+Socket là gì? Socket chính là điểm đầu cuối của một kết nối mạng, nơi dữ liệu được gửi và nhận giữa các thiết bị. Trong Java, gói java.net cung cấp các lớp quan trọng để xử lý:
+
+          </p>
+
+          
+          <div class="mt-3 flex flex-wrap gap-2">
+            
+              
+                
+                
+                  <a href="/categories/java/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">Java</a>
+                
+              
+            
+            
+              
+                
+                
+                  <a href="/tags/java/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Java</a>
+                
+              
+                
+                
+                  <a href="/tags/networking/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Networking</a>
+                
+              
+                
+                
+                  <a href="/tags/socket/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Socket</a>
+                
+              
+            
+          </div>
+        </div>
+      </article>
+    
+      
+      <article
+        class="group rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 backdrop-blur hover:shadow-xl hover:-translate-y-0.5 transition"
+        data-search='java cơ bản:  khám phá quản lý địa chỉ kết nối mạng java networking address management java'>
+
+        
+        
+          <a href="/blog/java-quan-ly-ket-noi-mang/"><img src="/images/posts/java-quan-ly-ket-noi-mang-cover.svg" alt="Java cơ bản:  Khám Phá Quản Lý Địa Chỉ Kết Nối Mạng" class="w-full h-44 object-cover"></a>
+        
+
+        
+        <div class="p-4">
+          <h2 class="text-lg font-semibold leading-snug">
+            <a href="/blog/java-quan-ly-ket-noi-mang/" class="group-hover:underline decoration-2 underline-offset-4">Java cơ bản:  Khám Phá Quản Lý Địa Chỉ Kết Nối Mạng</a>
+          </h2>
+          <p class="text-sm opacity-70 mt-1">2025-10-09 • ~4 phút</p>
+
+          
+          
+          <p class="opacity-90 mt-2" style="-webkit-line-clamp:3;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden;">
+            Chào mừng các bạn đến với bài viết đầu tiên trong chuỗi Java Network! Hôm nay, mình sẽ giới thiệu về quản lý địa chỉ kết nối mạng, bao gồm khái niệm về địa chỉ IP, port, subnet, và cách Java xử lý chúng trong lập trình mạng. Đây là nền tảng quan trọng để bạn làm chủ các ứng dụng mạng. Cùng mình khám phá nhé!
+Quản lý địa chỉ mạng là gì? Quản lý địa chỉ kết nối mạng là quá trình định danh và tổ chức các thiết bị trên mạng để chúng có thể giao tiếp với nhau. Trong Java, gói java.net cung cấp các lớp như InetAddress, Socket, và ServerSocket để giúp quản lý địa chỉ IP và port – những &ldquo;tọa độ&rdquo; quan trọng trong mạng. Đây là bước đầu tiên để xây dựng mô hình Client/Server hoặc ứng dụng phân tán.
+
+          </p>
+
+          
+          <div class="mt-3 flex flex-wrap gap-2">
+            
+              
+                
+                
+                  <a href="/categories/java/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">Java</a>
+                
+              
+            
+            
+              
+                
+                
+                  <a href="/tags/java/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Java</a>
+                
+              
+                
+                
+                  <a href="/tags/networking/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Networking</a>
+                
+              
+                
+                
+                  <a href="/tags/address-management/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Address Management</a>
+                
+              
+            
+          </div>
+        </div>
+      </article>
+    
+  </div>
+
+  
+  <p id="noResultsBlog" class="hidden text-center opacity-70 mt-6">Không tìm thấy bài phù hợp.</p>
+
+  
+  
+</section>
+
+
+<script>
+(function(){
+  const input = document.getElementById('blogFilter');
+  const grid  = document.getElementById('blogGrid');
+  if(!input || !grid) return;
+  const cards = Array.from(grid.children);
+  const empty = document.getElementById('noResultsBlog');
+
+  function filter(){
+    const q = (input.value || '').toLowerCase().trim();
+    let shown = 0;
+    cards.forEach(card=>{
+      const hay = (card.getAttribute('data-search')||'').toLowerCase();
+      const ok = !q || hay.includes(q);
+      card.style.display = ok ? '' : 'none';
+      if(ok) shown++;
+    });
+    if(empty) empty.classList.toggle('hidden', shown>0);
+  }
+  input.addEventListener('input', filter);
+})();
+</script>
+
 
     </main><footer class="container p-6 mx-auto flex justify-between items-center">
   <span class="text-sm font-light">

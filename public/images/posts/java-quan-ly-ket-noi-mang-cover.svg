@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1600" height="900" viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f2b46"/>
+      <stop offset="100%" stop-color="#091b2c"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#18e0ff"/>
+      <stop offset="100%" stop-color="#7cffcb"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#89a4b9" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
+    <style><![CDATA[
+      .title { font: 700 64px/1.2 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Helvetica, Arial, "Noto Sans", sans-serif; fill: #ffffff; }
+      .subtitle { font: 500 24px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Helvetica, Arial, "Noto Sans", sans-serif; fill: #cde7ff; letter-spacing: 0.3px; }
+      .badge { font: 600 20px/1.4 ui-monospace, SFMono-Regular, Menlo, Monaco, "JetBrains Mono", Consolas, "Liberation Mono", "DejaVu Sans Mono", monospace; fill: #0b2a40; }
+      .small { font: 500 14px/1.4 Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #a8c5dd; }
+    ]]></style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+
+  <g stroke="url(#accent)" stroke-width="2.5" stroke-opacity="0.9">
+    <line x1="1200" y1="180" x2="1400" y2="320" stroke-opacity="0.35"/>
+    <line x1="1080" y1="260" x2="1320" y2="520" stroke-opacity="0.28"/>
+    <line x1="980" y1="180" x2="1220" y2="420" stroke-opacity="0.22"/>
+    <line x1="1000" y1="560" x2="1300" y2="640" stroke-opacity="0.25"/>
+    <line x1="1160" y1="700" x2="1400" y2="520" stroke-opacity="0.30"/>
+    <line x1="1200" y1="360" x2="1500" y2="440" stroke-opacity="0.18"/>
+  </g>
+
+  <g fill="none" stroke="url(#accent)" stroke-width="3">
+    <circle cx="1200" cy="180" r="10"/>
+    <circle cx="1400" cy="320" r="10"/>
+    <circle cx="1080" cy="260" r="9"/>
+    <circle cx="1320" cy="520" r="12"/>
+    <circle cx="980" cy="180" r="8"/>
+    <circle cx="1220" cy="420" r="10"/>
+    <circle cx="1000" cy="560" r="9"/>
+    <circle cx="1300" cy="640" r="11"/>
+    <circle cx="1160" cy="700" r="10"/>
+    <circle cx="1400" cy="520" r="9"/>
+    <circle cx="1500" cy="440" r="8"/>
+  </g>
+
+  <path d="M0,760 C350,700 600,840 900,780 C1200,720 1350,820 1600,760 L1600,900 L0,900 Z"
+        fill="url(#accent)" fill-opacity="0.07"/>
+
+  <g transform="translate(120,190)" filter="url(#shadow)">
+    <rect x="0" y="0" rx="20" ry="20" width="860" height="420" fill="#0b2034" opacity="0.75" stroke="url(#accent)" stroke-opacity="0.35"/>
+    <g transform="translate(40,48)">
+      <text class="title">Networking Address Management</text>
+      <text class="subtitle" y="68">IPAM • IPv4/IPv6 • DHCP • DNS • CIDR • Subnetting</text>
+
+      <g class="small" transform="translate(0,130)">
+        <circle cx="6" cy="6" r="4" fill="url(#accent)"/>
+        <text x="22" y="10">Quản lý dải địa chỉ &amp; phân bổ IP cho dịch vụ/máy chủ</text>
+      </g>
+      <g class="small" transform="translate(0,170)">
+        <circle cx="6" cy="6" r="4" fill="url(#accent)"/>
+        <text x="22" y="10">Chuẩn hoá đặt tên &amp; theo dõi vòng đời địa chỉ</text>
+      </g>
+      <g class="small" transform="translate(0,210)">
+        <circle cx="6" cy="6" r="4" fill="url(#accent)"/>
+        <text x="22" y="10">Kết nối cùng DHCP/DNS để tự động hoá</text>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(1140,60)" filter="url(#shadow)">
+    <rect x="0" y="0" rx="12" ry="12" width="360" height="160" fill="#0b2034" opacity="0.7" stroke="url(#accent)" stroke-opacity="0.35"/>
+    <g transform="translate(18,20)">
+      <rect x="0" y="0" rx="8" ry="8" width="150" height="40" fill="url(#accent)"/>
+      <text class="badge" x="14" y="26">10.0.0.0/8</text>
+      <rect x="170" y="0" rx="8" ry="8" width="170" height="40" fill="url(#accent)"/>
+      <text class="badge" x="186" y="26">192.168.0.0/16</text>
+      <rect x="0" y="60" rx="8" ry="8" width="180" height="40" fill="url(#accent)"/>
+      <text class="badge" x="14" y="86">172.16.0.0/12</text>
+      <rect x="190" y="60" rx="8" ry="8" width="150" height="40" fill="url(#accent)"/>
+      <text class="badge" x="204" y="86">fd00::/8</text>
+    </g>
+  </g>
+
+  <text x="120" y="820" class="small" fill="#88a9c7">blog: Lập trình Mạng • tác giả: Phương Dung</text>
+</svg>

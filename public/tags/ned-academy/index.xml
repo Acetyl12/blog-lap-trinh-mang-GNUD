@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NED Academy on Blog Lập Trình Mạng</title>
+    <link>http://localhost:1313/tags/ned-academy/</link>
+    <description>Recent content in NED Academy on Blog Lập Trình Mạng</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <lastBuildDate>Tue, 21 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ned-academy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nhật ký học JavaScript Essential 1 (NED Academy): Bắt đầu nhẹ nhàng mà chắc</title>
+      <link>http://localhost:1313/blog/nhat-ky-hoc-javascript-essential-1-nedacademy/</link>
+      <pubDate>Tue, 21 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/nhat-ky-hoc-javascript-essential-1-nedacademy/</guid>
+      <description>Ghi chép đời thường khi mình học Essential 1: từ biến/kiểu dữ liệu, so sánh, điều kiện, vòng lặp cho tới hàm.</description>
+    </item>
+    <item>
+      <title>Nhật ký học JavaScript Essential 2 (NED Academy): Từ mảng/đối tượng đến DOM &amp; async</title>
+      <link>http://localhost:1313/blog/nhat-ky-hoc-javascript-essential-2-nedacademy/</link>
+      <pubDate>Tue, 21 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/nhat-ky-hoc-javascript-essential-2-nedacademy/</guid>
+      <description>Phần 2: mảng/đối tượng, arrow function &amp;amp; this, DOM/events, và async với fetch + async/await.</description>
+    </item>
+  </channel>
+</rss>

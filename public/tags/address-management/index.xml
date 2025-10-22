@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Address Management on Blog Lập Trình Mạng</title>
+    <link>http://localhost:1313/tags/address-management/</link>
+    <description>Recent content in Address Management on Blog Lập Trình Mạng</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <lastBuildDate>Thu, 09 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/address-management/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java cơ bản:  Khám Phá Quản Lý Địa Chỉ Kết Nối Mạng</title>
+      <link>http://localhost:1313/blog/java-quan-ly-ket-noi-mang/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/java-quan-ly-ket-noi-mang/</guid>
+      <description>&lt;p&gt;Chào mừng các bạn đến với bài viết đầu tiên trong chuỗi &lt;strong&gt;Java Network&lt;/strong&gt;! Hôm nay, mình sẽ giới thiệu về &lt;strong&gt;quản lý địa chỉ kết nối mạng&lt;/strong&gt;, bao gồm khái niệm về địa chỉ IP, port, subnet, và cách Java xử lý chúng trong lập trình mạng. Đây là nền tảng quan trọng để bạn làm chủ các ứng dụng mạng. Cùng mình khám phá nhé!&lt;/p&gt;&#xA;&lt;h2 id=&#34;quản-lý-địa-chỉ-mạng-là-gì&#34;&gt;Quản lý địa chỉ mạng là gì?&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Quản lý địa chỉ kết nối mạng&lt;/strong&gt; là quá trình định danh và tổ chức các thiết bị trên mạng để chúng có thể giao tiếp với nhau. Trong Java, gói &lt;code&gt;java.net&lt;/code&gt; cung cấp các lớp như &lt;code&gt;InetAddress&lt;/code&gt;, &lt;code&gt;Socket&lt;/code&gt;, và &lt;code&gt;ServerSocket&lt;/code&gt; để giúp quản lý địa chỉ IP và port – những &amp;ldquo;tọa độ&amp;rdquo; quan trọng trong mạng. Đây là bước đầu tiên để xây dựng mô hình Client/Server hoặc ứng dụng phân tán.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

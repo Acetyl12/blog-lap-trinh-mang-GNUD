@@ -8,11 +8,9 @@
   <title>
   Java cơ bản: Giới thiệu Lập trình Mạng &amp; Socket - Blog Lập Trình Mạng
   </title>
-  <meta name="description" content="Bài viết mở đầu chuỗi Java Network: tổng quan TCP/UDP, địa chỉ IP/Port, và mô hình Client/Server.
-Socket là điểm đầu cuối của kết nối mạng. Với Java, gói java.net cung cấp Socket, ServerSocket (TCP) và DatagramSocket (UDP).
-Khi nào dùng TCP? Khi cần tin cậy, có thứ tự. Khi nào dùng UDP? Khi cần tốc độ, chấp nhận mất mát (streaming, game).
-
-Mẹo học: phác thảo luồng dữ liệu từ client → server và log mọi trạng thái để dễ debug." /><meta name="generator" content="Hugo 0.151.0">
+  <meta name="description" content="Chào mừng các bạn đến với bài viết đầu tiên trong chuỗi Java Network! Hôm nay, mình sẽ giới thiệu tổng quan về TCP/UDP, vai trò của địa chỉ IP/Port, và mô hình Client/Server – những nền tảng quan trọng khi lập trình mạng bằng Java. Đây sẽ là bước khởi đầu để bạn làm quen với thế giới kết nối mạng!
+Socket là gì?
+Socket chính là điểm đầu cuối của một kết nối mạng, nơi dữ liệu được gửi và nhận giữa các thiết bị. Trong Java, gói java.net cung cấp các lớp quan trọng để xử lý:" /><meta name="generator" content="Hugo 0.151.0">
   <link rel="stylesheet" href="/css/styles.css" />
   
   
@@ -20,10 +18,8 @@ Mẹo học: phác thảo luồng dữ liệu từ client → server và log m�
   <meta property="og:url" content="http://localhost:1313/blog/java-co-ban-gioi-thieu-mang-socket/">
   <meta property="og:site_name" content="Blog Lập Trình Mạng">
   <meta property="og:title" content="Java cơ bản: Giới thiệu Lập trình Mạng & Socket">
-  <meta property="og:description" content="Bài viết mở đầu chuỗi Java Network: tổng quan TCP/UDP, địa chỉ IP/Port, và mô hình Client/Server.
-Socket là điểm đầu cuối của kết nối mạng. Với Java, gói java.net cung cấp Socket, ServerSocket (TCP) và DatagramSocket (UDP).
-Khi nào dùng TCP? Khi cần tin cậy, có thứ tự. Khi nào dùng UDP? Khi cần tốc độ, chấp nhận mất mát (streaming, game).
-Mẹo học: phác thảo luồng dữ liệu từ client → server và log mọi trạng thái để dễ debug.">
+  <meta property="og:description" content="Chào mừng các bạn đến với bài viết đầu tiên trong chuỗi Java Network! Hôm nay, mình sẽ giới thiệu tổng quan về TCP/UDP, vai trò của địa chỉ IP/Port, và mô hình Client/Server – những nền tảng quan trọng khi lập trình mạng bằng Java. Đây sẽ là bước khởi đầu để bạn làm quen với thế giới kết nối mạng!
+Socket là gì? Socket chính là điểm đầu cuối của một kết nối mạng, nơi dữ liệu được gửi và nhận giữa các thiết bị. Trong Java, gói java.net cung cấp các lớp quan trọng để xử lý:">
   <meta property="og:locale" content="vi">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
@@ -36,20 +32,16 @@ Mẹo học: phác thảo luồng dữ liệu từ client → server và log m�
   
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Java cơ bản: Giới thiệu Lập trình Mạng & Socket">
-  <meta name="twitter:description" content="Bài viết mở đầu chuỗi Java Network: tổng quan TCP/UDP, địa chỉ IP/Port, và mô hình Client/Server.
-Socket là điểm đầu cuối của kết nối mạng. Với Java, gói java.net cung cấp Socket, ServerSocket (TCP) và DatagramSocket (UDP).
-Khi nào dùng TCP? Khi cần tin cậy, có thứ tự. Khi nào dùng UDP? Khi cần tốc độ, chấp nhận mất mát (streaming, game).
-Mẹo học: phác thảo luồng dữ liệu từ client → server và log mọi trạng thái để dễ debug.">
+  <meta name="twitter:description" content="Chào mừng các bạn đến với bài viết đầu tiên trong chuỗi Java Network! Hôm nay, mình sẽ giới thiệu tổng quan về TCP/UDP, vai trò của địa chỉ IP/Port, và mô hình Client/Server – những nền tảng quan trọng khi lập trình mạng bằng Java. Đây sẽ là bước khởi đầu để bạn làm quen với thế giới kết nối mạng!
+Socket là gì? Socket chính là điểm đầu cuối của một kết nối mạng, nơi dữ liệu được gửi và nhận giữa các thiết bị. Trong Java, gói java.net cung cấp các lớp quan trọng để xử lý:">
 
   
   <meta itemprop="name" content="Java cơ bản: Giới thiệu Lập trình Mạng & Socket">
-  <meta itemprop="description" content="Bài viết mở đầu chuỗi Java Network: tổng quan TCP/UDP, địa chỉ IP/Port, và mô hình Client/Server.
-Socket là điểm đầu cuối của kết nối mạng. Với Java, gói java.net cung cấp Socket, ServerSocket (TCP) và DatagramSocket (UDP).
-Khi nào dùng TCP? Khi cần tin cậy, có thứ tự. Khi nào dùng UDP? Khi cần tốc độ, chấp nhận mất mát (streaming, game).
-Mẹo học: phác thảo luồng dữ liệu từ client → server và log mọi trạng thái để dễ debug.">
+  <meta itemprop="description" content="Chào mừng các bạn đến với bài viết đầu tiên trong chuỗi Java Network! Hôm nay, mình sẽ giới thiệu tổng quan về TCP/UDP, vai trò của địa chỉ IP/Port, và mô hình Client/Server – những nền tảng quan trọng khi lập trình mạng bằng Java. Đây sẽ là bước khởi đầu để bạn làm quen với thế giới kết nối mạng!
+Socket là gì? Socket chính là điểm đầu cuối của một kết nối mạng, nơi dữ liệu được gửi và nhận giữa các thiết bị. Trong Java, gói java.net cung cấp các lớp quan trọng để xử lý:">
   <meta itemprop="datePublished" content="2025-10-09T00:00:00+00:00">
   <meta itemprop="dateModified" content="2025-10-09T00:00:00+00:00">
-  <meta itemprop="wordCount" content="82">
+  <meta itemprop="wordCount" content="407">
   <meta itemprop="keywords" content="Java,Networking,Socket">
 
   
@@ -95,14 +87,14 @@ Mẹo học: phác thảo luồng dữ liệu từ client → server và log m�
               <li>
                 <a class="block px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800"
                   href="/categories/java/">
-                  Java <span class="opacity-60">(10)</span>
+                  Java <span class="opacity-60">(7)</span>
                 </a>
               </li>
             
               <li>
                 <a class="block px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800"
                   href="/categories/javascript/">
-                  JavaScript <span class="opacity-60">(8)</span>
+                  JavaScript <span class="opacity-60">(2)</span>
                 </a>
               </li>
             
@@ -189,7 +181,7 @@ Mẹo học: phác thảo luồng dữ liệu từ client → server và log m�
         <circle cx="12" cy="12" r="9" />
         <polyline points="12 7 12 12 15 15" />
       </svg>
-      One minute
+      2 minutes
       &nbsp;&bull;
       <svg xmlns="http://www.w3.org/2000/svg" class="mx-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -199,7 +191,7 @@ Mẹo học: phác thảo luồng dữ liệu từ client → server và log m�
         <line x1="12" y1="6" x2="12" y2="19" />
         <line x1="21" y1="6" x2="21" y2="19" />
       </svg>
-      82 words
+      407 words
       
         
       
@@ -208,11 +200,31 @@ Mẹo học: phác thảo luồng dữ liệu từ client → server và log m�
 
     
 
-    <p>Bài viết mở đầu chuỗi Java Network: tổng quan TCP/UDP, địa chỉ IP/Port, và mô hình Client/Server.<br>
-<strong>Socket</strong> là điểm đầu cuối của kết nối mạng. Với Java, gói <code>java.net</code> cung cấp <code>Socket</code>, <code>ServerSocket</code> (TCP) và <code>DatagramSocket</code> (UDP).<br>
-<strong>Khi nào dùng TCP?</strong> Khi cần tin cậy, có thứ tự. <strong>Khi nào dùng UDP?</strong> Khi cần tốc độ, chấp nhận mất mát (streaming, game).</p>
-<blockquote>
-<p>Mẹo học: phác thảo luồng dữ liệu từ client → server và log mọi trạng thái để dễ debug.</p></blockquote>
+    <p>Chào mừng các bạn đến với bài viết đầu tiên trong chuỗi <strong>Java Network</strong>! Hôm nay, mình sẽ giới thiệu tổng quan về <strong>TCP/UDP</strong>, vai trò của <strong>địa chỉ IP/Port</strong>, và mô hình <strong>Client/Server</strong> – những nền tảng quan trọng khi lập trình mạng bằng Java. Đây sẽ là bước khởi đầu để bạn làm quen với thế giới kết nối mạng!</p>
+<h2 id="socket-là-gì">Socket là gì?</h2>
+<p><strong>Socket</strong> chính là điểm đầu cuối của một kết nối mạng, nơi dữ liệu được gửi và nhận giữa các thiết bị. Trong Java, gói <code>java.net</code> cung cấp các lớp quan trọng để xử lý:</p>
+<ul>
+<li><code>Socket</code> và <code>ServerSocket</code>: Dùng cho giao thức <strong>TCP</strong> (Transmission Control Protocol), đảm bảo dữ liệu được truyền đi an toàn, có thứ tự, và không mất mát.</li>
+<li><code>DatagramSocket</code>: Dùng cho giao thức <strong>UDP</strong> (User Datagram Protocol), tập trung vào tốc độ, chấp nhận mất gói tin trong một số trường hợp.</li>
+</ul>
+<h2 id="khi-nào-dùng-tcp-khi-nào-dùng-udp">Khi nào dùng TCP? Khi nào dùng UDP?</h2>
+<ul>
+<li><strong>TCP</strong>: Chọn TCP khi bạn cần độ tin cậy cao, ví dụ như truyền file, email, hoặc ứng dụng yêu cầu dữ liệu đến đúng thứ tự (như chat). Nó giống như gửi thư được kiểm tra kỹ trước khi giao!</li>
+<li><strong>UDP</strong>: Dùng UDP khi tốc độ là ưu tiên hàng đầu và chấp nhận mất mát, như trong streaming video, gaming online, hoặc phát thanh đa điểm (multicast). Nó nhanh như ném bóng, nhưng có thể không đến đích!</li>
+</ul>
+<h2 id="tổng-quan-tcpudp-ipport">Tổng quan TCP/UDP, IP/Port</h2>
+<ul>
+<li><strong>TCP/UDP</strong>: TCP tạo kết nối trước khi gửi dữ liệu (handshake), trong khi UDP gửi ngay lập tức. TCP nặng hơn nhưng an toàn; UDP nhẹ nhưng không đảm bảo.</li>
+<li><strong>Địa chỉ IP</strong>: Là &ldquo;địa chỉ nhà&rdquo; của máy trên mạng (ví dụ: 192.168.1.1), giúp định vị thiết bị.</li>
+<li><strong>Port</strong>: Là &ldquo;cửa sổ&rdquo; cụ thể trên máy (từ 0-65535), ví dụ port 80 cho HTTP, 54321 cho ứng dụng tùy chỉnh.</li>
+<li><strong>Mô hình Client/Server</strong>: Client gửi yêu cầu, Server phản hồi. Socket giúp hai bên &ldquo;nói chuyện&rdquo; qua mạng.</li>
+</ul>
+<h2 id="mẹo-học-lập-trình-mạng">Mẹo học lập trình mạng</h2>
+<ul>
+<li><strong>Phác thảo luồng dữ liệu</strong>: Vẽ sơ đồ từ client → server, ghi rõ từng bước (kết nối, gửi, nhận) để dễ hình dung.</li>
+<li><strong>Log mọi trạng thái</strong>: Dùng System.out.println hoặc log framework (như SLF4J) để theo dõi lỗi, ví dụ in ra khi socket mở/đóng hoặc dữ liệu gửi đi.</li>
+<li><strong>Thực hành</strong>: Thử code đơn giản với Socket và DatagramSocket để hiểu sự khác biệt giữa TCP và UDP.</li>
+</ul>
 <div class="mt-10 flex flex-col gap-4">
 
   

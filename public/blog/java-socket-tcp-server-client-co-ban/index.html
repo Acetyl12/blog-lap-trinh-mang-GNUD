@@ -8,17 +8,11 @@
   <title>
   Java Socket TCP: Server/Client cơ bản - Blog Lập Trình Mạng
   </title>
-  <meta name="description" content="Ví dụ tối giản:
-
-Server: mở ServerSocket, chấp nhận Socket, đọc/ghi qua InputStream/OutputStream.
-Client: tạo Socket(host, port), gửi chuỗi, nhận phản hồi.
-
-Các bước an toàn:
-
-Dùng try-with-resources để đóng tài nguyên.
-Quy ước message protocol (ví dụ: chuỗi JSON kết thúc bằng \n).
-Thử nghiệm bằng telnet/nc để kiểm tra server.
-" /><meta name="generator" content="Hugo 0.151.0">
+  <meta name="description" content="Hành trình khám phá Java Socket TCP: Tạo Server và Client cơ bản!
+Chào các bạn! Hôm nay mình muốn chia sẻ một trải nghiệm siêu thú vị: học cách làm một Server và Client TCP cơ bản bằng Java. Đây là một phần quan trọng trong môn Lập trình Mạng, và mình đã thử nghiệm với vài dòng code nhỏ để &ldquo;nói chuyện&rdquo; giữa hai máy.
+Bắt đầu với Socket TCP: Nghe lạ nhưng dễ hiểu
+TCP là giao thức truyền dữ liệu ổn định, đảm bảo thông tin đến đúng chỗ, còn socket là &ldquo;cầu nối&rdquo; giữa máy chủ và máy khách.
+Mình bắt đầu với mấy bước cơ bản:" /><meta name="generator" content="Hugo 0.151.0">
   <link rel="stylesheet" href="/css/styles.css" />
   
   
@@ -26,9 +20,8 @@ Thử nghiệm bằng telnet/nc để kiểm tra server.
   <meta property="og:url" content="http://localhost:1313/blog/java-socket-tcp-server-client-co-ban/">
   <meta property="og:site_name" content="Blog Lập Trình Mạng">
   <meta property="og:title" content="Java Socket TCP: Server/Client cơ bản">
-  <meta property="og:description" content="Ví dụ tối giản:
-Server: mở ServerSocket, chấp nhận Socket, đọc/ghi qua InputStream/OutputStream. Client: tạo Socket(host, port), gửi chuỗi, nhận phản hồi. Các bước an toàn:
-Dùng try-with-resources để đóng tài nguyên. Quy ước message protocol (ví dụ: chuỗi JSON kết thúc bằng \n). Thử nghiệm bằng telnet/nc để kiểm tra server.">
+  <meta property="og:description" content="Hành trình khám phá Java Socket TCP: Tạo Server và Client cơ bản! Chào các bạn! Hôm nay mình muốn chia sẻ một trải nghiệm siêu thú vị: học cách làm một Server và Client TCP cơ bản bằng Java. Đây là một phần quan trọng trong môn Lập trình Mạng, và mình đã thử nghiệm với vài dòng code nhỏ để “nói chuyện” giữa hai máy.
+Bắt đầu với Socket TCP: Nghe lạ nhưng dễ hiểu TCP là giao thức truyền dữ liệu ổn định, đảm bảo thông tin đến đúng chỗ, còn socket là “cầu nối” giữa máy chủ và máy khách. Mình bắt đầu với mấy bước cơ bản:">
   <meta property="og:locale" content="vi">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
@@ -41,18 +34,16 @@ Dùng try-with-resources để đóng tài nguyên. Quy ước message protocol 
   
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Java Socket TCP: Server/Client cơ bản">
-  <meta name="twitter:description" content="Ví dụ tối giản:
-Server: mở ServerSocket, chấp nhận Socket, đọc/ghi qua InputStream/OutputStream. Client: tạo Socket(host, port), gửi chuỗi, nhận phản hồi. Các bước an toàn:
-Dùng try-with-resources để đóng tài nguyên. Quy ước message protocol (ví dụ: chuỗi JSON kết thúc bằng \n). Thử nghiệm bằng telnet/nc để kiểm tra server.">
+  <meta name="twitter:description" content="Hành trình khám phá Java Socket TCP: Tạo Server và Client cơ bản! Chào các bạn! Hôm nay mình muốn chia sẻ một trải nghiệm siêu thú vị: học cách làm một Server và Client TCP cơ bản bằng Java. Đây là một phần quan trọng trong môn Lập trình Mạng, và mình đã thử nghiệm với vài dòng code nhỏ để “nói chuyện” giữa hai máy.
+Bắt đầu với Socket TCP: Nghe lạ nhưng dễ hiểu TCP là giao thức truyền dữ liệu ổn định, đảm bảo thông tin đến đúng chỗ, còn socket là “cầu nối” giữa máy chủ và máy khách. Mình bắt đầu với mấy bước cơ bản:">
 
   
   <meta itemprop="name" content="Java Socket TCP: Server/Client cơ bản">
-  <meta itemprop="description" content="Ví dụ tối giản:
-Server: mở ServerSocket, chấp nhận Socket, đọc/ghi qua InputStream/OutputStream. Client: tạo Socket(host, port), gửi chuỗi, nhận phản hồi. Các bước an toàn:
-Dùng try-with-resources để đóng tài nguyên. Quy ước message protocol (ví dụ: chuỗi JSON kết thúc bằng \n). Thử nghiệm bằng telnet/nc để kiểm tra server.">
+  <meta itemprop="description" content="Hành trình khám phá Java Socket TCP: Tạo Server và Client cơ bản! Chào các bạn! Hôm nay mình muốn chia sẻ một trải nghiệm siêu thú vị: học cách làm một Server và Client TCP cơ bản bằng Java. Đây là một phần quan trọng trong môn Lập trình Mạng, và mình đã thử nghiệm với vài dòng code nhỏ để “nói chuyện” giữa hai máy.
+Bắt đầu với Socket TCP: Nghe lạ nhưng dễ hiểu TCP là giao thức truyền dữ liệu ổn định, đảm bảo thông tin đến đúng chỗ, còn socket là “cầu nối” giữa máy chủ và máy khách. Mình bắt đầu với mấy bước cơ bản:">
   <meta itemprop="datePublished" content="2025-10-09T00:00:00+00:00">
   <meta itemprop="dateModified" content="2025-10-09T00:00:00+00:00">
-  <meta itemprop="wordCount" content="52">
+  <meta itemprop="wordCount" content="543">
   <meta itemprop="keywords" content="Java,TCP,Socket">
 
   
@@ -98,14 +89,14 @@ Dùng try-with-resources để đóng tài nguyên. Quy ước message protocol 
               <li>
                 <a class="block px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800"
                   href="/categories/java/">
-                  Java <span class="opacity-60">(10)</span>
+                  Java <span class="opacity-60">(7)</span>
                 </a>
               </li>
             
               <li>
                 <a class="block px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800"
                   href="/categories/javascript/">
-                  JavaScript <span class="opacity-60">(8)</span>
+                  JavaScript <span class="opacity-60">(2)</span>
                 </a>
               </li>
             
@@ -192,7 +183,7 @@ Dùng try-with-resources để đóng tài nguyên. Quy ước message protocol 
         <circle cx="12" cy="12" r="9" />
         <polyline points="12 7 12 12 15 15" />
       </svg>
-      One minute
+      3 minutes
       &nbsp;&bull;
       <svg xmlns="http://www.w3.org/2000/svg" class="mx-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -202,7 +193,7 @@ Dùng try-with-resources để đóng tài nguyên. Quy ước message protocol 
         <line x1="12" y1="6" x2="12" y2="19" />
         <line x1="21" y1="6" x2="21" y2="19" />
       </svg>
-      52 words
+      543 words
       
         
       
@@ -211,17 +202,98 @@ Dùng try-with-resources để đóng tài nguyên. Quy ước message protocol 
 
     
 
-    <p>Ví dụ tối giản:</p>
+    <p>Hành trình khám phá Java Socket TCP: Tạo Server và Client cơ bản!
+Chào các bạn! Hôm nay mình muốn chia sẻ một trải nghiệm siêu thú vị: học cách làm một Server và Client TCP cơ bản bằng Java. Đây là một phần quan trọng trong môn Lập trình Mạng, và mình đã thử nghiệm với vài dòng code nhỏ để &ldquo;nói chuyện&rdquo; giữa hai máy.</p>
+<p><strong>Bắt đầu với Socket TCP: Nghe lạ nhưng dễ hiểu</strong>
+TCP là giao thức truyền dữ liệu ổn định, đảm bảo thông tin đến đúng chỗ, còn socket là &ldquo;cầu nối&rdquo; giữa máy chủ và máy khách.
+Mình bắt đầu với mấy bước cơ bản:</p>
 <ul>
-<li><strong>Server</strong>: mở <code>ServerSocket</code>, chấp nhận <code>Socket</code>, đọc/ghi qua <code>InputStream/OutputStream</code>.</li>
-<li><strong>Client</strong>: tạo <code>Socket(host, port)</code>, gửi chuỗi, nhận phản hồi.</li>
+<li>Tạo Server: Dùng ServerSocket để mở cổng chờ kết nối.</li>
+<li>Tạo Client: Dùng Socket để kết nối đến server.</li>
+<li>Gửi nhận dữ liệu: Dùng luồng (InputStream, OutputStream) để truyền tin nhắn.</li>
 </ul>
-<p>Các bước an toàn:</p>
-<ol>
-<li>Dùng <code>try-with-resources</code> để đóng tài nguyên.</li>
-<li>Quy ước <strong>message protocol</strong> (ví dụ: chuỗi JSON kết thúc bằng <code>\n</code>).</li>
-<li>Thử nghiệm bằng <code>telnet</code>/<code>nc</code> để kiểm tra server.</li>
-</ol>
+<p>Bài tập đầu tiên là làm một chương trình gửi tin nhắn từ client đến server.
+Dưới đây là một ví dụ code cơ bản mà mình đã làm. Bạn có thể copy và thử luôn nhé!</p>
+<p>Server.java</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">io</span>.<span style="color:#f92672">*</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">net</span>.<span style="color:#f92672">*</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Server</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String[] <span style="color:#a6e22e">args</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">ServerSocket</span> <span style="color:#a6e22e">serverSocket</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">ServerSocket</span>(<span style="color:#ae81ff">12345</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">System</span>.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Server đang chờ kết nối...&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">Socket</span> <span style="color:#a6e22e">socket</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">serverSocket</span>.<span style="color:#a6e22e">accept</span>();
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">System</span>.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Kết nối từ: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">socket</span>.<span style="color:#a6e22e">getInetAddress</span>());
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">BufferedReader</span> <span style="color:#a6e22e">reader</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">BufferedReader</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">InputStreamReader</span>(<span style="color:#a6e22e">socket</span>.<span style="color:#a6e22e">getInputStream</span>()));
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">PrintWriter</span> <span style="color:#a6e22e">writer</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">PrintWriter</span>(<span style="color:#a6e22e">socket</span>.<span style="color:#a6e22e">getOutputStream</span>(), <span style="color:#66d9ef">true</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            String <span style="color:#a6e22e">message</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">reader</span>.<span style="color:#a6e22e">readLine</span>();
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">System</span>.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Nhận được: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">message</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">writer</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Server: Nhận được tin nhắn của bạn!&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">socket</span>.<span style="color:#a6e22e">close</span>();
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">serverSocket</span>.<span style="color:#a6e22e">close</span>();
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">IOException</span> <span style="color:#a6e22e">e</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">System</span>.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Lỗi: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">getMessage</span>());
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Client.java</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">io</span>.<span style="color:#f92672">*</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">net</span>.<span style="color:#f92672">*</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Client</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String[] <span style="color:#a6e22e">args</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">Socket</span> <span style="color:#a6e22e">socket</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Socket</span>(<span style="color:#e6db74">&#34;localhost&#34;</span>, <span style="color:#ae81ff">12345</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">System</span>.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Kết nối thành công!&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">PrintWriter</span> <span style="color:#a6e22e">writer</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">PrintWriter</span>(<span style="color:#a6e22e">socket</span>.<span style="color:#a6e22e">getOutputStream</span>(), <span style="color:#66d9ef">true</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">BufferedReader</span> <span style="color:#a6e22e">reader</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">BufferedReader</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">InputStreamReader</span>(<span style="color:#a6e22e">socket</span>.<span style="color:#a6e22e">getInputStream</span>()));
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">BufferedReader</span> <span style="color:#a6e22e">console</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">BufferedReader</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">InputStreamReader</span>(<span style="color:#a6e22e">System</span>.<span style="color:#66d9ef">in</span>));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">System</span>.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(<span style="color:#e6db74">&#34;Nhập tin nhắn: &#34;</span>);
+</span></span><span style="display:flex;"><span>            String <span style="color:#a6e22e">message</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">readLine</span>();
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">writer</span>.<span style="color:#a6e22e">println</span>(<span style="color:#a6e22e">message</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            String <span style="color:#a6e22e">response</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">reader</span>.<span style="color:#a6e22e">readLine</span>();
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">System</span>.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Phản hồi: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">response</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">socket</span>.<span style="color:#a6e22e">close</span>();
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">IOException</span> <span style="color:#a6e22e">e</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">System</span>.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Lỗi: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">getMessage</span>());
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Cách chạy:</p>
+<ul>
+<li>Chạy Server.java trước trên một terminal/IDE.</li>
+<li>Chạy Client.java trên terminal/IDE khác.</li>
+<li>Nhập tin nhắn (ví dụ: &ldquo;Chào server!&rdquo;), rồi xem kết quả!</li>
+</ul>
+<p>Không phải lúc nào cũng mượt mà. Mình gặp vài lỗi như:</p>
+<ul>
+<li>Kết nối lỗi: Lúc đầu mình quên mở server trước, dẫn đến client báo lỗi. Phải chạy server trước mới được.</li>
+<li>Dữ liệu không gửi: Có lần quên flush() trong PrintWriter, làm tin nhắn không đến. Thêm dòng true khi tạo PrintWriter là fix ngay.</li>
+<li>Cổng bị chiếm: Mình thử cổng 12345 nhưng bị lỗi, hóa ra có thể bị phần mềm khác dùng rồi. Đổi sang 54321 là xong.</li>
+</ul>
+<p><strong>Cái được sau hành trình</strong>
+Sau khi mày mò, mình thấy mình tiến bộ:</p>
+<ul>
+<li>Hiểu cách TCP đảm bảo dữ liệu truyền đi an toàn.</li>
+<li>Biết dùng socket để tạo kết nối cơ bản.</li>
+<li>Tự tin debug hơn khi gặp lỗi.</li>
+</ul>
+<p>Mình bắt đầu mơ về việc làm một chat nhóm nhỏ hoặc server xử lý nhiều người dùng. Hành trình này mở ra thế giới lập trình mạng cho mình!</p>
+<p><strong>Lời khuyên cho bạn</strong>
+Nếu bạn muốn thử, cứ nhảy vào nhé! Mấy tip của mình:</p>
+<ul>
+<li>Chạy server trước, rồi mới client.</li>
+<li>Thực hành nhiều để quen với luồng dữ liệu.</li>
+</ul>
 <div class="mt-10 flex flex-col gap-4">
 
   

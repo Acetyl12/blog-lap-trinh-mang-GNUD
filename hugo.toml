@@ -36,7 +36,11 @@ languageCode = "vi"
     url  = "/tags/"
     weight = 5
 
-
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+      
 [taxonomies]
   tag = "tags"
   category = "categories"

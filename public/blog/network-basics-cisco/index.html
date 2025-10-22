@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="/favicon.ico">
+
+  <title>
+  Network Basics Cisco - Blog Lập Trình Mạng
+  </title>
+  <meta name="description" content="Hành trình học khóa Network Basics của Cisco trên Networking Academy
+Chào các bạn! Hôm nay mình muốn chia sẻ một hành trình dài và thú vị mà mình vừa hoàn thành: khóa học Network Basics của Cisco trên Cisco Networking Academy (hay còn gọi là NetAcad). Nếu bạn đang tìm hiểu về mạng máy tính, đây là khóa học siêu hay dành cho người mới bắt đầu.
+Bắt đầu hành trình: Từ zero đến hero với Network Basics" /><meta name="generator" content="Hugo 0.151.0">
+  <link rel="stylesheet" href="/css/styles.css" />
+  
+  
+
+  <meta property="og:url" content="http://localhost:1313/blog/network-basics-cisco/">
+  <meta property="og:site_name" content="Blog Lập Trình Mạng">
+  <meta property="og:title" content="Network Basics Cisco">
+  <meta property="og:description" content="Hành trình học khóa Network Basics của Cisco trên Networking Academy
+Chào các bạn! Hôm nay mình muốn chia sẻ một hành trình dài và thú vị mà mình vừa hoàn thành: khóa học Network Basics của Cisco trên Cisco Networking Academy (hay còn gọi là NetAcad). Nếu bạn đang tìm hiểu về mạng máy tính, đây là khóa học siêu hay dành cho người mới bắt đầu.
+Bắt đầu hành trình: Từ zero đến hero với Network Basics">
+  <meta property="og:locale" content="vi">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2025-10-09T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-10-09T00:00:00+00:00">
+    <meta property="article:tag" content="Networking">
+    <meta property="article:tag" content="Cisco">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Network Basics Cisco">
+  <meta name="twitter:description" content="Hành trình học khóa Network Basics của Cisco trên Networking Academy
+Chào các bạn! Hôm nay mình muốn chia sẻ một hành trình dài và thú vị mà mình vừa hoàn thành: khóa học Network Basics của Cisco trên Cisco Networking Academy (hay còn gọi là NetAcad). Nếu bạn đang tìm hiểu về mạng máy tính, đây là khóa học siêu hay dành cho người mới bắt đầu.
+Bắt đầu hành trình: Từ zero đến hero với Network Basics">
+
+  
+  <meta itemprop="name" content="Network Basics Cisco">
+  <meta itemprop="description" content="Hành trình học khóa Network Basics của Cisco trên Networking Academy
+Chào các bạn! Hôm nay mình muốn chia sẻ một hành trình dài và thú vị mà mình vừa hoàn thành: khóa học Network Basics của Cisco trên Cisco Networking Academy (hay còn gọi là NetAcad). Nếu bạn đang tìm hiểu về mạng máy tính, đây là khóa học siêu hay dành cho người mới bắt đầu.
+Bắt đầu hành trình: Từ zero đến hero với Network Basics">
+  <meta itemprop="datePublished" content="2025-10-09T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-10-09T00:00:00+00:00">
+  <meta itemprop="wordCount" content="962">
+  <meta itemprop="keywords" content="Networking,Cisco">
+
+  
+</head>
+<body class="dark:bg-gray-800 dark:text-white relative flex flex-col min-h-screen"><header class="container flex justify-between md:justify-between gap-4 flex-wrap p-6 mx-auto relative">
+  <a href="http://localhost:1313/" class="capitalize font-extrabold text-2xl">
+    
+    Blog Lập Trình Mạng
+    
+  </a>
+  <button class="mobile-menu-button md:hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <line x1="4" y1="8" x2="20" y2="8" />
+      <line x1="4" y1="16" x2="20" y2="16" />
+    </svg>
+  </button>
+  <ul class="mobile-menu absolute z-10 px-6 pb-6 md:p-0 top-full left-0 w-full md:w-auto md:relative hidden md:flex flex-col md:flex-row items-end md:items-center gap-4 lg:gap-6 bg-white dark:bg-gray-800">
+
+    
+    <li><a href="/">Home</a></li>
+    
+    <li><a href="/blog/">Blog</a></li>
+    
+    <li><a href="/about/">About</a></li>
+    
+    <li><a href="/portfolio/">Portfolio</a></li>
+    
+    <li><a href="/tags/">Tags</a></li>
+    
+
+    <li class="relative">
+      <details class="group">
+        <summary class="list-none cursor-pointer px-3 py-2 flex items-center gap-1 hover:opacity-80">
+          Categories <span aria-hidden>▾</span>
+        </summary>
+
+        <div class="absolute mt-2 z-50 bg-white dark:bg-neutral-900 rounded-xl shadow-lg p-2 w-64 border border-neutral-200 dark:border-neutral-800">
+          <ul class="max-h-72 overflow-auto">
+            
+            
+            
+              <li>
+                <a class="block px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                  href="/categories/java/">
+                  Java <span class="opacity-60">(7)</span>
+                </a>
+              </li>
+            
+              <li>
+                <a class="block px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                  href="/categories/javascript/">
+                  JavaScript <span class="opacity-60">(2)</span>
+                </a>
+              </li>
+            
+              <li>
+                <a class="block px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                  href="/categories/general/">
+                  General <span class="opacity-60">(1)</span>
+                </a>
+              </li>
+            
+
+            <li class="mt-1 border-t border-neutral-200 dark:border-neutral-800 pt-2">
+              <a class="block px-3 py-2 text-sm opacity-80 hover:opacity-100" href="/categories/">Xem tất cả →</a>
+            </li>
+          </ul>
+        </div>
+      </details>
+    </li>
+
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="open-search inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="10" cy="10" r="7" />
+          <line x1="21" y1="21" x2="15" y2="15" />
+        </svg>
+      </span>
+    </li>
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="toggle-dark-mode inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="12" cy="12" r="3" />
+          <line x1="12" y1="5" x2="12" y2="5.01" />
+          <line x1="17" y1="7" x2="17" y2="7.01" />
+          <line x1="19" y1="12" x2="19" y2="12.01" />
+          <line x1="17" y1="17" x2="17" y2="17.01" />
+          <line x1="12" y1="19" x2="12" y2="19.01" />
+          <line x1="7" y1="17" x2="7" y2="17.01" />
+          <line x1="5" y1="12" x2="5" y2="12.01" />
+          <line x1="7" y1="7" x2="7" y2="7.01" />
+        </svg>
+      </span>
+    </li>
+    
+  </ul>
+</header>
+
+<style>
+  summary::-webkit-details-marker { display: none; }
+</style><main class="flex-1">
+  
+  
+
+  
+
+  <article class="prose lg:prose-lg mx-auto my-8 dark:prose-dark px-4">
+
+    <h1 class="text-2xl font-bold mb-2">Network Basics Cisco</h1>
+    
+    <h5 class="text-sm flex items-center flex-wrap">
+      <svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <rect x="4" y="5" width="16" height="16" rx="2" />
+        <line x1="16" y1="3" x2="16" y2="7" />
+        <line x1="8" y1="3" x2="8" y2="7" />
+        <line x1="4" y1="11" x2="20" y2="11" />
+        <rect x="8" y="15" width="2" height="2" />
+      </svg>
+      Posted on October 9, 2025
+      
+        &nbsp;&bull;&nbsp;
+      
+      <svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <circle cx="12" cy="12" r="9" />
+        <polyline points="12 7 12 12 15 15" />
+      </svg>
+      5 minutes
+      &nbsp;&bull;
+      <svg xmlns="http://www.w3.org/2000/svg" class="mx-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+        <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+        <line x1="3" y1="6" x2="3" y2="19" />
+        <line x1="12" y1="6" x2="12" y2="19" />
+        <line x1="21" y1="6" x2="21" y2="19" />
+      </svg>
+      962 words
+      
+        
+      
+    </h5>
+    
+
+    
+
+    <p><strong>Hành trình học khóa Network Basics của Cisco trên Networking Academy</strong></p>
+<p>Chào các bạn! Hôm nay mình muốn chia sẻ một hành trình dài và thú vị mà mình vừa hoàn thành: khóa học Network Basics của Cisco trên Cisco Networking Academy (hay còn gọi là NetAcad). Nếu bạn đang tìm hiểu về mạng máy tính, đây là khóa học siêu hay dành cho người mới bắt đầu.</p>
+<p><strong>Bắt đầu hành trình: Từ zero đến hero với Network Basics</strong></p>
+<p>Lúc mới biết đến khóa học này, mình hoàn toàn là &ldquo;tay mơ&rdquo; về mạng. Mình chỉ biết mạng là cái gì đó giúp kết nối internet, nhưng không hiểu sâu hơn. Thầy cô giới thiệu Cisco Networking Academy – một nền tảng miễn phí của Cisco, nơi bạn có thể học online tự do. Khóa Network Basics (hay còn gọi là Networking Essentials ở một số phiên bản) là khóa đầu tiên, dành cho beginner, kéo dài khoảng 22 giờ học (theo tài liệu chính thức, nhưng mình mất gần 1 tháng vì học xen kẽ).
+Khóa học được thiết kế tự học (self-paced), với các module được chia nhỏ, dễ theo dõi. Bạn cần đăng ký tài khoản miễn phí trên netacad.com, rồi bắt đầu. Nội dung chính bao gồm:</p>
+<ul>
+<li>Module 1: Giới thiệu về mạng: Học về lịch sử mạng, cách dữ liệu di chuyển, và các mô hình mạng cơ bản như LAN, WAN.</li>
+<li>Module 2: Thiết bị mạng: Chi tiết về router, switch, hub. Mình học cách phân biệt chúng, ví dụ router kết nối mạng khác nhau, còn switch nối thiết bị trong cùng mạng.</li>
+<li>Module 3: Media và protocol: Nói về cáp mạng (UTP, fiber), và protocol như TCP/IP – cái &ldquo;ngôn ngữ&rdquo; của mạng.</li>
+<li>Module 4: Cấu hình cơ bản: Sử dụng Cisco Packet Tracer (phần mềm mô phỏng miễn phí) để thiết lập mạng đơn giản.</li>
+<li>Module 5: An ninh mạng cơ bản: Giới thiệu về firewall, VPN, và cách bảo vệ mạng.</li>
+</ul>
+<p>Mỗi module có video ngắn, bài đọc, quiz, và lab thực hành. Mình thích nhất là phần lab, vì được sử dụng Packet Tracer – giống như xây dựng mạng ảo trên máy tính. Thời gian đầu, mình dành 1-2 giờ mỗi ngày. Có hôm học đến khuya vì tò mò. Khóa học còn có diễn đàn cộng đồng, nơi mọi người hỏi đáp.</p>
+<p>Không phải mọi thứ đều dễ dàng. Khóa học đòi hỏi bạn phải thực hành, và mình gặp không ít khó khăn:</p>
+<ul>
+<li>Hiểu khái niệm trừu tượng: Phần protocol TCP/IP làm mình rối. Tại sao có OSI model 7 lớp, rồi TCP/IP 4 lớp? Mình phải xem video lặp lại 3-4 lần, rồi vẽ sơ đồ tay mới nắm.</li>
+<li>Lab trên Packet Tracer: Bài tập đầu tiên là kết nối hai PC qua switch. Mình quên gán IP đúng subnet, dẫn đến ping không thông. Debug mất cả tiếng, kiểm tra lệnh ip address và no shutdown.</li>
+<li>Quiz khó nhằn: Có quiz về binary và IP addressing. Mình không quen tính toán binary, nên sai hoài. Phải học thêm cách chuyển IP sang binary, ví dụ 192.168.1.1 là gì ở binary. May mà khóa học có giải thích chi tiết.</li>
+<li>Thời gian và động lực: Vì tự học, có lúc mình lười biếng. Nhưng NetAcad có badge và certificate khi hoàn thành, nên mình cố gắng.</li>
+</ul>
+<p>Những thử thách này giúp mình kiên nhẫn hơn. Mình nhận ra học mạng không chỉ lý thuyết, mà phải &ldquo;làm thật&rdquo; để hiểu. Sau vài tuần, mình bắt đầu thấy tự tin hơn khi nói về subnet mask hay VLAN.
+Dù khó, khóa học có nhiều lúc làm mình hào hứng:</p>
+<ul>
+<li>Xây dựng mạng đầu tiên: Trong module 4, mình thiết lập một mạng nhỏ với router, switch, và 4 PC. Khi ping từ PC1 sang PC4 thành công, dữ liệu chảy qua như thật (nhờ simulation mode).</li>
+<li>Hiểu cách internet hoạt động: Phần protocol, mình học về cách email gửi đi qua mạng. Có video minh họa dữ liệu gói tin (packet) di chuyển – siêu trực quan.&quot;</li>
+<li>Hoàn thành certificate: Mình làm bài thi cuối khóa (70% pass). Điểm 85%, nhận badge digital.</li>
+</ul>
+<p>Phần mình mê nhất là Packet Tracer. Nó miễn phí, dễ dùng, và giúp mình thử nghiệm mà không cần mua thiết bị thật. Mình thậm chí làm thêm lab ngoài khóa, như kết nối wireless.</p>
+<p><strong>Cái được sau khóa học: Từ newbie thành &ldquo;networker&rdquo; cơ bản</strong></p>
+<p>Sau khi hoàn thành Network Basics, mình thấy thay đổi lớn:</p>
+<ul>
+<li>Kiến thức nền tảng: Hiểu rõ mạng là gì, từ hardware đến software. Biết cách troubleshoot cơ bản, như check cable hay IP conflict.</li>
+<li>Kỹ năng thực hành: Thành thạo Packet Tracer, có thể cấu hình router/switch đơn giản (lệnh như vlan 10, ip route).</li>
+<li>Chuẩn bị cho tương lai: Khóa này là bước đệm cho CCNA hoặc CCST Networking. Mình giờ tự tin apply job entry-level IT support.</li>
+<li>Tư duy logic: Học mạng giúp mình nghĩ hệ thống hơn, như cách dữ liệu chảy qua lớp nào trong OSI model.
+Quan trọng nhất, mình không còn sợ &ldquo;mạng hỏng&rdquo; nữa. Giờ nhà wifi chậm, mình biết check router log!</li>
+</ul>
+<p><strong>Lời khuyên cho bạn muốn học</strong></p>
+<p>Nếu bạn đang lăn tăn về khóa Network Basics trên Cisco Networking Academy, mình khuyên cứ đăng ký ngay! Nó miễn phí, linh hoạt, và chất lượng cao. Mấy tip từ mình:</p>
+<ul>
+<li>Học đều đặn: Dành 1 giờ/ngày, đừng cramming. Làm lab ngay sau lý thuyết.</li>
+<li>Thực hành nhiều: Tải Packet Tracer và thử lab thêm. Có hàng tá template online.</li>
+<li>Kết hợp tài liệu: Đọc thêm sách &ldquo;Networking Basics Course Booklet&rdquo; của Cisco Press để củng cố.</li>
+<li>Theo dõi tiến độ: NetAcad có dashboard theo dõi, giúp bạn động lực.</li>
+</ul>
+<div class="mt-10 flex flex-col gap-4">
+
+  
+  
+  <div class="flex flex-wrap items-center gap-2">
+    <span class="text-sm opacity-70">Categories:</span>
+    
+      
+      
+        <a href="/categories/general/"
+           class="px-3 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition text-sm">
+          General
+        </a>
+      
+    
+  </div>
+  
+
+  
+  
+  <div class="flex flex-wrap items-center gap-2">
+    <span class="text-sm opacity-70">Tags:</span>
+    
+      
+      
+        <a href="/tags/networking/"
+           class="px-3 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition text-sm">
+          #Networking
+        </a>
+      
+    
+      
+      
+        <a href="/tags/cisco/"
+           class="px-3 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition text-sm">
+          #Cisco
+        </a>
+      
+    
+  </div>
+  
+
+</div></article><div class="bg-blue-200 dark:bg-gray-900">
+  <div class="container px-4 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+    <div>
+      <div class="text-2xl font-bold mb-2"></div>
+      <p class="opacity-60"></p>
+      
+    </div>
+
+    <ul class="flex justify-center gap-x-3 flex-wrap gap-y-2">
+      
+    </ul>
+  </div>
+</div>
+
+    </main><footer class="container p-6 mx-auto flex justify-between items-center">
+  <span class="text-sm font-light">
+    
+    2025 © Blog Lập Trình Mạng
+    
+  </span>
+  <span onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-1 cursor-pointer">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5"
+      stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M18 15l-6 -6l-6 6h12" />
+    </svg>
+  </span>
+</footer>
+
+<div class="search-ui absolute top-0 left-0 w-full h-full bg-white dark:bg-gray-800 hidden">
+  <div class="container max-w-3xl mx-auto p-12">
+    <div class="relative">
+      <div class="my-4 text-center text-2xl font-bold">Search</div>
+
+      <span class="p-2 absolute right-0 top-0 cursor-pointer close-search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </span>
+    </div>
+
+    <input type="search" class="py-2 px-3 w-full dark:text-black border dark:border-transparent"
+      placeholder="Enter search query" />
+
+    <div class="search-results text-lg font-medium my-4 hidden">Results</div>
+    <ul class="search-list my-2">
+
+    </ul>
+
+    <div class="no-results text-center my-8 hidden">
+      <div class="text-xl font-semibold mb-2">No results found</div>
+      <p class="font-light text-sm">Try adjusting your search query</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script src="http://localhost:1313/js/scripts.min.js"></script>
+
+
+
+
+
+
+
+<script>
+  
+  const darkmode = document.querySelector('.toggle-dark-mode');
+  function toggleDarkMode() {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('darkmode', 'light')
+    } else {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('darkmode', 'dark')
+    }
+  }
+  if (darkmode) {
+    darkmode.addEventListener('click', toggleDarkMode);
+  }
+
+  const darkStorage = localStorage.getItem('darkmode');
+  const isBrowserDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if (!darkStorage && isBrowserDark) {
+    document.documentElement.classList.add('dark');
+  }
+
+  if (darkStorage && darkStorage === 'dark') {
+    toggleDarkMode();
+  }
+</script>
+
+
+<script>
+  const mobileMenuButton = document.querySelector('.mobile-menu-button')
+  const mobileMenu = document.querySelector('.mobile-menu')
+  function toggleMenu() {
+    mobileMenu.classList.toggle('hidden');
+    mobileMenu.classList.toggle('flex');
+  }
+  if(mobileMenu && mobileMenuButton){
+    mobileMenuButton.addEventListener('click', toggleMenu)
+  }
+</script>
+</body>
+</html>

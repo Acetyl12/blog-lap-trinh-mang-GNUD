@@ -72,14 +72,14 @@
               <li>
                 <a class="block px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800"
                   href="/categories/java/">
-                  Java <span class="opacity-60">(10)</span>
+                  Java <span class="opacity-60">(7)</span>
                 </a>
               </li>
             
               <li>
                 <a class="block px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800"
                   href="/categories/javascript/">
-                  JavaScript <span class="opacity-60">(8)</span>
+                  JavaScript <span class="opacity-60">(2)</span>
                 </a>
               </li>
             
@@ -139,67 +139,353 @@
 <style>
   summary::-webkit-details-marker { display: none; }
 </style><main class="flex-1">
-<article class="prose mx-auto">
-  <h1 class="mb-6">Java</h1>
-  <ul class="list-none p-0">
+
+<section class="container mx-auto p-6">
+  <header class="mb-6">
+    <h1 class="text-3xl font-extrabold">#Java</h1>
+    <p class="opacity-80 mt-1">7 bài viết</p>
+  </header>
+
+  
+
+  <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
     
-      <li class="my-3">
-        <a href="/blog/tang-do-ben-mang-retry-backoff-circuit-breaker-java-js/">Tăng độ bền mạng: Retry, Backoff, Circuit Breaker cho Java &amp; JS</a>
-        <span class="opacity-70"> — 2025-10-19</span>
-      </li>
+      
+      <article class="group rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 hover:shadow-xl hover:-translate-y-0.5 transition">
+        
+          <a href="/blog/kiem-thu-network-java-junit-wiremock/"><img src="/images/posts/kiem-thu-network-java-junit-wiremock.png" alt="Kiểm thử code mạng Java với JUnit &amp; WireMock" class="w-full h-44 object-cover"></a>
+        
+
+        <div class="p-4">
+          <h2 class="text-lg font-semibold leading-snug">
+            <a href="/blog/kiem-thu-network-java-junit-wiremock/" class="group-hover:underline decoration-2 underline-offset-4">Kiểm thử code mạng Java với JUnit &amp; WireMock</a>
+          </h2>
+          <p class="text-sm opacity-70 mt-1">2025-10-19 • ~3 phút</p>
+
+          
+          <p class="opacity-90 mt-2 clamp-3">Mock server HTTP, giả lập tình huống lỗi, timeouts, và viết test đáng tin cậy cho logic mạng.
+Từ khoá: Java, Testing, WireMock, JUnit.
+Trong bài viết này, mình đi theo hướng thực chiến: giải thích ngắn gọn, kèm checklist, bẫy thường gặp và ví dụ code để bạn có thể áp dụng ngay vào dự án.
+1) Vì sao cần mock? Trong lập trình mạng, code thường tương tác với server, API, hoặc socket, nên cần kiểm tra kỹ lưỡng. JUnit là framework kiểm thử đơn vị (unit testing) phổ biến trong Java, còn WireMock là công cụ giả lập (mocking) để mô phỏng phản hồi từ server mạng – rất hữu ích khi không muốn phụ thuộc vào server thật. Kiểm thử code mạng không phụ thuộc hệ thống bên ngoài. WireMock giúp giả lập API với scenario, delay, lỗi…
+</p>
+
+          <div class="mt-3 flex flex-wrap gap-2">
+            
+              
+                
+                
+                  <a href="/categories/java/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">Java</a>
+                
+              
+            
+            
+              
+                
+                
+                  <a href="/tags/java/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Java</a>
+                
+              
+                
+                
+                  <a href="/tags/testing/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Testing</a>
+                
+              
+                
+                
+                  <a href="/tags/wiremock/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#WireMock</a>
+                
+              
+            
+          </div>
+        </div>
+      </article>
     
-      <li class="my-3">
-        <a href="/blog/kiem-thu-network-java-junit-wiremock/">Kiểm thử code mạng Java với JUnit &amp; WireMock</a>
-        <span class="opacity-70"> — 2025-10-19</span>
-      </li>
+      
+      <article class="group rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 hover:shadow-xl hover:-translate-y-0.5 transition">
+        
+          <a href="/blog/java-lap-trinh-multicast/"><img src="/images/posts/lap-trinh-multicast.png" alt="Java: Lập trình Multicast" class="w-full h-44 object-cover"></a>
+        
+
+        <div class="p-4">
+          <h2 class="text-lg font-semibold leading-snug">
+            <a href="/blog/java-lap-trinh-multicast/" class="group-hover:underline decoration-2 underline-offset-4">Java: Lập trình Multicast</a>
+          </h2>
+          <p class="text-sm opacity-70 mt-1">2025-10-17 • ~3 phút</p>
+
+          
+          <p class="opacity-90 mt-2 clamp-3">Hành trình khám phá lập trình Multicast trong Java: Server và Client cơ bản!
+Chào các bạn! Hôm nay mình muốn chia sẻ một trải nghiệm mới mẻ và thú vị: học cách lập trình Multicast trong Java, một phần quan trọng của môn Lập trình Mạng. Khác với TCP thông thường, Multicast cho phép gửi dữ liệu đến nhiều máy cùng lúc, giống như phát sóng radio vậy!
+Bắt đầu với Multicast
+</p>
+
+          <div class="mt-3 flex flex-wrap gap-2">
+            
+              
+                
+                
+                  <a href="/categories/java/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">Java</a>
+                
+              
+            
+            
+              
+                
+                
+                  <a href="/tags/java/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Java</a>
+                
+              
+                
+                
+                  <a href="/tags/multicast/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Multicast</a>
+                
+              
+            
+          </div>
+        </div>
+      </article>
     
-      <li class="my-3">
-        <a href="/blog/java-socket-tcp-co-ban/">Java Socket TCP cơ bản: Client/Server và giao thức thông điệp đơn giản</a>
-        <span class="opacity-70"> — 2025-10-19</span>
-      </li>
+      
+      <article class="group rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 hover:shadow-xl hover:-translate-y-0.5 transition">
+        
+          <a href="/blog/java-phan-tan-doi-tuong-rmi/"><img src="/images/posts/java-phan-tan-doi-tuong-rmi.png" alt="Java: Lập trình đa tuyến - Multi Thread" class="w-full h-44 object-cover"></a>
+        
+
+        <div class="p-4">
+          <h2 class="text-lg font-semibold leading-snug">
+            <a href="/blog/java-phan-tan-doi-tuong-rmi/" class="group-hover:underline decoration-2 underline-offset-4">Java: Lập trình đa tuyến - Multi Thread</a>
+          </h2>
+          <p class="text-sm opacity-70 mt-1">2025-10-09 • ~3 phút</p>
+
+          
+          <p class="opacity-90 mt-2 clamp-3">Hành trình khám phá phân tán đối tượng trong Java bằng RMI Chào các bạn! Hôm nay mình muốn chia sẻ một bài học thú vị: học về phân tán đối tượng (object distribution) trong Java bằng RMI (Remote Method Invocation), một phần quan trọng trong môn Lập trình Mạng. Đây là lần đầu mình tiếp cận với cách gọi phương thức từ xa.
+RMI là gì? RMI là một công nghệ của Java cho phép gọi phương thức từ một đối tượng trên máy này sang máy khác, giống như &ldquo;gửi lời mời&rdquo; qua mạng. Nó dùng để xây dựng ứng dụng phân tán, nơi các máy phối hợp làm việc. Hãy tưởng tượng nó như một đội làm việc từ xa, mỗi người ở một nơi nhưng vẫn &ldquo;hợp sức&rdquo;!
+</p>
+
+          <div class="mt-3 flex flex-wrap gap-2">
+            
+              
+                
+                
+                  <a href="/categories/java/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">Java</a>
+                
+              
+            
+            
+              
+                
+                
+                  <a href="/tags/java/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Java</a>
+                
+              
+                
+                
+                  <a href="/tags/rmi/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#RMI</a>
+                
+              
+            
+          </div>
+        </div>
+      </article>
     
-      <li class="my-3">
-        <a href="/blog/java-nio-selector-hang-nghin-ket-noi/">Java NIO &amp; Selector: Xử lý hàng nghìn kết nối trên một thread</a>
-        <span class="opacity-70"> — 2025-10-19</span>
-      </li>
+      
+      <article class="group rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 hover:shadow-xl hover:-translate-y-0.5 transition">
+        
+          <a href="/blog/java-lap-trinh-da-tuyen/"><img src="/images/posts/java-lap-trinh-da-tuyen.png" alt="Java: Lập trình đa tuyến - Multi Thread" class="w-full h-44 object-cover"></a>
+        
+
+        <div class="p-4">
+          <h2 class="text-lg font-semibold leading-snug">
+            <a href="/blog/java-lap-trinh-da-tuyen/" class="group-hover:underline decoration-2 underline-offset-4">Java: Lập trình đa tuyến - Multi Thread</a>
+          </h2>
+          <p class="text-sm opacity-70 mt-1">2025-10-09 • ~3 phút</p>
+
+          
+          <p class="opacity-90 mt-2 clamp-3">Hành trình học lập trình đa tuyến trong Java môn Lập trình Mạng
+Chào các bạn! Hôm nay, mình muốn chia sẻ một hành trình mới mà mình vừa trải qua: học về lập trình đa tuyến (multithreading) trong môn Lập trình Mạng bằng Java.
+Khởi đầu với đa tuyến
+Đa tuyến là cách Java cho phép chạy nhiều luồng (thread) cùng lúc, giúp xử lý nhiều việc một cách hiệu quả, đặc biệt trong lập trình mạng. Mình bắt đầu với mấy khái niệm cơ bản:
+</p>
+
+          <div class="mt-3 flex flex-wrap gap-2">
+            
+              
+                
+                
+                  <a href="/categories/java/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">Java</a>
+                
+              
+            
+            
+              
+                
+                
+                  <a href="/tags/java/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Java</a>
+                
+              
+                
+                
+                  <a href="/tags/thread/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Thread</a>
+                
+              
+                
+                
+                  <a href="/tags/multi-thread/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Multi Thread</a>
+                
+              
+            
+          </div>
+        </div>
+      </article>
     
-      <li class="my-3">
-        <a href="/blog/java-concurrency-ung-dung-mang-threadpool-backpressure-metrics/">Java Concurrency cho ứng dụng mạng: ThreadPool, Backpressure và Metrics</a>
-        <span class="opacity-70"> — 2025-10-19</span>
-      </li>
+      
+      <article class="group rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 hover:shadow-xl hover:-translate-y-0.5 transition">
+        
+          <a href="/blog/java-socket-tcp-server-client-co-ban/"><img src="/images/posts/java-tcp-socket-co-ban.png" alt="Java Socket TCP: Server/Client cơ bản" class="w-full h-44 object-cover"></a>
+        
+
+        <div class="p-4">
+          <h2 class="text-lg font-semibold leading-snug">
+            <a href="/blog/java-socket-tcp-server-client-co-ban/" class="group-hover:underline decoration-2 underline-offset-4">Java Socket TCP: Server/Client cơ bản</a>
+          </h2>
+          <p class="text-sm opacity-70 mt-1">2025-10-09 • ~3 phút</p>
+
+          
+          <p class="opacity-90 mt-2 clamp-3">Hành trình khám phá Java Socket TCP: Tạo Server và Client cơ bản! Chào các bạn! Hôm nay mình muốn chia sẻ một trải nghiệm siêu thú vị: học cách làm một Server và Client TCP cơ bản bằng Java. Đây là một phần quan trọng trong môn Lập trình Mạng, và mình đã thử nghiệm với vài dòng code nhỏ để &ldquo;nói chuyện&rdquo; giữa hai máy.
+Bắt đầu với Socket TCP: Nghe lạ nhưng dễ hiểu TCP là giao thức truyền dữ liệu ổn định, đảm bảo thông tin đến đúng chỗ, còn socket là &ldquo;cầu nối&rdquo; giữa máy chủ và máy khách. Mình bắt đầu với mấy bước cơ bản:
+</p>
+
+          <div class="mt-3 flex flex-wrap gap-2">
+            
+              
+                
+                
+                  <a href="/categories/java/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">Java</a>
+                
+              
+            
+            
+              
+                
+                
+                  <a href="/tags/java/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Java</a>
+                
+              
+                
+                
+                  <a href="/tags/tcp/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#TCP</a>
+                
+              
+                
+                
+                  <a href="/tags/socket/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Socket</a>
+                
+              
+            
+          </div>
+        </div>
+      </article>
     
-      <li class="my-3">
-        <a href="/blog/java-httpclient-11-sync-async-timeout-retry/">Java 11&#43; HttpClient: gọi API sync/async, timeout và retry</a>
-        <span class="opacity-70"> — 2025-10-19</span>
-      </li>
+      
+      <article class="group rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 hover:shadow-xl hover:-translate-y-0.5 transition">
+        
+          <div class="w-full h-44 bg-gradient-to-br from-neutral-200/70 to-neutral-300/70 dark:from-neutral-800 dark:to-neutral-700"></div>
+        
+
+        <div class="p-4">
+          <h2 class="text-lg font-semibold leading-snug">
+            <a href="/blog/java-co-ban-gioi-thieu-mang-socket/" class="group-hover:underline decoration-2 underline-offset-4">Java cơ bản: Giới thiệu Lập trình Mạng &amp; Socket</a>
+          </h2>
+          <p class="text-sm opacity-70 mt-1">2025-10-09 • ~2 phút</p>
+
+          
+          <p class="opacity-90 mt-2 clamp-3">Chào mừng các bạn đến với bài viết đầu tiên trong chuỗi Java Network! Hôm nay, mình sẽ giới thiệu tổng quan về TCP/UDP, vai trò của địa chỉ IP/Port, và mô hình Client/Server – những nền tảng quan trọng khi lập trình mạng bằng Java. Đây sẽ là bước khởi đầu để bạn làm quen với thế giới kết nối mạng!
+Socket là gì? Socket chính là điểm đầu cuối của một kết nối mạng, nơi dữ liệu được gửi và nhận giữa các thiết bị. Trong Java, gói java.net cung cấp các lớp quan trọng để xử lý:
+</p>
+
+          <div class="mt-3 flex flex-wrap gap-2">
+            
+              
+                
+                
+                  <a href="/categories/java/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">Java</a>
+                
+              
+            
+            
+              
+                
+                
+                  <a href="/tags/java/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Java</a>
+                
+              
+                
+                
+                  <a href="/tags/networking/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Networking</a>
+                
+              
+                
+                
+                  <a href="/tags/socket/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Socket</a>
+                
+              
+            
+          </div>
+        </div>
+      </article>
     
-      <li class="my-3">
-        <a href="/blog/java-socket-tcp-server-client-co-ban/">Java Socket TCP: Server/Client cơ bản</a>
-        <span class="opacity-70"> — 2025-10-09</span>
-      </li>
+      
+      <article class="group rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 hover:shadow-xl hover:-translate-y-0.5 transition">
+        
+          <a href="/blog/java-quan-ly-ket-noi-mang/"><img src="/images/posts/java-quan-ly-ket-noi-mang-cover.svg" alt="Java cơ bản:  Khám Phá Quản Lý Địa Chỉ Kết Nối Mạng" class="w-full h-44 object-cover"></a>
+        
+
+        <div class="p-4">
+          <h2 class="text-lg font-semibold leading-snug">
+            <a href="/blog/java-quan-ly-ket-noi-mang/" class="group-hover:underline decoration-2 underline-offset-4">Java cơ bản:  Khám Phá Quản Lý Địa Chỉ Kết Nối Mạng</a>
+          </h2>
+          <p class="text-sm opacity-70 mt-1">2025-10-09 • ~4 phút</p>
+
+          
+          <p class="opacity-90 mt-2 clamp-3">Chào mừng các bạn đến với bài viết đầu tiên trong chuỗi Java Network! Hôm nay, mình sẽ giới thiệu về quản lý địa chỉ kết nối mạng, bao gồm khái niệm về địa chỉ IP, port, subnet, và cách Java xử lý chúng trong lập trình mạng. Đây là nền tảng quan trọng để bạn làm chủ các ứng dụng mạng. Cùng mình khám phá nhé!
+Quản lý địa chỉ mạng là gì? Quản lý địa chỉ kết nối mạng là quá trình định danh và tổ chức các thiết bị trên mạng để chúng có thể giao tiếp với nhau. Trong Java, gói java.net cung cấp các lớp như InetAddress, Socket, và ServerSocket để giúp quản lý địa chỉ IP và port – những &ldquo;tọa độ&rdquo; quan trọng trong mạng. Đây là bước đầu tiên để xây dựng mô hình Client/Server hoặc ứng dụng phân tán.
+</p>
+
+          <div class="mt-3 flex flex-wrap gap-2">
+            
+              
+                
+                
+                  <a href="/categories/java/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">Java</a>
+                
+              
+            
+            
+              
+                
+                
+                  <a href="/tags/java/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Java</a>
+                
+              
+                
+                
+                  <a href="/tags/networking/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Networking</a>
+                
+              
+                
+                
+                  <a href="/tags/address-management/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Address Management</a>
+                
+              
+            
+          </div>
+        </div>
+      </article>
     
-      <li class="my-3">
-        <a href="/blog/java-nio-selector-va-channel/">Java NIO: Selector &amp; Channel cho kết nối đồng thời</a>
-        <span class="opacity-70"> — 2025-10-09</span>
-      </li>
-    
-      <li class="my-3">
-        <a href="/blog/java-co-ban-gioi-thieu-mang-socket/">Java cơ bản: Giới thiệu Lập trình Mạng &amp; Socket</a>
-        <span class="opacity-70"> — 2025-10-09</span>
-      </li>
-    
-      <li class="my-3">
-        <a href="/blog/java-http-client-modern-11-plus/">Java 11&#43;: HttpClient hiện đại (sync/async)</a>
-        <span class="opacity-70"> — 2025-10-09</span>
-      </li>
-    
-      <li class="my-3">
-        <a href="/blog/java-concurrency-cho-ung-dung-mang/">Concurrency trong ứng dụng mạng Java</a>
-        <span class="opacity-70"> — 2025-10-09</span>
-      </li>
-    
-  </ul>
-</article>
+  </div>
+
+  
+</section>
+
 
     </main><footer class="container p-6 mx-auto flex justify-between items-center">
   <span class="text-sm font-light">

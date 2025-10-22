@@ -29,8 +29,8 @@
   
   <meta itemprop="name" content="Blog Lập Trình Mạng">
   <meta itemprop="description" content="title: “Categories” aliases: [&#34;/category&#34;, “/chuyen-muc”] description: “Các chuyên mục chính của blog.”">
-  <meta itemprop="datePublished" content="2025-10-19T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2025-10-19T00:00:00+00:00">
+  <meta itemprop="datePublished" content="2025-10-21T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-10-21T00:00:00+00:00">
   <meta itemprop="wordCount" content="12">
 
   
@@ -76,14 +76,14 @@
               <li>
                 <a class="block px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800"
                   href="/categories/java/">
-                  Java <span class="opacity-60">(10)</span>
+                  Java <span class="opacity-60">(7)</span>
                 </a>
               </li>
             
               <li>
                 <a class="block px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800"
                   href="/categories/javascript/">
-                  JavaScript <span class="opacity-60">(8)</span>
+                  JavaScript <span class="opacity-60">(2)</span>
                 </a>
               </li>
             
@@ -143,27 +143,77 @@
 <style>
   summary::-webkit-details-marker { display: none; }
 </style><main class="flex-1">
-<article class="prose mx-auto">
-  <h1 class="mb-6"></h1>
-  <ul class="list-none p-0">
+
+<section class="container mx-auto p-6">
+  <header class="mb-6">
+    <h1 class="text-3xl font-extrabold">Tags</h1>
     
-      <li class="my-2">
-        <a href="/categories/java/">java</a>
-        <span> (10)</span>
-      </li>
+  </header>
+
+  
+  <div class="relative w-full md:w-96 mb-6">
+    <input id="termFilter" type="search"
+           placeholder="Lọc theo tên tag…"
+           class="w-full px-4 py-2 rounded-lg border border-neutral-200 dark:border-neutral-700 bg-white/70 dark:bg-neutral-900/70 focus:outline-none focus:ring-2 focus:ring-neutral-400">
+    <svg class="absolute right-3 top-2.5 opacity-60" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    </svg>
+  </div>
+
+  
+  <div id="termsGrid" class="grid gap-3 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
     
-      <li class="my-2">
-        <a href="/categories/javascript/">javascript</a>
-        <span> (8)</span>
-      </li>
+      
+      <a href="/categories/java/"
+         class="group px-3 py-2 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 hover:shadow transition"
+         data-term="java">
+        <div class="font-medium group-hover:underline">java</div>
+        <div class="text-sm opacity-70">7 bài</div>
+      </a>
     
-      <li class="my-2">
-        <a href="/categories/general/">general</a>
-        <span> (1)</span>
-      </li>
+      
+      <a href="/categories/javascript/"
+         class="group px-3 py-2 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 hover:shadow transition"
+         data-term="javascript">
+        <div class="font-medium group-hover:underline">javascript</div>
+        <div class="text-sm opacity-70">2 bài</div>
+      </a>
     
-  </ul>
-</article>
+      
+      <a href="/categories/general/"
+         class="group px-3 py-2 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 hover:shadow transition"
+         data-term="general">
+        <div class="font-medium group-hover:underline">general</div>
+        <div class="text-sm opacity-70">1 bài</div>
+      </a>
+    
+  </div>
+
+  <p id="noTerm" class="hidden text-center opacity-70 mt-6">Không tìm thấy tag phù hợp.</p>
+</section>
+
+<script>
+(function(){
+  const input = document.getElementById('termFilter');
+  const grid  = document.getElementById('termsGrid');
+  const empty = document.getElementById('noTerm');
+  if(!input || !grid) return;
+  const cards = Array.from(grid.children);
+  function filter(){
+    const q = (input.value || '').toLowerCase().trim();
+    let shown = 0;
+    cards.forEach(c=>{
+      const ok = !q || (c.getAttribute('data-term')||'').includes(q);
+      c.style.display = ok ? '' : 'none';
+      if(ok) shown++;
+    });
+    if(empty) empty.classList.toggle('hidden', shown>0);
+  }
+  input.addEventListener('input', filter);
+})();
+</script>
+
 
     </main><footer class="container p-6 mx-auto flex justify-between items-center">
   <span class="text-sm font-light">

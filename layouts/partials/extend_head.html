@@ -1,0 +1,23 @@
+<style>
+  /* Lưới chứng chỉ: 1 cột (mobile) → 2 cột (tablet) → 3 cột (desktop) */
+  .cert-grid{
+    display:grid; gap:12px;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  @media (min-width: 640px){ .cert-grid{ grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px){ .cert-grid{ grid-template-columns: repeat(3, 1fr); } }
+
+  .cert-card{
+    display:block; text-decoration:none; color:inherit; text-align:center;
+    border:1px solid rgba(0,0,0,.12); border-radius:16px; padding:10px;
+    background:rgba(255,255,255,.75); transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .dark .cert-card{ border-color:rgba(255,255,255,.15); background:rgba(17,17,17,.75); }
+  .cert-card:hover{ transform:translateY(-2px); box-shadow:0 10px 25px rgba(0,0,0,.12); }
+
+  .cert-thumb{
+    width:100%; aspect-ratio:4/3; object-fit:cover;
+    border-radius:12px; display:block;
+  }
+  .cert-caption{ display:block; margin-top:8px; font-size:.92rem; opacity:.9; }
+</style>

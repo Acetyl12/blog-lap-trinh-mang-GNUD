@@ -1,0 +1,150 @@
+{{ define "main" }}
+
+<section class="container mx-auto p-6">
+  <!-- Header -->
+  <header class="mb-6">
+    <h1 class="text-3xl font-extrabold">{{ or .Title "Blog" }}</h1>
+    {{ with .Params.description }}
+      <p class="mt-2 opacity-80">{{ . }}</p>
+    {{ end }}
+  </header>
+
+  <!-- Dải Categories phổ biến (chỉ tính các bài trong Section "blog") -->
+  <div class="flex flex-col md:flex-row gap-4 md:items-center md:justify-between mb-6">
+    <div class="flex flex-wrap gap-2">
+      {{ $cats := .Site.Taxonomies.categories }}
+      {{ $top := slice }}
+      {{ range $name, $tax := $cats }}
+        {{ $countInBlog := len (where $tax.Pages "Section" "blog") }}
+        {{ if gt $countInBlog 0 }}
+          {{ $top = $top | append (dict "name" $name "count" $countInBlog) }}
+        {{ end }}
+      {{ end }}
+      {{ range first 8 (sort $top "count" "desc") }}
+        {{ $name := .name }}
+        {{ $cnt  := .count }}
+        {{ with $.Site.GetPage (printf "/categories/%s" ($name | urlize)) }}
+          <a href="{{ .RelPermalink }}"
+             class="px-3 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 text-sm hover:bg-neutral-200 dark:hover:bg-neutral-700">
+            {{ $name }} <span class="opacity-60">({{ $cnt }})</span>
+          </a>
+        {{ end }}
+      {{ end }}
+    </div>
+
+    <!-- Ô lọc nhanh client-side -->
+    <div class="relative w-full md:w-80">
+      <input id="blogFilter" type="search"
+             placeholder="Lọc theo tiêu đề, tags, categories…"
+             class="w-full px-4 py-2 rounded-lg border border-neutral-200 dark:border-neutral-700 bg-white/70 dark:bg-neutral-900/70 focus:outline-none focus:ring-2 focus:ring-neutral-400">
+      <svg class="absolute right-3 top-2.5 opacity-60" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+           viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Lưới bài viết -->
+  {{ $pages := .Pages.ByDate.Reverse }}
+  {{ $p := .Paginate $pages }}
+  <div id="blogGrid" class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+    {{ range $p.Pages }}
+      {{ $cover := .Resources.GetMatch "cover*" }}
+      <article
+        class="group rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 backdrop-blur hover:shadow-xl hover:-translate-y-0.5 transition"
+        data-search='{{ (printf "%s %s %s" .Title (delimit (.Params.tags | default (slice)) " ") (delimit (.Params.categories | default (slice)) " ")) | lower }}'>
+
+        <!-- Cover -->
+        {{ if $cover }}
+          <a href="{{ .RelPermalink }}"><img src="{{ $cover.RelPermalink }}" alt="{{ .Title }}" class="w-full h-44 object-cover"></a>
+        {{ else if .Params.cover }}
+          <a href="{{ .RelPermalink }}"><img src="{{ .Params.cover | relURL }}" alt="{{ .Title }}" class="w-full h-44 object-cover"></a>
+        {{ else }}
+          <div class="w-full h-44 bg-gradient-to-br from-neutral-200/70 to-neutral-300/70 dark:from-neutral-800 dark:to-neutral-700"></div>
+        {{ end }}
+
+        <!-- Nội dung -->
+        <div class="p-4">
+          <h2 class="text-lg font-semibold leading-snug">
+            <a href="{{ .RelPermalink }}" class="group-hover:underline decoration-2 underline-offset-4">{{ .Title }}</a>
+          </h2>
+          <p class="text-sm opacity-70 mt-1">{{ .Date.Format "2006-01-02" }} • ~{{ .ReadingTime }} phút</p>
+
+          <!-- Tóm tắt (clamp 3 dòng) -->
+          {{ $sum := cond (ne .Summary "") (.Summary | plainify) (.Plain | truncate 180) }}
+          <p class="opacity-90 mt-2" style="-webkit-line-clamp:3;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden;">
+            {{ $sum }}
+          </p>
+
+          <!-- Chips -->
+          <div class="mt-3 flex flex-wrap gap-2">
+            {{ with .Params.categories }}
+              {{ range first 1 . }}
+                {{ $c := . }}
+                {{ with $.Site.GetPage (printf "/categories/%s" ($c | urlize)) }}
+                  <a href="{{ .RelPermalink }}" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">{{ $c }}</a>
+                {{ end }}
+              {{ end }}
+            {{ end }}
+            {{ with .Params.tags }}
+              {{ range first 3 . }}
+                {{ $t := . }}
+                {{ with $.Site.GetPage (printf "/tags/%s" ($t | urlize)) }}
+                  <a href="{{ .RelPermalink }}" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#{{ $t }}</a>
+                {{ end }}
+              {{ end }}
+            {{ end }}
+          </div>
+        </div>
+      </article>
+    {{ end }}
+  </div>
+
+  <!-- Không có kết quả (khi lọc client-side) -->
+  <p id="noResultsBlog" class="hidden text-center opacity-70 mt-6">Không tìm thấy bài phù hợp.</p>
+
+  <!-- Phân trang -->
+  {{ if gt $p.TotalPages 1 }}
+  <nav class="flex justify-center items-center gap-2 mt-10">
+    {{ with $p.Prev }}
+      <a class="px-3 py-2 rounded border border-neutral-200 dark:border-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-800" href="{{ .URL }}">← Mới hơn</a>
+    {{ end }}
+    {{ range $i, $pg := $p.Pagers }}
+      {{ $n := add $i 1 }}
+      <a href="{{ $pg.URL }}"
+         class="px-3 py-2 rounded border border-neutral-200 dark:border-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-800 {{ if eq $pg $p }}bg-neutral-900 text-white dark:bg-white dark:text-black{{ end }}">
+        {{ $n }}
+      </a>
+    {{ end }}
+    {{ with $p.Next }}
+      <a class="px-3 py-2 rounded border border-neutral-200 dark:border-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-800" href="{{ .URL }}">Cũ hơn →</a>
+    {{ end }}
+  </nav>
+  {{ end }}
+</section>
+
+<!-- Lọc client-side -->
+<script>
+(function(){
+  const input = document.getElementById('blogFilter');
+  const grid  = document.getElementById('blogGrid');
+  if(!input || !grid) return;
+  const cards = Array.from(grid.children);
+  const empty = document.getElementById('noResultsBlog');
+
+  function filter(){
+    const q = (input.value || '').toLowerCase().trim();
+    let shown = 0;
+    cards.forEach(card=>{
+      const hay = (card.getAttribute('data-search')||'').toLowerCase();
+      const ok = !q || hay.includes(q);
+      card.style.display = ok ? '' : 'none';
+      if(ok) shown++;
+    });
+    if(empty) empty.classList.toggle('hidden', shown>0);
+  }
+  input.addEventListener('input', filter);
+})();
+</script>
+
+{{ end }}

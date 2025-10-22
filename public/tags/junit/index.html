@@ -72,14 +72,14 @@
               <li>
                 <a class="block px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800"
                   href="/categories/java/">
-                  Java <span class="opacity-60">(10)</span>
+                  Java <span class="opacity-60">(7)</span>
                 </a>
               </li>
             
               <li>
                 <a class="block px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800"
                   href="/categories/javascript/">
-                  JavaScript <span class="opacity-60">(8)</span>
+                  JavaScript <span class="opacity-60">(2)</span>
                 </a>
               </li>
             
@@ -139,17 +139,72 @@
 <style>
   summary::-webkit-details-marker { display: none; }
 </style><main class="flex-1">
-<article class="prose mx-auto">
-  <h1 class="mb-6">JUnit</h1>
-  <ul class="list-none p-0">
+
+<section class="container mx-auto p-6">
+  <header class="mb-6">
+    <h1 class="text-3xl font-extrabold">#JUnit</h1>
+    <p class="opacity-80 mt-1">1 bài viết</p>
+  </header>
+
+  
+
+  <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
     
-      <li class="my-3">
-        <a href="/blog/kiem-thu-network-java-junit-wiremock/">Kiểm thử code mạng Java với JUnit &amp; WireMock</a>
-        <span class="opacity-70"> — 2025-10-19</span>
-      </li>
+      
+      <article class="group rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 hover:shadow-xl hover:-translate-y-0.5 transition">
+        
+          <a href="/blog/kiem-thu-network-java-junit-wiremock/"><img src="/images/posts/kiem-thu-network-java-junit-wiremock.png" alt="Kiểm thử code mạng Java với JUnit &amp; WireMock" class="w-full h-44 object-cover"></a>
+        
+
+        <div class="p-4">
+          <h2 class="text-lg font-semibold leading-snug">
+            <a href="/blog/kiem-thu-network-java-junit-wiremock/" class="group-hover:underline decoration-2 underline-offset-4">Kiểm thử code mạng Java với JUnit &amp; WireMock</a>
+          </h2>
+          <p class="text-sm opacity-70 mt-1">2025-10-19 • ~3 phút</p>
+
+          
+          <p class="opacity-90 mt-2 clamp-3">Mock server HTTP, giả lập tình huống lỗi, timeouts, và viết test đáng tin cậy cho logic mạng.
+Từ khoá: Java, Testing, WireMock, JUnit.
+Trong bài viết này, mình đi theo hướng thực chiến: giải thích ngắn gọn, kèm checklist, bẫy thường gặp và ví dụ code để bạn có thể áp dụng ngay vào dự án.
+1) Vì sao cần mock? Trong lập trình mạng, code thường tương tác với server, API, hoặc socket, nên cần kiểm tra kỹ lưỡng. JUnit là framework kiểm thử đơn vị (unit testing) phổ biến trong Java, còn WireMock là công cụ giả lập (mocking) để mô phỏng phản hồi từ server mạng – rất hữu ích khi không muốn phụ thuộc vào server thật. Kiểm thử code mạng không phụ thuộc hệ thống bên ngoài. WireMock giúp giả lập API với scenario, delay, lỗi…
+</p>
+
+          <div class="mt-3 flex flex-wrap gap-2">
+            
+              
+                
+                
+                  <a href="/categories/java/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">Java</a>
+                
+              
+            
+            
+              
+                
+                
+                  <a href="/tags/java/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Java</a>
+                
+              
+                
+                
+                  <a href="/tags/testing/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#Testing</a>
+                
+              
+                
+                
+                  <a href="/tags/wiremock/" class="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800">#WireMock</a>
+                
+              
+            
+          </div>
+        </div>
+      </article>
     
-  </ul>
-</article>
+  </div>
+
+  
+</section>
+
 
     </main><footer class="container p-6 mx-auto flex justify-between items-center">
   <span class="text-sm font-light">

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tips on Blog Lập Trình Mạng</title>
+    <link>http://localhost:1313/tags/tips/</link>
+    <description>Recent content in Tips on Blog Lập Trình Mạng</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <lastBuildDate>Tue, 21 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/tips/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hành trình học JavaScript Essential 1 &amp; 2 (NED Academy)</title>
+      <link>http://localhost:1313/blog/hanh-trinh-hoc-javascript-essential-nedacademy/</link>
+      <pubDate>Tue, 21 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/hanh-trinh-hoc-javascript-essential-nedacademy/</guid>
+      <description>Ghi chép lại quá trình mình hoàn thành JavaScript Essential 1 &amp;amp; 2 trên NED Academy: kiến thức cốt lõi, lỗi hay gặp, mini-projects, và cách mình ôn tập để nhớ lâu.</description>
+    </item>
+  </channel>
+</rss>

@@ -29,8 +29,8 @@
   
   <meta itemprop="name" content="Blog Lập Trình Mạng">
   <meta itemprop="description" content="title: “Tags” aliases: [&#34;/tag&#34;, “/the-loai”, “/nhan”] description: “Tất cả thẻ nội dung của blog.”">
-  <meta itemprop="datePublished" content="2025-10-19T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2025-10-19T00:00:00+00:00">
+  <meta itemprop="datePublished" content="2025-10-21T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-10-21T00:00:00+00:00">
   <meta itemprop="wordCount" content="14">
 
   
@@ -76,14 +76,14 @@
               <li>
                 <a class="block px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800"
                   href="/categories/java/">
-                  Java <span class="opacity-60">(10)</span>
+                  Java <span class="opacity-60">(7)</span>
                 </a>
               </li>
             
               <li>
                 <a class="block px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800"
                   href="/categories/javascript/">
-                  JavaScript <span class="opacity-60">(8)</span>
+                  JavaScript <span class="opacity-60">(2)</span>
                 </a>
               </li>
             
@@ -143,127 +143,221 @@
 <style>
   summary::-webkit-details-marker { display: none; }
 </style><main class="flex-1">
-<article class="prose mx-auto">
-  <h1 class="mb-6"></h1>
-  <ul class="list-none p-0">
+
+<section class="container mx-auto p-6">
+  <header class="mb-6">
+    <h1 class="text-3xl font-extrabold">Tags</h1>
     
-      <li class="my-2">
-        <a href="/tags/java/">java</a>
-        <span> (11)</span>
-      </li>
+  </header>
+
+  
+  <div class="relative w-full md:w-96 mb-6">
+    <input id="termFilter" type="search"
+           placeholder="Lọc theo tên tag…"
+           class="w-full px-4 py-2 rounded-lg border border-neutral-200 dark:border-neutral-700 bg-white/70 dark:bg-neutral-900/70 focus:outline-none focus:ring-2 focus:ring-neutral-400">
+    <svg class="absolute right-3 top-2.5 opacity-60" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    </svg>
+  </div>
+
+  
+  <div id="termsGrid" class="grid gap-3 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
     
-      <li class="my-2">
-        <a href="/tags/javascript/">javascript</a>
-        <span> (7)</span>
-      </li>
+      
+      <a href="/tags/java/"
+         class="group px-3 py-2 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 hover:shadow transition"
+         data-term="java">
+        <div class="font-medium group-hover:underline">java</div>
+        <div class="text-sm opacity-70">7 bài</div>
+      </a>
     
-      <li class="my-2">
-        <a href="/tags/concurrency/">concurrency</a>
-        <span> (4)</span>
-      </li>
+      
+      <a href="/tags/networking/"
+         class="group px-3 py-2 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 hover:shadow transition"
+         data-term="networking">
+        <div class="font-medium group-hover:underline">networking</div>
+        <div class="text-sm opacity-70">3 bài</div>
+      </a>
     
-      <li class="my-2">
-        <a href="/tags/http/">http</a>
-        <span> (4)</span>
-      </li>
+      
+      <a href="/tags/javascript-essential/"
+         class="group px-3 py-2 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 hover:shadow transition"
+         data-term="javascript essential">
+        <div class="font-medium group-hover:underline">javascript essential</div>
+        <div class="text-sm opacity-70">2 bài</div>
+      </a>
     
-      <li class="my-2">
-        <a href="/tags/tcp/">tcp</a>
-        <span> (4)</span>
-      </li>
+      
+      <a href="/tags/ned-academy/"
+         class="group px-3 py-2 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 hover:shadow transition"
+         data-term="ned academy">
+        <div class="font-medium group-hover:underline">ned academy</div>
+        <div class="text-sm opacity-70">2 bài</div>
+      </a>
     
-      <li class="my-2">
-        <a href="/tags/socket/">socket</a>
-        <span> (3)</span>
-      </li>
+      
+      <a href="/tags/socket/"
+         class="group px-3 py-2 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 hover:shadow transition"
+         data-term="socket">
+        <div class="font-medium group-hover:underline">socket</div>
+        <div class="text-sm opacity-70">2 bài</div>
+      </a>
     
-      <li class="my-2">
-        <a href="/tags/api/">api</a>
-        <span> (2)</span>
-      </li>
+      
+      <a href="/tags/tips-th%E1%BB%B1c-chi%E1%BA%BFn/"
+         class="group px-3 py-2 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 hover:shadow transition"
+         data-term="tips thực chiến">
+        <div class="font-medium group-hover:underline">tips thực chiến</div>
+        <div class="text-sm opacity-70">2 bài</div>
+      </a>
     
-      <li class="my-2">
-        <a href="/tags/async/">async</a>
-        <span> (2)</span>
-      </li>
+      
+      <a href="/tags/address-management/"
+         class="group px-3 py-2 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 hover:shadow transition"
+         data-term="address management">
+        <div class="font-medium group-hover:underline">address management</div>
+        <div class="text-sm opacity-70">1 bài</div>
+      </a>
     
-      <li class="my-2">
-        <a href="/tags/axios/">axios</a>
-        <span> (2)</span>
-      </li>
+      
+      <a href="/tags/async/"
+         class="group px-3 py-2 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 hover:shadow transition"
+         data-term="async">
+        <div class="font-medium group-hover:underline">async</div>
+        <div class="text-sm opacity-70">1 bài</div>
+      </a>
     
-      <li class="my-2">
-        <a href="/tags/networking/">networking</a>
-        <span> (2)</span>
-      </li>
+      
+      <a href="/tags/cisco/"
+         class="group px-3 py-2 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 hover:shadow transition"
+         data-term="cisco">
+        <div class="font-medium group-hover:underline">cisco</div>
+        <div class="text-sm opacity-70">1 bài</div>
+      </a>
     
-      <li class="my-2">
-        <a href="/tags/nio/">nio</a>
-        <span> (2)</span>
-      </li>
+      
+      <a href="/tags/dom/"
+         class="group px-3 py-2 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 hover:shadow transition"
+         data-term="dom">
+        <div class="font-medium group-hover:underline">dom</div>
+        <div class="text-sm opacity-70">1 bài</div>
+      </a>
     
-      <li class="my-2">
-        <a href="/tags/node.js/">node.js</a>
-        <span> (2)</span>
-      </li>
+      
+      <a href="/tags/essential-1/"
+         class="group px-3 py-2 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 hover:shadow transition"
+         data-term="essential 1">
+        <div class="font-medium group-hover:underline">essential 1</div>
+        <div class="text-sm opacity-70">1 bài</div>
+      </a>
     
-      <li class="my-2">
-        <a href="/tags/realtime/">realtime</a>
-        <span> (2)</span>
-      </li>
+      
+      <a href="/tags/essential-2/"
+         class="group px-3 py-2 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 hover:shadow transition"
+         data-term="essential 2">
+        <div class="font-medium group-hover:underline">essential 2</div>
+        <div class="text-sm opacity-70">1 bài</div>
+      </a>
     
-      <li class="my-2">
-        <a href="/tags/threadpool/">threadpool</a>
-        <span> (2)</span>
-      </li>
+      
+      <a href="/tags/h%C3%A0nh-tr%C3%ACnh-h%E1%BB%8Dc/"
+         class="group px-3 py-2 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 hover:shadow transition"
+         data-term="hành trình học">
+        <div class="font-medium group-hover:underline">hành trình học</div>
+        <div class="text-sm opacity-70">1 bài</div>
+      </a>
     
-      <li class="my-2">
-        <a href="/tags/udp/">udp</a>
-        <span> (2)</span>
-      </li>
+      
+      <a href="/tags/junit/"
+         class="group px-3 py-2 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 hover:shadow transition"
+         data-term="junit">
+        <div class="font-medium group-hover:underline">junit</div>
+        <div class="text-sm opacity-70">1 bài</div>
+      </a>
     
-      <li class="my-2">
-        <a href="/tags/websocket/">websocket</a>
-        <span> (2)</span>
-      </li>
+      
+      <a href="/tags/multi-thread/"
+         class="group px-3 py-2 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 hover:shadow transition"
+         data-term="multi thread">
+        <div class="font-medium group-hover:underline">multi thread</div>
+        <div class="text-sm opacity-70">1 bài</div>
+      </a>
     
-      <li class="my-2">
-        <a href="/tags/event-loop/">event loop</a>
-        <span> (1)</span>
-      </li>
+      
+      <a href="/tags/multicast/"
+         class="group px-3 py-2 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 hover:shadow transition"
+         data-term="multicast">
+        <div class="font-medium group-hover:underline">multicast</div>
+        <div class="text-sm opacity-70">1 bài</div>
+      </a>
     
-      <li class="my-2">
-        <a href="/tags/eventloop/">eventloop</a>
-        <span> (1)</span>
-      </li>
+      
+      <a href="/tags/rmi/"
+         class="group px-3 py-2 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 hover:shadow transition"
+         data-term="rmi">
+        <div class="font-medium group-hover:underline">rmi</div>
+        <div class="text-sm opacity-70">1 bài</div>
+      </a>
     
-      <li class="my-2">
-        <a href="/tags/junit/">junit</a>
-        <span> (1)</span>
-      </li>
+      
+      <a href="/tags/tcp/"
+         class="group px-3 py-2 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 hover:shadow transition"
+         data-term="tcp">
+        <div class="font-medium group-hover:underline">tcp</div>
+        <div class="text-sm opacity-70">1 bài</div>
+      </a>
     
-      <li class="my-2">
-        <a href="/tags/resilience/">resilience</a>
-        <span> (1)</span>
-      </li>
+      
+      <a href="/tags/testing/"
+         class="group px-3 py-2 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 hover:shadow transition"
+         data-term="testing">
+        <div class="font-medium group-hover:underline">testing</div>
+        <div class="text-sm opacity-70">1 bài</div>
+      </a>
     
-      <li class="my-2">
-        <a href="/tags/selector/">selector</a>
-        <span> (1)</span>
-      </li>
+      
+      <a href="/tags/thread/"
+         class="group px-3 py-2 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 hover:shadow transition"
+         data-term="thread">
+        <div class="font-medium group-hover:underline">thread</div>
+        <div class="text-sm opacity-70">1 bài</div>
+      </a>
     
-      <li class="my-2">
-        <a href="/tags/testing/">testing</a>
-        <span> (1)</span>
-      </li>
+      
+      <a href="/tags/wiremock/"
+         class="group px-3 py-2 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 hover:shadow transition"
+         data-term="wiremock">
+        <div class="font-medium group-hover:underline">wiremock</div>
+        <div class="text-sm opacity-70">1 bài</div>
+      </a>
     
-      <li class="my-2">
-        <a href="/tags/wiremock/">wiremock</a>
-        <span> (1)</span>
-      </li>
-    
-  </ul>
-</article>
+  </div>
+
+  <p id="noTerm" class="hidden text-center opacity-70 mt-6">Không tìm thấy tag phù hợp.</p>
+</section>
+
+<script>
+(function(){
+  const input = document.getElementById('termFilter');
+  const grid  = document.getElementById('termsGrid');
+  const empty = document.getElementById('noTerm');
+  if(!input || !grid) return;
+  const cards = Array.from(grid.children);
+  function filter(){
+    const q = (input.value || '').toLowerCase().trim();
+    let shown = 0;
+    cards.forEach(c=>{
+      const ok = !q || (c.getAttribute('data-term')||'').includes(q);
+      c.style.display = ok ? '' : 'none';
+      if(ok) shown++;
+    });
+    if(empty) empty.classList.toggle('hidden', shown>0);
+  }
+  input.addEventListener('input', filter);
+})();
+</script>
+
 
     </main><footer class="container p-6 mx-auto flex justify-between items-center">
   <span class="text-sm font-light">

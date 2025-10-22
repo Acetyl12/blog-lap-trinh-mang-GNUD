@@ -1,23 +1,22 @@
 name: "Phương Dung"
 headline: "Lập trình Mạng • Java & JavaScript"
 bio: >
-  Mình là developer yêu thích lập trình mạng, tối ưu hệ thống I/O và xây
-  các dịch vụ realtime. Blog này ghi chép lại kinh nghiệm thực chiến với
-  Java/Node.js, từ TCP/UDP, WebSocket đến HTTP client resilient.
+  Sinh viên năm 4 chuyên ngành Công nghệ Thông tin tại Trường Đại học Công nghệ Thành phố Hồ Chí Minh (HUTECH)
 
 avatar: "/images/avatar.png"   # đặt ảnh tại static/images/avatar.png
 location: "TP.HCM, Việt Nam"
 email: "phuongdungphan1207@gmail.com"
 
 skills:
-  - Java (Socket/NIO/HttpClient)
-  - JavaScript/Node.js (net, dgram, ws)
-  - REST/WebSocket, Testing (JUnit, WireMock)
+  - Java
+  - ASP.Net Core
+  - Testing (JUnit, Mockito, Selenium)
+  - PostMan, Swagger
+  - Databases (MySQL, SQL Server, PostgreSQL)
   - CI/CD (GitHub Actions), Git
 
 links:
   - { label: "GitHub", url: "https://github.com/Acetyl12" }
   - { label: "Facebook", url: "https://www.facebook.com/phuong.dung.phan.749391" }
-  - { label: "Email", url: "phuongdungphan1207@gmail.com" }
 
 #resume_url: "/files/resume.pdf"   # (tuỳ chọn) đặt file tại static/files/resume.pdf

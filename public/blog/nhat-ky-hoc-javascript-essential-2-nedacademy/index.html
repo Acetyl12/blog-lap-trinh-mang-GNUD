@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="/favicon.ico">
+
+  <title>
+  Nhật ký học JavaScript Essential 2 (NED Academy): Từ mảng/đối tượng đến DOM &amp; async - Blog Lập Trình Mạng
+  </title>
+  <meta name="description" content="Phần 2: mảng/đối tượng, arrow function &amp; this, DOM/events, và async với fetch &#43; async/await." /><meta name="generator" content="Hugo 0.151.0">
+  <link rel="stylesheet" href="/css/styles.css" />
+  
+  
+
+  <meta property="og:url" content="http://localhost:1313/blog/nhat-ky-hoc-javascript-essential-2-nedacademy/">
+  <meta property="og:site_name" content="Blog Lập Trình Mạng">
+  <meta property="og:title" content="Nhật ký học JavaScript Essential 2 (NED Academy): Từ mảng/đối tượng đến DOM & async">
+  <meta property="og:description" content="Phần 2: mảng/đối tượng, arrow function &amp; this, DOM/events, và async với fetch &#43; async/await.">
+  <meta property="og:locale" content="vi">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2025-10-21T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-10-21T00:00:00+00:00">
+    <meta property="article:tag" content="NED Academy">
+    <meta property="article:tag" content="JavaScript Essential">
+    <meta property="article:tag" content="Essential 2">
+    <meta property="article:tag" content="DOM">
+    <meta property="article:tag" content="Async">
+    <meta property="article:tag" content="Tips Thực Chiến">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Nhật ký học JavaScript Essential 2 (NED Academy): Từ mảng/đối tượng đến DOM & async">
+  <meta name="twitter:description" content="Phần 2: mảng/đối tượng, arrow function &amp; this, DOM/events, và async với fetch &#43; async/await.">
+
+  
+  <meta itemprop="name" content="Nhật ký học JavaScript Essential 2 (NED Academy): Từ mảng/đối tượng đến DOM & async">
+  <meta itemprop="description" content="Phần 2: mảng/đối tượng, arrow function &amp; this, DOM/events, và async với fetch &#43; async/await.">
+  <meta itemprop="datePublished" content="2025-10-21T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-10-21T00:00:00+00:00">
+  <meta itemprop="wordCount" content="422">
+  <meta itemprop="keywords" content="NED Academy,JavaScript Essential,Essential 2,DOM,Async,Tips Thực Chiến">
+
+  
+</head>
+<body class="dark:bg-gray-800 dark:text-white relative flex flex-col min-h-screen"><header class="container flex justify-between md:justify-between gap-4 flex-wrap p-6 mx-auto relative">
+  <a href="http://localhost:1313/" class="capitalize font-extrabold text-2xl">
+    
+    Blog Lập Trình Mạng
+    
+  </a>
+  <button class="mobile-menu-button md:hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <line x1="4" y1="8" x2="20" y2="8" />
+      <line x1="4" y1="16" x2="20" y2="16" />
+    </svg>
+  </button>
+  <ul class="mobile-menu absolute z-10 px-6 pb-6 md:p-0 top-full left-0 w-full md:w-auto md:relative hidden md:flex flex-col md:flex-row items-end md:items-center gap-4 lg:gap-6 bg-white dark:bg-gray-800">
+
+    
+    <li><a href="/">Home</a></li>
+    
+    <li><a href="/blog/">Blog</a></li>
+    
+    <li><a href="/about/">About</a></li>
+    
+    <li><a href="/portfolio/">Portfolio</a></li>
+    
+    <li><a href="/tags/">Tags</a></li>
+    
+
+    <li class="relative">
+      <details class="group">
+        <summary class="list-none cursor-pointer px-3 py-2 flex items-center gap-1 hover:opacity-80">
+          Categories <span aria-hidden>▾</span>
+        </summary>
+
+        <div class="absolute mt-2 z-50 bg-white dark:bg-neutral-900 rounded-xl shadow-lg p-2 w-64 border border-neutral-200 dark:border-neutral-800">
+          <ul class="max-h-72 overflow-auto">
+            
+            
+            
+              <li>
+                <a class="block px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                  href="/categories/java/">
+                  Java <span class="opacity-60">(7)</span>
+                </a>
+              </li>
+            
+              <li>
+                <a class="block px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                  href="/categories/javascript/">
+                  JavaScript <span class="opacity-60">(2)</span>
+                </a>
+              </li>
+            
+              <li>
+                <a class="block px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                  href="/categories/general/">
+                  General <span class="opacity-60">(1)</span>
+                </a>
+              </li>
+            
+
+            <li class="mt-1 border-t border-neutral-200 dark:border-neutral-800 pt-2">
+              <a class="block px-3 py-2 text-sm opacity-80 hover:opacity-100" href="/categories/">Xem tất cả →</a>
+            </li>
+          </ul>
+        </div>
+      </details>
+    </li>
+
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="open-search inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="10" cy="10" r="7" />
+          <line x1="21" y1="21" x2="15" y2="15" />
+        </svg>
+      </span>
+    </li>
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="toggle-dark-mode inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="12" cy="12" r="3" />
+          <line x1="12" y1="5" x2="12" y2="5.01" />
+          <line x1="17" y1="7" x2="17" y2="7.01" />
+          <line x1="19" y1="12" x2="19" y2="12.01" />
+          <line x1="17" y1="17" x2="17" y2="17.01" />
+          <line x1="12" y1="19" x2="12" y2="19.01" />
+          <line x1="7" y1="17" x2="7" y2="17.01" />
+          <line x1="5" y1="12" x2="5" y2="12.01" />
+          <line x1="7" y1="7" x2="7" y2="7.01" />
+        </svg>
+      </span>
+    </li>
+    
+  </ul>
+</header>
+
+<style>
+  summary::-webkit-details-marker { display: none; }
+</style><main class="flex-1">
+  
+  
+
+  
+
+  <article class="prose lg:prose-lg mx-auto my-8 dark:prose-dark px-4">
+
+    <h1 class="text-2xl font-bold mb-2">Nhật ký học JavaScript Essential 2 (NED Academy): Từ mảng/đối tượng đến DOM &amp; async</h1>
+    
+    <h5 class="text-sm flex items-center flex-wrap">
+      <svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <rect x="4" y="5" width="16" height="16" rx="2" />
+        <line x1="16" y1="3" x2="16" y2="7" />
+        <line x1="8" y1="3" x2="8" y2="7" />
+        <line x1="4" y1="11" x2="20" y2="11" />
+        <rect x="8" y="15" width="2" height="2" />
+      </svg>
+      Posted on October 21, 2025
+      
+        &nbsp;&bull;&nbsp;
+      
+      <svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <circle cx="12" cy="12" r="9" />
+        <polyline points="12 7 12 12 15 15" />
+      </svg>
+      2 minutes
+      &nbsp;&bull;
+      <svg xmlns="http://www.w3.org/2000/svg" class="mx-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+        <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+        <line x1="3" y1="6" x2="3" y2="19" />
+        <line x1="12" y1="6" x2="12" y2="19" />
+        <line x1="21" y1="6" x2="21" y2="19" />
+      </svg>
+      422 words
+      
+        
+      
+    </h5>
+    
+
+    
+
+    <p><strong>Hành trình học JavaScript Essential 2: Lên cấp độ mới!</strong></p>
+<p>Sau khi &ldquo;tốt nghiệp&rdquo; Essential 1, mình quyết định nhảy vào <strong>JavaScript Essential 2</strong> để nâng cấp kỹ năng. Lần này mình cảm thấy khó khăn hơn rất nhiều vì nội dung khó hơn nhiều.</p>
+<p><strong>Bước vào Essential 2:</strong></p>
+<p>Khóa <strong>Essential 2</strong> bắt đầu với mấy thứ nâng cao hơn Essential 1 nhiều. Mình học cách xử lý mấy thứ phức tạp hơn, kiểu như:</p>
+<ul>
+<li><strong>Array và Object nâng cao:</strong> Mình khám phá cách lọc, sắp xếp mảng (array) với .filter() và .sort(). Còn object thì thêm thuộc tính, xóa thuộc tính.</li>
+<li><strong>Callback và Promises:</strong> Đây là cách để xử lý mấy việc &ldquo;chờ đợi&rdquo; trong code, như gọi API. Promises giúp mình không bị rối khi code chạy không theo thứ tự.</li>
+<li><strong>Asynchronous JavaScript:</strong> Mình học về async/await, kiểu như làm cho code chạy mượt mà hơn khi xử lý dữ liệu từ server.</li>
+</ul>
+<p><strong>Những lúc muốn bỏ cuộc</strong></p>
+<p>Có vài lúc mình muốn &ldquo;đập bàn&rdquo; vì khó quá. Phần Error Handling với try/catch làm mình đau đầu. Lúc đầu mình không hiểu tại sao code bị lỗi, rồi mới biết mình quên xử lý ngoại lệ. Rồi đến phần fetch API, mình gọi dữ liệu từ một trang web giả lập, nhưng vì lỗi cú pháp mà nó không chạy. Nhưng mà, chính mấy lần thất bại này giúp mình cứng cáp hơn. Mỗi lần sửa lỗi, mình lại thấy tự tin hơn. Có bài tập làm một cái app nhỏ hiển thị thời tiết, mình phải kết hợp cả Promises và fetch.</p>
+<p><strong>Điều mình thích nhất ở khóa học</strong></p>
+<p>Mình thích nhất là phần học về <strong>ES6+ features</strong>. Có mấy thứ như let/const, arrow functions (=&gt;), và destructuring làm code nhìn gọn gàng, &ldquo;cool ngầu&rdquo; hơn hẳn. Ví dụ, thay vì viết dài dòng, giờ mình chỉ cần const { name, age } = person; là xong, nhanh gọn lẹ!</p>
+<p>Cộng đồng học cùng cũng là điểm sáng. Mấy anh chị trong nhóm hay share mẹo hay, như cách dùng Chrome DevTools để debug.</p>
+<p><strong>Cái được sau khóa học</strong></p>
+<p>Sau <strong>JavaScript Essential 2</strong>, mình thấy mình &ldquo;lên tay&rdquo; hẳn:</p>
+<ul>
+<li>Biết cách xử lý code bất đồng bộ (asynchronous) mượt mà.</li>
+<li>Hiểu sâu hơn về array, object, và cách làm việc với dữ liệu thực tế.</li>
+</ul>
+<p><strong>Lời khuyên cho bạn</strong></p>
+<ul>
+<li>Thực hành nhiều, đặc biệt là với API và async.</li>
+<li>Đừng ngại hỏi khi bí, Google và bạn bè là &ldquo;cứu tinh&rdquo;.</li>
+<li>Chậm mà chắc, hiểu từng bước là được.</li>
+</ul>
+<div class="mt-10 flex flex-col gap-4">
+
+  
+  
+  <div class="flex flex-wrap items-center gap-2">
+    <span class="text-sm opacity-70">Categories:</span>
+    
+      
+      
+        <a href="/categories/javascript/"
+           class="px-3 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition text-sm">
+          JavaScript
+        </a>
+      
+    
+  </div>
+  
+
+  
+  
+  <div class="flex flex-wrap items-center gap-2">
+    <span class="text-sm opacity-70">Tags:</span>
+    
+      
+      
+        <a href="/tags/ned-academy/"
+           class="px-3 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition text-sm">
+          #NED Academy
+        </a>
+      
+    
+      
+      
+        <a href="/tags/javascript-essential/"
+           class="px-3 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition text-sm">
+          #JavaScript Essential
+        </a>
+      
+    
+      
+      
+        <a href="/tags/essential-2/"
+           class="px-3 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition text-sm">
+          #Essential 2
+        </a>
+      
+    
+      
+      
+        <a href="/tags/dom/"
+           class="px-3 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition text-sm">
+          #DOM
+        </a>
+      
+    
+      
+      
+        <a href="/tags/async/"
+           class="px-3 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition text-sm">
+          #Async
+        </a>
+      
+    
+      
+      
+        <span class="px-3 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 text-sm">#Tips thực chiến</span>
+      
+    
+  </div>
+  
+
+</div></article><div class="bg-blue-200 dark:bg-gray-900">
+  <div class="container px-4 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+    <div>
+      <div class="text-2xl font-bold mb-2"></div>
+      <p class="opacity-60"></p>
+      
+    </div>
+
+    <ul class="flex justify-center gap-x-3 flex-wrap gap-y-2">
+      
+    </ul>
+  </div>
+</div>
+
+    </main><footer class="container p-6 mx-auto flex justify-between items-center">
+  <span class="text-sm font-light">
+    
+    2025 © Blog Lập Trình Mạng
+    
+  </span>
+  <span onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-1 cursor-pointer">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5"
+      stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M18 15l-6 -6l-6 6h12" />
+    </svg>
+  </span>
+</footer>
+
+<div class="search-ui absolute top-0 left-0 w-full h-full bg-white dark:bg-gray-800 hidden">
+  <div class="container max-w-3xl mx-auto p-12">
+    <div class="relative">
+      <div class="my-4 text-center text-2xl font-bold">Search</div>
+
+      <span class="p-2 absolute right-0 top-0 cursor-pointer close-search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </span>
+    </div>
+
+    <input type="search" class="py-2 px-3 w-full dark:text-black border dark:border-transparent"
+      placeholder="Enter search query" />
+
+    <div class="search-results text-lg font-medium my-4 hidden">Results</div>
+    <ul class="search-list my-2">
+
+    </ul>
+
+    <div class="no-results text-center my-8 hidden">
+      <div class="text-xl font-semibold mb-2">No results found</div>
+      <p class="font-light text-sm">Try adjusting your search query</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script src="http://localhost:1313/js/scripts.min.js"></script>
+
+
+
+
+
+
+
+<script>
+  
+  const darkmode = document.querySelector('.toggle-dark-mode');
+  function toggleDarkMode() {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('darkmode', 'light')
+    } else {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('darkmode', 'dark')
+    }
+  }
+  if (darkmode) {
+    darkmode.addEventListener('click', toggleDarkMode);
+  }
+
+  const darkStorage = localStorage.getItem('darkmode');
+  const isBrowserDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if (!darkStorage && isBrowserDark) {
+    document.documentElement.classList.add('dark');
+  }
+
+  if (darkStorage && darkStorage === 'dark') {
+    toggleDarkMode();
+  }
+</script>
+
+
+<script>
+  const mobileMenuButton = document.querySelector('.mobile-menu-button')
+  const mobileMenu = document.querySelector('.mobile-menu')
+  function toggleMenu() {
+    mobileMenu.classList.toggle('hidden');
+    mobileMenu.classList.toggle('flex');
+  }
+  if(mobileMenu && mobileMenuButton){
+    mobileMenuButton.addEventListener('click', toggleMenu)
+  }
+</script>
+</body>
+</html>

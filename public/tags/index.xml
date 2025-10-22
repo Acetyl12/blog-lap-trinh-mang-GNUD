@@ -6,48 +6,62 @@
     <description>Recent content on Blog Lập Trình Mạng</description>
     <generator>Hugo</generator>
     <language>vi</language>
-    <lastBuildDate>Sun, 19 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Oct 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>API</title>
-      <link>http://localhost:1313/tags/api/</link>
-      <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/api/</guid>
-      <description></description>
-    </item>
     <item>
       <title>Async</title>
       <link>http://localhost:1313/tags/async/</link>
-      <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 21 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/async/</guid>
       <description></description>
     </item>
     <item>
-      <title>Axios</title>
-      <link>http://localhost:1313/tags/axios/</link>
-      <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/axios/</guid>
+      <title>DOM</title>
+      <link>http://localhost:1313/tags/dom/</link>
+      <pubDate>Tue, 21 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/dom/</guid>
       <description></description>
     </item>
     <item>
-      <title>Concurrency</title>
-      <link>http://localhost:1313/tags/concurrency/</link>
-      <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/concurrency/</guid>
+      <title>Essential 1</title>
+      <link>http://localhost:1313/tags/essential-1/</link>
+      <pubDate>Tue, 21 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/essential-1/</guid>
       <description></description>
     </item>
     <item>
-      <title>Event Loop</title>
-      <link>http://localhost:1313/tags/event-loop/</link>
-      <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/event-loop/</guid>
+      <title>Essential 2</title>
+      <link>http://localhost:1313/tags/essential-2/</link>
+      <pubDate>Tue, 21 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/essential-2/</guid>
       <description></description>
     </item>
     <item>
-      <title>HTTP</title>
-      <link>http://localhost:1313/tags/http/</link>
-      <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/http/</guid>
+      <title>Hành Trình Học</title>
+      <link>http://localhost:1313/tags/h%C3%A0nh-tr%C3%ACnh-h%E1%BB%8Dc/</link>
+      <pubDate>Tue, 21 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/h%C3%A0nh-tr%C3%ACnh-h%E1%BB%8Dc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>JavaScript Essential</title>
+      <link>http://localhost:1313/tags/javascript-essential/</link>
+      <pubDate>Tue, 21 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/javascript-essential/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NED Academy</title>
+      <link>http://localhost:1313/tags/ned-academy/</link>
+      <pubDate>Tue, 21 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/ned-academy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tips Thực Chiến</title>
+      <link>http://localhost:1313/tags/tips-th%E1%BB%B1c-chi%E1%BA%BFn/</link>
+      <pubDate>Tue, 21 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/tips-th%E1%BB%B1c-chi%E1%BA%BFn/</guid>
       <description></description>
     </item>
     <item>
@@ -58,73 +72,10 @@
       <description></description>
     </item>
     <item>
-      <title>JavaScript</title>
-      <link>http://localhost:1313/tags/javascript/</link>
-      <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/javascript/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>JUnit</title>
       <link>http://localhost:1313/tags/junit/</link>
       <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/junit/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Networking</title>
-      <link>http://localhost:1313/tags/networking/</link>
-      <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/networking/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>NIO</title>
-      <link>http://localhost:1313/tags/nio/</link>
-      <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/nio/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Node.js</title>
-      <link>http://localhost:1313/tags/node.js/</link>
-      <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/node.js/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Realtime</title>
-      <link>http://localhost:1313/tags/realtime/</link>
-      <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/realtime/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Resilience</title>
-      <link>http://localhost:1313/tags/resilience/</link>
-      <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/resilience/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Selector</title>
-      <link>http://localhost:1313/tags/selector/</link>
-      <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/selector/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Socket</title>
-      <link>http://localhost:1313/tags/socket/</link>
-      <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/socket/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>TCP</title>
-      <link>http://localhost:1313/tags/tcp/</link>
-      <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/tcp/</guid>
       <description></description>
     </item>
     <item>
@@ -135,27 +86,6 @@
       <description></description>
     </item>
     <item>
-      <title>ThreadPool</title>
-      <link>http://localhost:1313/tags/threadpool/</link>
-      <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/threadpool/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>UDP</title>
-      <link>http://localhost:1313/tags/udp/</link>
-      <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/udp/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>WebSocket</title>
-      <link>http://localhost:1313/tags/websocket/</link>
-      <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/websocket/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>WireMock</title>
       <link>http://localhost:1313/tags/wiremock/</link>
       <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
@@ -163,10 +93,66 @@
       <description></description>
     </item>
     <item>
-      <title>EventLoop</title>
-      <link>http://localhost:1313/tags/eventloop/</link>
+      <title>Multicast</title>
+      <link>http://localhost:1313/tags/multicast/</link>
+      <pubDate>Fri, 17 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/multicast/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Address Management</title>
+      <link>http://localhost:1313/tags/address-management/</link>
       <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/eventloop/</guid>
+      <guid>http://localhost:1313/tags/address-management/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cisco</title>
+      <link>http://localhost:1313/tags/cisco/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/cisco/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Multi Thread</title>
+      <link>http://localhost:1313/tags/multi-thread/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/multi-thread/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Networking</title>
+      <link>http://localhost:1313/tags/networking/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/networking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RMI</title>
+      <link>http://localhost:1313/tags/rmi/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/rmi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Socket</title>
+      <link>http://localhost:1313/tags/socket/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/socket/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TCP</title>
+      <link>http://localhost:1313/tags/tcp/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/tcp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Thread</title>
+      <link>http://localhost:1313/tags/thread/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/thread/</guid>
       <description></description>
     </item>
   </channel>

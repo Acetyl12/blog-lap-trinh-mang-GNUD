@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Multi Thread on Blog Lập Trình Mạng</title>
+    <link>http://localhost:1313/tags/multi-thread/</link>
+    <description>Recent content in Multi Thread on Blog Lập Trình Mạng</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <lastBuildDate>Thu, 09 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/multi-thread/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java: Lập trình đa tuyến - Multi Thread</title>
+      <link>http://localhost:1313/blog/java-lap-trinh-da-tuyen/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/java-lap-trinh-da-tuyen/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Hành trình học lập trình đa tuyến trong Java môn Lập trình Mạng&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Chào các bạn! Hôm nay, mình muốn chia sẻ một hành trình mới mà mình vừa trải qua: học về lập trình đa tuyến (multithreading) trong môn Lập trình Mạng bằng Java.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Khởi đầu với đa tuyến&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Đa tuyến là cách Java cho phép chạy nhiều luồng (thread) cùng lúc, giúp xử lý nhiều việc một cách hiệu quả, đặc biệt trong lập trình mạng.&#xA;Mình bắt đầu với mấy khái niệm cơ bản:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

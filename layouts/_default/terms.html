@@ -1,0 +1,57 @@
+{{ define "main" }}
+
+<section class="container mx-auto p-6">
+  <header class="mb-6">
+    <h1 class="text-3xl font-extrabold">{{ .Title | default "Tags" }}</h1>
+    {{ with .Params.description }}<p class="mt-2 opacity-80">{{ . }}</p>{{ end }}
+  </header>
+
+  <!-- Ô lọc nhanh -->
+  <div class="relative w-full md:w-96 mb-6">
+    <input id="termFilter" type="search"
+           placeholder="Lọc theo tên tag…"
+           class="w-full px-4 py-2 rounded-lg border border-neutral-200 dark:border-neutral-700 bg-white/70 dark:bg-neutral-900/70 focus:outline-none focus:ring-2 focus:ring-neutral-400">
+    <svg class="absolute right-3 top-2.5 opacity-60" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    </svg>
+  </div>
+
+  <!-- Lưới các term -->
+  <div id="termsGrid" class="grid gap-3 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
+    {{ range .Data.Terms.ByCount }}
+      {{ $name := .Name }}
+      <a href="{{ .Page.RelPermalink }}"
+         class="group px-3 py-2 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/70 hover:shadow transition"
+         data-term="{{ $name | lower }}">
+        <div class="font-medium group-hover:underline">{{ $name }}</div>
+        <div class="text-sm opacity-70">{{ .Count }} bài</div>
+      </a>
+    {{ end }}
+  </div>
+
+  <p id="noTerm" class="hidden text-center opacity-70 mt-6">Không tìm thấy tag phù hợp.</p>
+</section>
+
+<script>
+(function(){
+  const input = document.getElementById('termFilter');
+  const grid  = document.getElementById('termsGrid');
+  const empty = document.getElementById('noTerm');
+  if(!input || !grid) return;
+  const cards = Array.from(grid.children);
+  function filter(){
+    const q = (input.value || '').toLowerCase().trim();
+    let shown = 0;
+    cards.forEach(c=>{
+      const ok = !q || (c.getAttribute('data-term')||'').includes(q);
+      c.style.display = ok ? '' : 'none';
+      if(ok) shown++;
+    });
+    if(empty) empty.classList.toggle('hidden', shown>0);
+  }
+  input.addEventListener('input', filter);
+})();
+</script>
+
+{{ end }}

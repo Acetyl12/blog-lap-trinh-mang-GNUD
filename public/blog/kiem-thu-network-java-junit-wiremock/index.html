@@ -8,16 +8,11 @@
   <title>
   Kiểm thử code mạng Java với JUnit &amp; WireMock - Blog Lập Trình Mạng
   </title>
-  <meta name="description" content="
-
-  
-  
-
-Mock server HTTP, giả lập tình huống lỗi, timeouts, và viết test đáng tin cậy cho logic mạng.
+  <meta name="description" content="Mock server HTTP, giả lập tình huống lỗi, timeouts, và viết test đáng tin cậy cho logic mạng.
 Từ khoá: Java, Testing, WireMock, JUnit.
 Trong bài viết này, mình đi theo hướng thực chiến: giải thích ngắn gọn, kèm checklist, bẫy thường gặp và ví dụ code để bạn có thể áp dụng ngay vào dự án.
 1) Vì sao cần mock?
-Kiểm thử code mạng không phụ thuộc hệ thống bên ngoài. WireMock giúp giả lập API với scenario, delay, lỗi…" /><meta name="generator" content="Hugo 0.151.0">
+Trong lập trình mạng, code thường tương tác với server, API, hoặc socket, nên cần kiểm tra kỹ lưỡng. JUnit là framework kiểm thử đơn vị (unit testing) phổ biến trong Java, còn WireMock là công cụ giả lập (mocking) để mô phỏng phản hồi từ server mạng – rất hữu ích khi không muốn phụ thuộc vào server thật. Kiểm thử code mạng không phụ thuộc hệ thống bên ngoài. WireMock giúp giả lập API với scenario, delay, lỗi…" /><meta name="generator" content="Hugo 0.151.0">
   <link rel="stylesheet" href="/css/styles.css" />
   
   
@@ -28,7 +23,7 @@ Kiểm thử code mạng không phụ thuộc hệ thống bên ngoài. WireMock
   <meta property="og:description" content="Mock server HTTP, giả lập tình huống lỗi, timeouts, và viết test đáng tin cậy cho logic mạng.
 Từ khoá: Java, Testing, WireMock, JUnit.
 Trong bài viết này, mình đi theo hướng thực chiến: giải thích ngắn gọn, kèm checklist, bẫy thường gặp và ví dụ code để bạn có thể áp dụng ngay vào dự án.
-1) Vì sao cần mock? Kiểm thử code mạng không phụ thuộc hệ thống bên ngoài. WireMock giúp giả lập API với scenario, delay, lỗi…">
+1) Vì sao cần mock? Trong lập trình mạng, code thường tương tác với server, API, hoặc socket, nên cần kiểm tra kỹ lưỡng. JUnit là framework kiểm thử đơn vị (unit testing) phổ biến trong Java, còn WireMock là công cụ giả lập (mocking) để mô phỏng phản hồi từ server mạng – rất hữu ích khi không muốn phụ thuộc vào server thật. Kiểm thử code mạng không phụ thuộc hệ thống bên ngoài. WireMock giúp giả lập API với scenario, delay, lỗi…">
   <meta property="og:locale" content="vi">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
@@ -45,17 +40,17 @@ Trong bài viết này, mình đi theo hướng thực chiến: giải thích ng
   <meta name="twitter:description" content="Mock server HTTP, giả lập tình huống lỗi, timeouts, và viết test đáng tin cậy cho logic mạng.
 Từ khoá: Java, Testing, WireMock, JUnit.
 Trong bài viết này, mình đi theo hướng thực chiến: giải thích ngắn gọn, kèm checklist, bẫy thường gặp và ví dụ code để bạn có thể áp dụng ngay vào dự án.
-1) Vì sao cần mock? Kiểm thử code mạng không phụ thuộc hệ thống bên ngoài. WireMock giúp giả lập API với scenario, delay, lỗi…">
+1) Vì sao cần mock? Trong lập trình mạng, code thường tương tác với server, API, hoặc socket, nên cần kiểm tra kỹ lưỡng. JUnit là framework kiểm thử đơn vị (unit testing) phổ biến trong Java, còn WireMock là công cụ giả lập (mocking) để mô phỏng phản hồi từ server mạng – rất hữu ích khi không muốn phụ thuộc vào server thật. Kiểm thử code mạng không phụ thuộc hệ thống bên ngoài. WireMock giúp giả lập API với scenario, delay, lỗi…">
 
   
   <meta itemprop="name" content="Kiểm thử code mạng Java với JUnit & WireMock">
   <meta itemprop="description" content="Mock server HTTP, giả lập tình huống lỗi, timeouts, và viết test đáng tin cậy cho logic mạng.
 Từ khoá: Java, Testing, WireMock, JUnit.
 Trong bài viết này, mình đi theo hướng thực chiến: giải thích ngắn gọn, kèm checklist, bẫy thường gặp và ví dụ code để bạn có thể áp dụng ngay vào dự án.
-1) Vì sao cần mock? Kiểm thử code mạng không phụ thuộc hệ thống bên ngoài. WireMock giúp giả lập API với scenario, delay, lỗi…">
+1) Vì sao cần mock? Trong lập trình mạng, code thường tương tác với server, API, hoặc socket, nên cần kiểm tra kỹ lưỡng. JUnit là framework kiểm thử đơn vị (unit testing) phổ biến trong Java, còn WireMock là công cụ giả lập (mocking) để mô phỏng phản hồi từ server mạng – rất hữu ích khi không muốn phụ thuộc vào server thật. Kiểm thử code mạng không phụ thuộc hệ thống bên ngoài. WireMock giúp giả lập API với scenario, delay, lỗi…">
   <meta itemprop="datePublished" content="2025-10-19T00:00:00+00:00">
   <meta itemprop="dateModified" content="2025-10-19T00:00:00+00:00">
-  <meta itemprop="wordCount" content="228">
+  <meta itemprop="wordCount" content="588">
   <meta itemprop="keywords" content="Java,Testing,WireMock,JUnit">
 
   
@@ -101,14 +96,14 @@ Trong bài viết này, mình đi theo hướng thực chiến: giải thích ng
               <li>
                 <a class="block px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800"
                   href="/categories/java/">
-                  Java <span class="opacity-60">(10)</span>
+                  Java <span class="opacity-60">(7)</span>
                 </a>
               </li>
             
               <li>
                 <a class="block px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800"
                   href="/categories/javascript/">
-                  JavaScript <span class="opacity-60">(8)</span>
+                  JavaScript <span class="opacity-60">(2)</span>
                 </a>
               </li>
             
@@ -195,7 +190,7 @@ Trong bài viết này, mình đi theo hướng thực chiến: giải thích ng
         <circle cx="12" cy="12" r="9" />
         <polyline points="12 7 12 12 15 15" />
       </svg>
-      2 minutes
+      3 minutes
       &nbsp;&bull;
       <svg xmlns="http://www.w3.org/2000/svg" class="mx-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -205,7 +200,7 @@ Trong bài viết này, mình đi theo hướng thực chiến: giải thích ng
         <line x1="12" y1="6" x2="12" y2="19" />
         <line x1="21" y1="6" x2="21" y2="19" />
       </svg>
-      228 words
+      588 words
       
         
       
@@ -214,30 +209,85 @@ Trong bài viết này, mình đi theo hướng thực chiến: giải thích ng
 
     
 
-    <p>
-<figure class="my-6">
-  <img
-    src="/images/posts/kiem-thu-network-java-junit-wiremock.svg"
-    alt="minh họa"
-    loading="lazy"
-    class="mx-auto block ">
-  
-</figure></p>
-<p>Mock server HTTP, giả lập tình huống lỗi, timeouts, và viết test đáng tin cậy cho logic mạng.</p>
+    <p>Mock server HTTP, giả lập tình huống lỗi, timeouts, và viết test đáng tin cậy cho logic mạng.</p>
 <p><strong>Từ khoá:</strong> Java, Testing, WireMock, JUnit.<br>
 Trong bài viết này, mình đi theo hướng <em>thực chiến</em>: giải thích ngắn gọn, kèm checklist, bẫy thường gặp và ví dụ code để bạn có thể áp dụng ngay vào dự án.</p>
 <h2 id="1-vì-sao-cần-mock">1) Vì sao cần mock?</h2>
-<p>Kiểm thử code mạng <strong>không phụ thuộc</strong> hệ thống bên ngoài. <code>WireMock</code> giúp giả lập API với scenario, delay, lỗi…</p>
+<p>Trong lập trình mạng, code thường tương tác với server, API, hoặc socket, nên cần kiểm tra kỹ lưỡng. JUnit là framework kiểm thử đơn vị (unit testing) phổ biến trong Java, còn WireMock là công cụ giả lập (mocking) để mô phỏng phản hồi từ server mạng – rất hữu ích khi không muốn phụ thuộc vào server thật. Kiểm thử code mạng <strong>không phụ thuộc</strong> hệ thống bên ngoài. <code>WireMock</code> giúp giả lập API với scenario, delay, lỗi…</p>
+<p>Bắt đầu với các bước cơ bản:</p>
+<ul>
+<li><strong>Cài đặt JUnit</strong>: Thêm thư viện vào project (qua Maven hoặc Gradle), học cách viết test case với @Test.</li>
+<li><strong>Hiểu WireMock</strong>: Tải WireMock (dùng JAR hoặc Docker), cấu hình stub để giả lập API hoặc socket.</li>
+<li><strong>Kiểm thử mạng</strong>: Viết test cho các tác vụ như gọi HTTP, socket, hoặc xử lý ngoại lệ.
+Dùng JUnit để kiểm tra logic, và WireMock để giả lập phản hồi từ server.</li>
+</ul>
 <h2 id="2-ví-dụ-test">2) Ví dụ test</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Test</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">should_handle_500_with_retry</span>() {
-</span></span><span style="display:flex;"><span>  WireMockServer wm <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> WireMockServer(8089);
-</span></span><span style="display:flex;"><span>  wm.<span style="color:#a6e22e">start</span>();
-</span></span><span style="display:flex;"><span>  wm.<span style="color:#a6e22e">stubFor</span>(get(<span style="color:#e6db74">&#34;/users&#34;</span>).<span style="color:#a6e22e">willReturn</span>(aResponse().<span style="color:#a6e22e">withStatus</span>(500)));
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Gọi hàm client của bạn (có retry) rồi assert hành vi</span>
-</span></span><span style="display:flex;"><span>  wm.<span style="color:#a6e22e">stop</span>();
+<p>WeatherService.java (Lớp cần kiểm thử)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.BufferedReader;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.InputStreamReader;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.net.HttpURLConnection;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.net.URL;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">WeatherService</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getWeather</span>(String city) <span style="color:#66d9ef">throws</span> Exception {
+</span></span><span style="display:flex;"><span>        URL url <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> URL(<span style="color:#e6db74">&#34;http://localhost:8080/weather/&#34;</span> <span style="color:#f92672">+</span> city);
+</span></span><span style="display:flex;"><span>        HttpURLConnection conn <span style="color:#f92672">=</span> (HttpURLConnection) url.<span style="color:#a6e22e">openConnection</span>();
+</span></span><span style="display:flex;"><span>        conn.<span style="color:#a6e22e">setRequestMethod</span>(<span style="color:#e6db74">&#34;GET&#34;</span>);
+</span></span><span style="display:flex;"><span>        BufferedReader reader <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BufferedReader(<span style="color:#66d9ef">new</span> InputStreamReader(conn.<span style="color:#a6e22e">getInputStream</span>()));
+</span></span><span style="display:flex;"><span>        String line <span style="color:#f92672">=</span> reader.<span style="color:#a6e22e">readLine</span>();
+</span></span><span style="display:flex;"><span>        reader.<span style="color:#a6e22e">close</span>();
+</span></span><span style="display:flex;"><span>        conn.<span style="color:#a6e22e">disconnect</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> line;
+</span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="best-practices-nhanh">Best-practices nhanh</h2>
+</span></span></code></pre></div><p>WeatherServiceTest.java (Test với JUnit &amp; WireMock)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">org</span>.<span style="color:#a6e22e">junit</span>.<span style="color:#a6e22e">Before</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">org</span>.<span style="color:#a6e22e">junit</span>.<span style="color:#a6e22e">Rule</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">org</span>.<span style="color:#a6e22e">junit</span>.<span style="color:#a6e22e">Test</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#66d9ef">static</span> <span style="color:#a6e22e">org</span>.<span style="color:#a6e22e">junit</span>.<span style="color:#a6e22e">Assert</span>.<span style="color:#a6e22e">assertEquals</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">com</span>.<span style="color:#a6e22e">github</span>.<span style="color:#a6e22e">tomakehurst</span>.<span style="color:#a6e22e">wiremock</span>.<span style="color:#a6e22e">junit</span>.<span style="color:#a6e22e">WireMockRule</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">WeatherServiceTest</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">Rule</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">WireMockRule</span> <span style="color:#a6e22e">wireMockRule</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WireMockRule</span>(<span style="color:#ae81ff">8080</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">Before</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setUp</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">wireMockRule</span>.<span style="color:#a6e22e">stubFor</span>(<span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">urlEqualTo</span>(<span style="color:#e6db74">&#34;/weather/Hanoi&#34;</span>))
+</span></span><span style="display:flex;"><span>            .<span style="color:#a6e22e">willReturn</span>(<span style="color:#a6e22e">aResponse</span>()
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">withStatus</span>(<span style="color:#ae81ff">200</span>)
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">withBody</span>(<span style="color:#e6db74">&#34;25°C&#34;</span>)));
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">Test</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testGetWeatherSuccess</span>() <span style="color:#66d9ef">throws</span> <span style="color:#a6e22e">Exception</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">WeatherService</span> <span style="color:#a6e22e">service</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WeatherService</span>();
+</span></span><span style="display:flex;"><span>        String <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">service</span>.<span style="color:#a6e22e">getWeather</span>(<span style="color:#e6db74">&#34;Hanoi&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">assertEquals</span>(<span style="color:#e6db74">&#34;25°C&#34;</span>, <span style="color:#a6e22e">result</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">Test</span>(<span style="color:#a6e22e">expected</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Exception</span>.<span style="color:#66d9ef">class</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testGetWeatherError</span>() <span style="color:#66d9ef">throws</span> <span style="color:#a6e22e">Exception</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">wireMockRule</span>.<span style="color:#a6e22e">stubFor</span>(<span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">urlEqualTo</span>(<span style="color:#e6db74">&#34;/weather/ErrorCity&#34;</span>))
+</span></span><span style="display:flex;"><span>            .<span style="color:#a6e22e">willReturn</span>(<span style="color:#a6e22e">aResponse</span>()
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">withStatus</span>(<span style="color:#ae81ff">500</span>)
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">withBody</span>(<span style="color:#e6db74">&#34;Server error&#34;</span>)));
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">WeatherService</span> <span style="color:#a6e22e">service</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WeatherService</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">service</span>.<span style="color:#a6e22e">getWeather</span>(<span style="color:#e6db74">&#34;ErrorCity&#34;</span>); <span style="color:#75715e">// Kiểm tra ngoại lệ
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Cách chạy:</p>
+<p>1.Thêm dependency WireMock trong pom.xml:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">dependency</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">groupId</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">com</span>.<span style="color:#a6e22e">github</span>.<span style="color:#a6e22e">tomakehurst</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">artifactId</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">wiremock</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">version</span><span style="color:#f92672">&gt;</span><span style="color:#ae81ff">2.35</span>.<span style="color:#ae81ff">0</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/version&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">scope</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">test</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/scope&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/dependency&gt;</span>
+</span></span></code></pre></div><p>2.Compile và chạy test: mvn test hoặc chạy trong IDE.
+3.Xem kết quả: Hai test (testGetWeatherSuccess và testGetWeatherError) sẽ pass nếu WireMock trả về đúng dữ liệu và ngoại lệ!
+Lưu ý: Cần cài Maven và WireMock trước.</p>
+<h2 id="best-practices-nhanh">Best-practices nhanh</h2>
 <ul>
 <li>Ghi log có cấu trúc (JSON) + traceId.</li>
 <li>Timeout hợp lý cho connect/read/write; tổng timeout (deadline) khi cần.</li>
@@ -252,7 +302,14 @@ Trong bài viết này, mình đi theo hướng <em>thực chiến</em>: giải 
 <li><input disabled="" type="checkbox"> Tài liệu hoá ví dụ request/response (hoặc mock contract).</li>
 </ul>
 <h2 id="kết-luận">Kết luận</h2>
-<p>Những nguyên tắc ở trên đủ để bạn triển khai và mở rộng trong bối cảnh dự án thực tế. Hãy clone lại ví dụ, chạy thử, thêm log và đo đạc; mọi tối ưu đều bắt đầu từ quan sát.</p>
+<p>Những nguyên tắc ở trên đủ để bạn triển khai và mở rộng trong bối cảnh dự án thực tế.</p>
+<ul>
+<li>Kỹ năng kiểm thử: Nắm cách viết test case, dùng assert, và kiểm tra ngoại lệ.</li>
+<li>Hiểu mạng sâu hơn: Hiểu cách dữ liệu di chuyển qua HTTP/socket, và cách mock phản hồi.</li>
+<li>Tối ưu code: Phát hiện lỗi sớm (như timeout, null pointer) trước khi deploy.</li>
+<li>Chuẩn bị nghề nghiệp: Đây là kỹ năng cần thiết cho QA hoặc dev trong dự án mạng.</li>
+<li>Tư duy phòng thủ: Học cách nghĩ đến mọi kịch bản (thành công, lỗi) khi viết code.</li>
+</ul>
 <div class="mt-10 flex flex-col gap-4">
 
   

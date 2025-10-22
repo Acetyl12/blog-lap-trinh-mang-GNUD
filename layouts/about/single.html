@@ -14,10 +14,13 @@
         {{ $img = $p.avatar }}
       {{ end }}
 
-      {{ with $img }}
-        <img src="{{ . | relURL }}"
-             alt="{{ $p.name }}"
-             class="w-full h-auto max-w-xl rounded-2xl shadow-md">
+      {{ if $img }}
+        {{ $abs := printf "static%s" $img }}
+        {{ $ver := md5 (readFile $abs) }}
+        <img 
+            src="{{ printf "%s?v=%s" ($img | relURL) $ver }}"
+            alt="{{ $p.name }}"
+            class="w-full h-auto max-w-xl rounded-2xl shadow-md">
       {{ end }}
     </div>
 

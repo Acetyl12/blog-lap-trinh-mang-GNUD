@@ -4,7 +4,7 @@ date: 2025-10-19
 tags: ["Java", "Testing", "WireMock", "JUnit"]
 categories: ["Java"]
 draft: false
-cover: "/images/posts/kiem-thu-network-java-junit-wiremock.png"
+cover: "images/posts/kiem-thu-network-java-junit-wiremock.png"
 ---
 
 

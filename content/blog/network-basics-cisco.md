@@ -4,7 +4,7 @@ date: 2025-10-09
 tags: ["Networking", "Cisco"]
 categories: ["General"]
 draft: false
-cover: "/images/posts/network-basics-cisco-cover.jpg"
+cover: "images/posts/network-basics-cisco-cover.jpg"
 ---
 
 **Hành trình học khóa Network Basics của Cisco trên Networking Academy**

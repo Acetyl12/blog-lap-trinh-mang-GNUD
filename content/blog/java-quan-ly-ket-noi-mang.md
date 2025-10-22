@@ -4,7 +4,7 @@ date: 2025-10-09
 tags: ["Java", "Networking", "Address Management"]
 categories: ["Java"]
 draft: false
-cover: "/images/posts/java-quan-ly-ket-noi-mang-cover.svg"
+cover: "images/posts/java-quan-ly-ket-noi-mang-cover.svg"
 ---
 
 Chào mừng các bạn đến với bài viết đầu tiên trong chuỗi **Java Network**! Hôm nay, mình sẽ giới thiệu về **quản lý địa chỉ kết nối mạng**, bao gồm khái niệm về địa chỉ IP, port, subnet, và cách Java xử lý chúng trong lập trình mạng. Đây là nền tảng quan trọng để bạn làm chủ các ứng dụng mạng. Cùng mình khám phá nhé!

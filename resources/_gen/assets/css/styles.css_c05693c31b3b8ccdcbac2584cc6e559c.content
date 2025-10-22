@@ -1189,6 +1189,9 @@ a.page-link {
 .h-8 {
   height: 2rem;
 }
+.h-auto {
+  height: auto;
+}
 .h-full {
   height: 100%;
 }
@@ -1215,6 +1218,9 @@ a.page-link {
 }
 .max-w-5xl {
   max-width: 64rem;
+}
+.max-w-\[420px\] {
+  max-width: 420px;
 }
 .max-w-full {
   max-width: 100%;
@@ -2065,6 +2071,10 @@ a.page-link {
   }
   .md\:col-span-3 {
     grid-column: span 3 / span 3;
+  }
+  .md\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
   }
   .md\:flex {
     display: flex;

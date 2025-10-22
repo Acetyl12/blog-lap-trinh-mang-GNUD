@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Essential 1 on Blog Lập Trình Mạng</title>
-    <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/essential-1/</link>
+    <link>http://localhost:1313/tags/essential-1/</link>
     <description>Recent content in Essential 1 on Blog Lập Trình Mạng</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate>Tue, 21 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/essential-1/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/essential-1/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Nhật ký học JavaScript Essential 1 (NED Academy): Bắt đầu nhẹ nhàng mà chắc</title>
-      <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/blog/nhat-ky-hoc-javascript-essential-1-nedacademy/</link>
+      <link>http://localhost:1313/blog/nhat-ky-hoc-javascript-essential-1-nedacademy/</link>
       <pubDate>Tue, 21 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog-lap-trinh-mang-GNUD/blog/nhat-ky-hoc-javascript-essential-1-nedacademy/</guid>
+      <guid>http://localhost:1313/blog/nhat-ky-hoc-javascript-essential-1-nedacademy/</guid>
       <description>Ghi chép đời thường khi mình học Essential 1: từ biến/kiểu dữ liệu, so sánh, điều kiện, vòng lặp cho tới hàm.</description>
     </item>
   </channel>

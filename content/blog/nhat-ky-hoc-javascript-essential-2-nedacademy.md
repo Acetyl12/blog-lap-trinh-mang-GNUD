@@ -3,7 +3,7 @@ title: "Nhật ký học JavaScript Essential 2 (NED Academy): Từ mảng/đố
 date: 2025-10-21
 categories: ["JavaScript"]
 tags: ["NED Academy", "JavaScript Essential", "Essential 2", "DOM", "Async", "Tips thực chiến"]
-cover: "/images/posts/js-essential-2-nedacademy-cover.jpg"
+cover: "images/posts/js-essential-2-nedacademy-cover.jpg"
 summary: "Phần 2: mảng/đối tượng, arrow function & this, DOM/events, và async với fetch + async/await."
 draft: false
 ---

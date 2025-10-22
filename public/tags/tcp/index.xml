@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>TCP on Blog Lập Trình Mạng</title>
-    <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/tcp/</link>
+    <link>http://localhost:1313/tags/tcp/</link>
     <description>Recent content in TCP on Blog Lập Trình Mạng</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate>Thu, 09 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/tcp/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/tcp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Java Socket TCP: Server/Client cơ bản</title>
-      <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/blog/java-socket-tcp-server-client-co-ban/</link>
+      <link>http://localhost:1313/blog/java-socket-tcp-server-client-co-ban/</link>
       <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog-lap-trinh-mang-GNUD/blog/java-socket-tcp-server-client-co-ban/</guid>
+      <guid>http://localhost:1313/blog/java-socket-tcp-server-client-co-ban/</guid>
       <description>&lt;p&gt;Hành trình khám phá Java Socket TCP: Tạo Server và Client cơ bản!&#xA;Chào các bạn! Hôm nay mình muốn chia sẻ một trải nghiệm siêu thú vị: học cách làm một Server và Client TCP cơ bản bằng Java. Đây là một phần quan trọng trong môn Lập trình Mạng, và mình đã thử nghiệm với vài dòng code nhỏ để &amp;ldquo;nói chuyện&amp;rdquo; giữa hai máy.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Bắt đầu với Socket TCP: Nghe lạ nhưng dễ hiểu&lt;/strong&gt;&#xA;TCP là giao thức truyền dữ liệu ổn định, đảm bảo thông tin đến đúng chỗ, còn socket là &amp;ldquo;cầu nối&amp;rdquo; giữa máy chủ và máy khách.&#xA;Mình bắt đầu với mấy bước cơ bản:&lt;/p&gt;</description>
     </item>
   </channel>

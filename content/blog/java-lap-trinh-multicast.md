@@ -4,7 +4,7 @@ date: 2025-10-17
 tags: ["Java", "Multicast"]
 categories: ["Java"]
 draft: false
-cover: "/images/posts/lap-trinh-multicast.png"
+cover: "images/posts/lap-trinh-multicast.png"
 ---
 
 **Hành trình khám phá lập trình Multicast trong Java: Server và Client cơ bản!**

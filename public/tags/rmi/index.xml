@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>RMI on Blog Lập Trình Mạng</title>
-    <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/rmi/</link>
+    <link>http://localhost:1313/tags/rmi/</link>
     <description>Recent content in RMI on Blog Lập Trình Mạng</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate>Thu, 09 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/rmi/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/rmi/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Java: Lập trình đa tuyến - Multi Thread</title>
-      <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/blog/java-phan-tan-doi-tuong-rmi/</link>
+      <link>http://localhost:1313/blog/java-phan-tan-doi-tuong-rmi/</link>
       <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog-lap-trinh-mang-GNUD/blog/java-phan-tan-doi-tuong-rmi/</guid>
+      <guid>http://localhost:1313/blog/java-phan-tan-doi-tuong-rmi/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Hành trình khám phá phân tán đối tượng trong Java bằng RMI&lt;/strong&gt;&#xA;Chào các bạn! Hôm nay mình muốn chia sẻ một bài học thú vị: học về phân tán đối tượng (object distribution) trong Java bằng RMI (Remote Method Invocation), một phần quan trọng trong môn Lập trình Mạng. Đây là lần đầu mình tiếp cận với cách gọi phương thức từ xa.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;RMI là gì?&lt;/strong&gt;&#xA;RMI là một công nghệ của Java cho phép gọi phương thức từ một đối tượng trên máy này sang máy khác, giống như &amp;ldquo;gửi lời mời&amp;rdquo; qua mạng. Nó dùng để xây dựng ứng dụng phân tán, nơi các máy phối hợp làm việc. Hãy tưởng tượng nó như một đội làm việc từ xa, mỗi người ở một nơi nhưng vẫn &amp;ldquo;hợp sức&amp;rdquo;!&lt;/p&gt;</description>
     </item>
   </channel>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>General on Blog Lập Trình Mạng</title>
-    <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/categories/general/</link>
+    <link>http://localhost:1313/categories/general/</link>
     <description>Recent content in General on Blog Lập Trình Mạng</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate>Thu, 09 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog-lap-trinh-mang-GNUD/categories/general/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/general/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Network Basics Cisco</title>
-      <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/blog/network-basics-cisco/</link>
+      <link>http://localhost:1313/blog/network-basics-cisco/</link>
       <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog-lap-trinh-mang-GNUD/blog/network-basics-cisco/</guid>
+      <guid>http://localhost:1313/blog/network-basics-cisco/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Hành trình học khóa Network Basics của Cisco trên Networking Academy&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Chào các bạn! Hôm nay mình muốn chia sẻ một hành trình dài và thú vị mà mình vừa hoàn thành: khóa học Network Basics của Cisco trên Cisco Networking Academy (hay còn gọi là NetAcad). Nếu bạn đang tìm hiểu về mạng máy tính, đây là khóa học siêu hay dành cho người mới bắt đầu.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Bắt đầu hành trình: Từ zero đến hero với Network Basics&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
   </channel>

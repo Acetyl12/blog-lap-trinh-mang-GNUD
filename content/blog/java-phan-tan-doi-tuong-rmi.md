@@ -4,7 +4,7 @@ date: 2025-10-09
 tags: ["Java", "RMI"]
 categories: ["Java"]
 draft: false
-cover: "/images/posts/java-phan-tan-doi-tuong-rmi.png"
+cover: "images/posts/java-phan-tan-doi-tuong-rmi.png"
 ---
 
 **Hành trình khám phá phân tán đối tượng trong Java bằng RMI**

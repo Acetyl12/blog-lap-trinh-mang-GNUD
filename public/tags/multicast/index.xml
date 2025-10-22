@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Multicast on Blog Lập Trình Mạng</title>
-    <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/multicast/</link>
+    <link>http://localhost:1313/tags/multicast/</link>
     <description>Recent content in Multicast on Blog Lập Trình Mạng</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate>Fri, 17 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/multicast/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/multicast/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Java: Lập trình Multicast</title>
-      <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/blog/java-lap-trinh-multicast/</link>
+      <link>http://localhost:1313/blog/java-lap-trinh-multicast/</link>
       <pubDate>Fri, 17 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog-lap-trinh-mang-GNUD/blog/java-lap-trinh-multicast/</guid>
+      <guid>http://localhost:1313/blog/java-lap-trinh-multicast/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Hành trình khám phá lập trình Multicast trong Java: Server và Client cơ bản!&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Chào các bạn! Hôm nay mình muốn chia sẻ một trải nghiệm mới mẻ và thú vị: học cách lập trình Multicast trong Java, một phần quan trọng của môn Lập trình Mạng. Khác với TCP thông thường, Multicast cho phép gửi dữ liệu đến nhiều máy cùng lúc, giống như phát sóng radio vậy!&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Bắt đầu với Multicast&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
   </channel>

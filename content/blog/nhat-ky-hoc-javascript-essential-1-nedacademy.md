@@ -3,7 +3,7 @@ title: "Nhật ký học JavaScript Essential 1 (NED Academy): Bắt đầu nh�
 date: 2025-10-21
 categories: ["JavaScript"]
 tags: ["NED Academy", "JavaScript Essential", "Essential 1", "Hành trình học", "Tips thực chiến"]
-cover: "/images/posts/js-essential-1-nedacademy-cover.jpg"
+cover: "images/posts/js-essential-1-nedacademy-cover.jpg"
 summary: "Ghi chép đời thường khi mình học Essential 1: từ biến/kiểu dữ liệu, so sánh, điều kiện, vòng lặp cho tới hàm."
 draft: false
 ---

@@ -4,7 +4,7 @@ date: 2025-10-09
 tags: ["Java", "TCP", "Socket"]
 categories: ["Java"]
 draft: false
-cover: "/images/posts/java-tcp-socket-co-ban.png"
+cover: "images/posts/java-tcp-socket-co-ban.png"
 ---
 
 Hành trình khám phá Java Socket TCP: Tạo Server và Client cơ bản!

@@ -2,157 +2,157 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog Lập Trình Mạng</title>
-    <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content on Blog Lập Trình Mạng</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate>Tue, 21 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Async</title>
-      <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/async/</link>
+      <link>http://localhost:1313/tags/async/</link>
       <pubDate>Tue, 21 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/async/</guid>
+      <guid>http://localhost:1313/tags/async/</guid>
       <description></description>
     </item>
     <item>
       <title>DOM</title>
-      <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/dom/</link>
+      <link>http://localhost:1313/tags/dom/</link>
       <pubDate>Tue, 21 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/dom/</guid>
+      <guid>http://localhost:1313/tags/dom/</guid>
       <description></description>
     </item>
     <item>
       <title>Essential 1</title>
-      <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/essential-1/</link>
+      <link>http://localhost:1313/tags/essential-1/</link>
       <pubDate>Tue, 21 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/essential-1/</guid>
+      <guid>http://localhost:1313/tags/essential-1/</guid>
       <description></description>
     </item>
     <item>
       <title>Essential 2</title>
-      <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/essential-2/</link>
+      <link>http://localhost:1313/tags/essential-2/</link>
       <pubDate>Tue, 21 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/essential-2/</guid>
+      <guid>http://localhost:1313/tags/essential-2/</guid>
       <description></description>
     </item>
     <item>
       <title>Hành Trình Học</title>
-      <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/h%C3%A0nh-tr%C3%ACnh-h%E1%BB%8Dc/</link>
+      <link>http://localhost:1313/tags/h%C3%A0nh-tr%C3%ACnh-h%E1%BB%8Dc/</link>
       <pubDate>Tue, 21 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/h%C3%A0nh-tr%C3%ACnh-h%E1%BB%8Dc/</guid>
+      <guid>http://localhost:1313/tags/h%C3%A0nh-tr%C3%ACnh-h%E1%BB%8Dc/</guid>
       <description></description>
     </item>
     <item>
       <title>JavaScript Essential</title>
-      <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/javascript-essential/</link>
+      <link>http://localhost:1313/tags/javascript-essential/</link>
       <pubDate>Tue, 21 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/javascript-essential/</guid>
+      <guid>http://localhost:1313/tags/javascript-essential/</guid>
       <description></description>
     </item>
     <item>
       <title>NED Academy</title>
-      <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/ned-academy/</link>
+      <link>http://localhost:1313/tags/ned-academy/</link>
       <pubDate>Tue, 21 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/ned-academy/</guid>
+      <guid>http://localhost:1313/tags/ned-academy/</guid>
       <description></description>
     </item>
     <item>
       <title>Tips Thực Chiến</title>
-      <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/tips-th%E1%BB%B1c-chi%E1%BA%BFn/</link>
+      <link>http://localhost:1313/tags/tips-th%E1%BB%B1c-chi%E1%BA%BFn/</link>
       <pubDate>Tue, 21 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/tips-th%E1%BB%B1c-chi%E1%BA%BFn/</guid>
+      <guid>http://localhost:1313/tags/tips-th%E1%BB%B1c-chi%E1%BA%BFn/</guid>
       <description></description>
     </item>
     <item>
       <title>Java</title>
-      <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/java/</link>
+      <link>http://localhost:1313/tags/java/</link>
       <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/java/</guid>
+      <guid>http://localhost:1313/tags/java/</guid>
       <description></description>
     </item>
     <item>
       <title>JUnit</title>
-      <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/junit/</link>
+      <link>http://localhost:1313/tags/junit/</link>
       <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/junit/</guid>
+      <guid>http://localhost:1313/tags/junit/</guid>
       <description></description>
     </item>
     <item>
       <title>Testing</title>
-      <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/testing/</link>
+      <link>http://localhost:1313/tags/testing/</link>
       <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/testing/</guid>
+      <guid>http://localhost:1313/tags/testing/</guid>
       <description></description>
     </item>
     <item>
       <title>WireMock</title>
-      <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/wiremock/</link>
+      <link>http://localhost:1313/tags/wiremock/</link>
       <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/wiremock/</guid>
+      <guid>http://localhost:1313/tags/wiremock/</guid>
       <description></description>
     </item>
     <item>
       <title>Multicast</title>
-      <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/multicast/</link>
+      <link>http://localhost:1313/tags/multicast/</link>
       <pubDate>Fri, 17 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/multicast/</guid>
+      <guid>http://localhost:1313/tags/multicast/</guid>
       <description></description>
     </item>
     <item>
       <title>Address Management</title>
-      <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/address-management/</link>
+      <link>http://localhost:1313/tags/address-management/</link>
       <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/address-management/</guid>
+      <guid>http://localhost:1313/tags/address-management/</guid>
       <description></description>
     </item>
     <item>
       <title>Cisco</title>
-      <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/cisco/</link>
+      <link>http://localhost:1313/tags/cisco/</link>
       <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/cisco/</guid>
+      <guid>http://localhost:1313/tags/cisco/</guid>
       <description></description>
     </item>
     <item>
       <title>Multi Thread</title>
-      <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/multi-thread/</link>
+      <link>http://localhost:1313/tags/multi-thread/</link>
       <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/multi-thread/</guid>
+      <guid>http://localhost:1313/tags/multi-thread/</guid>
       <description></description>
     </item>
     <item>
       <title>Networking</title>
-      <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/networking/</link>
+      <link>http://localhost:1313/tags/networking/</link>
       <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/networking/</guid>
+      <guid>http://localhost:1313/tags/networking/</guid>
       <description></description>
     </item>
     <item>
       <title>RMI</title>
-      <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/rmi/</link>
+      <link>http://localhost:1313/tags/rmi/</link>
       <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/rmi/</guid>
+      <guid>http://localhost:1313/tags/rmi/</guid>
       <description></description>
     </item>
     <item>
       <title>Socket</title>
-      <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/socket/</link>
+      <link>http://localhost:1313/tags/socket/</link>
       <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/socket/</guid>
+      <guid>http://localhost:1313/tags/socket/</guid>
       <description></description>
     </item>
     <item>
       <title>TCP</title>
-      <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/tcp/</link>
+      <link>http://localhost:1313/tags/tcp/</link>
       <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/tcp/</guid>
+      <guid>http://localhost:1313/tags/tcp/</guid>
       <description></description>
     </item>
     <item>
       <title>Thread</title>
-      <link>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/thread/</link>
+      <link>http://localhost:1313/tags/thread/</link>
       <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog-lap-trinh-mang-GNUD/tags/thread/</guid>
+      <guid>http://localhost:1313/tags/thread/</guid>
       <description></description>
     </item>
   </channel>

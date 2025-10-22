@@ -4,7 +4,7 @@ date: 2025-10-09
 tags: ["Java", "Thread", "Multi Thread"]
 categories: ["Java"]
 draft: false
-cover: "/images/posts/java-lap-trinh-da-tuyen.png"
+cover: "images/posts/java-lap-trinh-da-tuyen.png"
 ---
 
 **Hành trình học lập trình đa tuyến trong Java môn Lập trình Mạng**

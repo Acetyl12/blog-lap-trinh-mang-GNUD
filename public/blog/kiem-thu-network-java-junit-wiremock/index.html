@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" itemscope itemtype="http://schema.org/WebPage"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage"><head><script src="/blog-lap-trinh-mang-GNUD/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog-lap-trinh-mang-GNUD/livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -13,11 +13,11 @@ Từ khoá: Java, Testing, WireMock, JUnit.
 Trong bài viết này, mình đi theo hướng thực chiến: giải thích ngắn gọn, kèm checklist, bẫy thường gặp và ví dụ code để bạn có thể áp dụng ngay vào dự án.
 1) Vì sao cần mock?
 Trong lập trình mạng, code thường tương tác với server, API, hoặc socket, nên cần kiểm tra kỹ lưỡng. JUnit là framework kiểm thử đơn vị (unit testing) phổ biến trong Java, còn WireMock là công cụ giả lập (mocking) để mô phỏng phản hồi từ server mạng – rất hữu ích khi không muốn phụ thuộc vào server thật. Kiểm thử code mạng không phụ thuộc hệ thống bên ngoài. WireMock giúp giả lập API với scenario, delay, lỗi…" /><meta name="generator" content="Hugo 0.151.0">
-  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/blog-lap-trinh-mang-GNUD/css/styles.css" />
   
   
 
-  <meta property="og:url" content="http://localhost:1313/blog/kiem-thu-network-java-junit-wiremock/">
+  <meta property="og:url" content="http://localhost:1313/blog-lap-trinh-mang-GNUD/blog/kiem-thu-network-java-junit-wiremock/">
   <meta property="og:site_name" content="Blog Lập Trình Mạng">
   <meta property="og:title" content="Kiểm thử code mạng Java với JUnit & WireMock">
   <meta property="og:description" content="Mock server HTTP, giả lập tình huống lỗi, timeouts, và viết test đáng tin cậy cho logic mạng.
@@ -56,7 +56,7 @@ Trong bài viết này, mình đi theo hướng thực chiến: giải thích ng
   
 </head>
 <body class="dark:bg-gray-800 dark:text-white relative flex flex-col min-h-screen"><header class="container flex justify-between md:justify-between gap-4 flex-wrap p-6 mx-auto relative">
-  <a href="http://localhost:1313/" class="capitalize font-extrabold text-2xl">
+  <a href="http://localhost:1313/blog-lap-trinh-mang-GNUD/" class="capitalize font-extrabold text-2xl">
     
     Blog Lập Trình Mạng
     
@@ -71,15 +71,15 @@ Trong bài viết này, mình đi theo hướng thực chiến: giải thích ng
   <ul class="mobile-menu absolute z-10 px-6 pb-6 md:p-0 top-full left-0 w-full md:w-auto md:relative hidden md:flex flex-col md:flex-row items-end md:items-center gap-4 lg:gap-6 bg-white dark:bg-gray-800">
 
     
-    <li><a href="/">Home</a></li>
+    <li><a href="/blog-lap-trinh-mang-GNUD/">Home</a></li>
     
-    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/blog-lap-trinh-mang-GNUD/blog/">Blog</a></li>
     
-    <li><a href="/about/">About</a></li>
+    <li><a href="/blog-lap-trinh-mang-GNUD/about/">About</a></li>
     
-    <li><a href="/portfolio/">Portfolio</a></li>
+    <li><a href="/blog-lap-trinh-mang-GNUD/portfolio/">Portfolio</a></li>
     
-    <li><a href="/tags/">Tags</a></li>
+    <li><a href="/blog-lap-trinh-mang-GNUD/tags/">Tags</a></li>
     
 
     <li class="relative">
@@ -95,28 +95,28 @@ Trong bài viết này, mình đi theo hướng thực chiến: giải thích ng
             
               <li>
                 <a class="block px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800"
-                  href="/categories/java/">
+                  href="/blog-lap-trinh-mang-GNUD/categories/java/">
                   Java <span class="opacity-60">(7)</span>
                 </a>
               </li>
             
               <li>
                 <a class="block px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800"
-                  href="/categories/javascript/">
+                  href="/blog-lap-trinh-mang-GNUD/categories/javascript/">
                   JavaScript <span class="opacity-60">(2)</span>
                 </a>
               </li>
             
               <li>
                 <a class="block px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800"
-                  href="/categories/general/">
+                  href="/blog-lap-trinh-mang-GNUD/categories/general/">
                   General <span class="opacity-60">(1)</span>
                 </a>
               </li>
             
 
             <li class="mt-1 border-t border-neutral-200 dark:border-neutral-800 pt-2">
-              <a class="block px-3 py-2 text-sm opacity-80 hover:opacity-100" href="/categories/">Xem tất cả →</a>
+              <a class="block px-3 py-2 text-sm opacity-80 hover:opacity-100" href="/blog-lap-trinh-mang-GNUD/categories/">Xem tất cả →</a>
             </li>
           </ul>
         </div>
@@ -319,7 +319,7 @@ Lưu ý: Cần cài Maven và WireMock trước.</p>
     
       
       
-        <a href="/categories/java/"
+        <a href="/blog-lap-trinh-mang-GNUD/categories/java/"
            class="px-3 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition text-sm">
           Java
         </a>
@@ -335,7 +335,7 @@ Lưu ý: Cần cài Maven và WireMock trước.</p>
     
       
       
-        <a href="/tags/java/"
+        <a href="/blog-lap-trinh-mang-GNUD/tags/java/"
            class="px-3 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition text-sm">
           #Java
         </a>
@@ -343,7 +343,7 @@ Lưu ý: Cần cài Maven và WireMock trước.</p>
     
       
       
-        <a href="/tags/testing/"
+        <a href="/blog-lap-trinh-mang-GNUD/tags/testing/"
            class="px-3 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition text-sm">
           #Testing
         </a>
@@ -351,7 +351,7 @@ Lưu ý: Cần cài Maven và WireMock trước.</p>
     
       
       
-        <a href="/tags/wiremock/"
+        <a href="/blog-lap-trinh-mang-GNUD/tags/wiremock/"
            class="px-3 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition text-sm">
           #WireMock
         </a>
@@ -359,7 +359,7 @@ Lưu ý: Cần cài Maven và WireMock trước.</p>
     
       
       
-        <a href="/tags/junit/"
+        <a href="/blog-lap-trinh-mang-GNUD/tags/junit/"
            class="px-3 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition text-sm">
           #JUnit
         </a>
@@ -431,7 +431,7 @@ Lưu ý: Cần cài Maven và WireMock trước.</p>
 
 
 
-<script src="http://localhost:1313/js/scripts.min.js"></script>
+<script src="http://localhost:1313/blog-lap-trinh-mang-GNUD/js/scripts.min.js"></script>
 
 
 

@@ -1,4 +1,25 @@
-{{ $src := .Destination | safeURL }}
+{{- $dst := .Destination -}}
+{{- $alt := .Text | plainify -}}
+{{- $title := .Title -}}
+{{- $cls := .Page.Params.imageClass -}}
+{{- $src := "" -}}
+
+{{- if or (hasPrefix $dst "http://") (hasPrefix $dst "https://") -}}
+  {{- $src = $dst | safeURL -}}
+{{- else if hasPrefix $dst "/" -}}
+  {{- $src = $dst | relURL -}}
+{{- else -}}
+  {{- with .Page.Resources.GetMatch $dst -}}
+    {{- $src = .RelPermalink -}}
+  {{- else -}}
+    {{- if hasPrefix $dst "images/" -}}
+      {{- $src = $dst | relURL -}}
+    {{- else -}}
+      {{- $src = (print .Page.RelPermalink $dst) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
 <figure class="my-6">
   <img
     src="{{ .Destination | relURL}}"

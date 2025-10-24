@@ -17,7 +17,7 @@ Dự án **Website chia sẻ công thức nấu ăn** được phát triển tro
 
 Hệ thống áp dụng kiến trúc **fullstack hiện đại với BunJS + ElysiaJS (backend)** và **Next.js (frontend)**, tích hợp **Clerk** để xác thực và phân quyền người dùng, đảm bảo trải nghiệm mượt mà, bảo mật và mở rộng linh hoạt.
 
-![Hình ảnh dự án](home_demo.png "Trang chủ Website")
+![Hình ảnh dự án ](images/projects/damh_cnpm/home_demo.png "Trang chủ Website")
 
 
 ---
